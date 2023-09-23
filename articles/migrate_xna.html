@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Migrating from XNA </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Migrating from XNA ">
+      
+      <link rel="icon" href="../images/favicon-192x192.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MonoGame/monogame.github.io/blob/main/articles/migrate_xna.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/mg-logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="migrating-from-xna">Migrating from XNA</h1>
+
+<p>MonoGame is API compatible with <a href="https://docs.microsoft.com/en-us/previous-versions/windows/xna/bb200104(v=xnagamestudio.41)">XNA 4.0</a> even down to the namespaces.  That means you do not have to change much of your game code to port from XNA to MonoGame. There are however some exceptions and some things to keep in mind.</p>
+<blockquote>
+<p>If your game targets XNA 3.1, you might want to use this archived migration cheatsheet to upgrade to 4.0:</p>
+<p><a href="https://www.nelsonhurst.com/xna-cheatsheet/">http://www.nelxon.com/blog/xna-3-1-to-xna-4-0-cheatsheet/</a></p>
+</blockquote>
+<h2 id="missingremoved-api">Missing/removed API</h2>
+<ul>
+<li>The Storage namespace was removed due to portability issues (short discussion <a href="https://github.com/MonoGame/MonoGame/issues/4311">here</a>).</li>
+<li>GamerServices was removed. This part of MonoGame was badly maintained due to low usage and difficulties in providing the GamerServices API for different platforms.</li>
+<li>The Net namespace was removed due to its cost of maintenance.</li>
+</ul>
+<h2 id="effects">Effects</h2>
+<p>MonoGame does not use the legacy fxc compiler for effects that XNA used. Instead, MonoGame uses the DX11 compiler.
+The way MonoGame handles shaders imposes some restrictions and causes some caveats in what is and is not supported.</p>
+<p>This is all documented in the <a href="content_pipeline/custom_effects.html">custom effects</a> documentation page.</p>
+<h2 id="half-pixel-offset">Half pixel offset</h2>
+<p>XNA uses the DirectX 9 graphics API. MonoGame uses the newer Direct X 11 API for DirectX platforms.</p>
+<p>DirectX 9 interprets UV coordinates differently from other graphics API's. This is typically referred to as the half-pixel offset.</p>
+<p>MonoGame supports replicating XNA's behavior (currently only on OpenGL platforms) by setting the <code>PreferHalfPixelOffset</code> flag in <a class="xref" href="../api/Microsoft.Xna.Framework.GraphicsDeviceManager.html"><code>GraphicsDeviceManager</code></a> to <code>true</code>. This flag is set to <code>false</code> by default to encourage users to use the modern style of pixel addressing.</p>
+<p>DirectX platforms will ignore setting the <code>PreferHalfPixelOffset</code> flag and will
+always render with a half pixel offset compared to XNA. This is usually not noticeable.</p>
+<p>This value is passed to <code>UseHalfPixelOffset</code> in <a class="xref" href="../api/Microsoft.Xna.Framework.Graphics.GraphicsDevice.html"><code>GraphicsDevice</code></a>. If <code>UseHalfPixelOffset</code> is <code>true</code>, you have to add half-pixel offset to a Projection matrix.</p>
+<p><a class="xref" href="../api/Microsoft.Xna.Framework.Graphics.SpriteBatch.html"><code>SpriteBatch</code></a> rendering is not affected by the flag.</p>
+<p>Regardless of what value the flag has, <code>SpriteBatch</code> will render things exactly the same as in XNA.</p>
+<p>If you migrated your game from XNA and some things seem blurred out or very slightly offset, you may want to try to enable the <code>PreferHalfPixelOffset</code> flag.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MonoGame/monogame.github.io/blob/main/articles/migrate_xna.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align='center'>Copyright © 2009-2023 MonoGame Team.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
