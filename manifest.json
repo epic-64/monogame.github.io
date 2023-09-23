@@ -4668,86 +4668,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-AudioProperties.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-AudioProperties.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-ContentReference.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-ContentReference.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-EffectProperties.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-EffectProperties.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-Fontproperties.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-Fontproperties.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-ImageProperties.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-ImageProperties.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-ModelProperties.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-ModelProperties.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-TextProperties.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-TextProperties.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/content_pipeline/images/MGCB-VideoProperties.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/content_pipeline/images/MGCB-VideoProperties.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/content_pipeline/images/add_as_link.png",
       "output": {
         "resource": {
@@ -4798,10 +4718,70 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_audio_properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_audio_properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_content_reference.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_content_reference.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_effect_properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_effect_properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_font_properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_font_properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_image_properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_image_properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/content_pipeline/images/mgcb_import.png",
       "output": {
         "resource": {
           "relative_path": "articles/content_pipeline/images/mgcb_import.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_model_properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_model_properties.png"
         }
       },
       "version": ""
@@ -4832,6 +4812,26 @@
       "output": {
         "resource": {
           "relative_path": "articles/content_pipeline/images/mgcb_project.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_text_properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_text_properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/content_pipeline/images/mgcb_video_properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/content_pipeline/images/mgcb_video_properties.png"
         }
       },
       "version": ""
@@ -4960,26 +4960,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_ContinueWithoutCode.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/getting_started/Images/1_ContinueWithoutCode.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_Installers_md.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/getting_started/Images/1_Installers_md.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/getting_started/Images/1_Installers_vs.png",
       "output": {
         "resource": {
@@ -4990,60 +4970,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_MonoGameVersions.png",
+      "source_relative_path": "articles/getting_started/Images/1_continue_without_code.png",
       "output": {
         "resource": {
-          "relative_path": "articles/getting_started/Images/1_MonoGameVersions.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_VSIXInstallerWindow.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/getting_started/Images/1_VSIXInstallerWindow.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_VisualStudioExtensionManager.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/getting_started/Images/1_VisualStudioExtensionManager.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_VisualStudioExtensionMenu.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/getting_started/Images/1_VisualStudioExtensionMenu.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_VisualStudioMacExtensionManager.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/getting_started/Images/1_VisualStudioMacExtensionManager.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/1_installer_md.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/getting_started/Images/1_installer_md.png"
+          "relative_path": "articles/getting_started/Images/1_continue_without_code.png"
         }
       },
       "version": ""
@@ -5064,6 +4994,36 @@
       "output": {
         "resource": {
           "relative_path": "articles/getting_started/Images/1_installer_vs_components.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/getting_started/Images/1_visual_studio_extension_manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/getting_started/Images/1_visual_studio_extension_manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/getting_started/Images/1_visual_studio_extension_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/getting_started/Images/1_visual_studio_extension_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/getting_started/Images/1_vsix_installer_window.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/getting_started/Images/1_vsix_installer_window.png"
         }
       },
       "version": ""
@@ -5160,50 +5120,50 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/vswin-mg-new-1.png",
+      "source_relative_path": "articles/getting_started/Images/vswin_mg_new_1.png",
       "output": {
         "resource": {
-          "relative_path": "articles/getting_started/Images/vswin-mg-new-1.png"
+          "relative_path": "articles/getting_started/Images/vswin_mg_new_1.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/vswin-mg-new-2.png",
+      "source_relative_path": "articles/getting_started/Images/vswin_mg_new_2.png",
       "output": {
         "resource": {
-          "relative_path": "articles/getting_started/Images/vswin-mg-new-2.png"
+          "relative_path": "articles/getting_started/Images/vswin_mg_new_2.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/vswin-mg-new-3.png",
+      "source_relative_path": "articles/getting_started/Images/vswin_mg_new_3.png",
       "output": {
         "resource": {
-          "relative_path": "articles/getting_started/Images/vswin-mg-new-3.png"
+          "relative_path": "articles/getting_started/Images/vswin_mg_new_3.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/vswin-mg-new-4.png",
+      "source_relative_path": "articles/getting_started/Images/vswin_mg_new_4.png",
       "output": {
         "resource": {
-          "relative_path": "articles/getting_started/Images/vswin-mg-new-4.png"
+          "relative_path": "articles/getting_started/Images/vswin_mg_new_4.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/getting_started/Images/vswin-mg-new-5.png",
+      "source_relative_path": "articles/getting_started/Images/vswin_mg_new_5.png",
       "output": {
         "resource": {
-          "relative_path": "articles/getting_started/Images/vswin-mg-new-5.png"
+          "relative_path": "articles/getting_started/Images/vswin_mg_new_5.png"
         }
       },
       "version": ""
@@ -5343,10 +5303,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/tools/images/MGCB-editor.png",
+      "source_relative_path": "articles/tools/images/mgcb_editor.png",
       "output": {
         "resource": {
-          "relative_path": "articles/tools/images/MGCB-editor.png"
+          "relative_path": "articles/tools/images/mgcb_editor.png"
         }
       },
       "version": ""
@@ -5423,20 +5383,20 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/favicon-192x192.png",
+      "source_relative_path": "images/favicon.png",
       "output": {
         "resource": {
-          "relative_path": "images/favicon-192x192.png"
+          "relative_path": "images/favicon.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/mg-logo.svg",
+      "source_relative_path": "images/monogame.svg",
       "output": {
         "resource": {
-          "relative_path": "images/mg-logo.svg"
+          "relative_path": "images/monogame.svg"
         }
       },
       "version": ""

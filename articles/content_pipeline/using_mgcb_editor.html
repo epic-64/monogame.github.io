@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Using MGCB Editor ">
       
-      <link rel="icon" href="../../images/favicon-192x192.png">
+      <link rel="icon" href="../../images/favicon.png">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
       <meta name="docfx:navrel" content="../../toc.html">
@@ -46,7 +46,7 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/mg-logo.svg" alt="">
+            <img id="logo" class="svg" src="../../images/monogame.svg" alt="">
             
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,7 +116,7 @@
 <h2 id="file-types">File Types</h2>
 <p>The MonoGame Content Builder (MGCB) pipeline supports many different file types within a content project, along with several default processing options for those files:</p>
 <h3 id="images">Images</h3>
-<p><img src="images/MGCB-ImageProperties.png" alt="Image Properties"></p>
+<p><img src="images/mgcb_image_properties.png" alt="Image Properties"></p>
 <p>Images come in a variety of formats such as png or jpg, most of which are natively supported by the MonoGame content pipeline.</p>
 <p>Additionally, the following options are configurable per image asset when imported:</p>
 <table>
@@ -158,7 +158,7 @@
 </tbody>
 </table>
 <h3 id="audio">Audio</h3>
-<p><img src="images/MGCB-AudioProperties.png" alt="Image Properties"></p>
+<p><img src="images/mgcb_audio_properties.png" alt="Image Properties"></p>
 <p>MonoGame supports several audio formats to cope with a wide variety of audio needs, from Wav files for effects to MP3's for songs/background music. The type of audio you use will depend on the audio needs for your project.</p>
 <p>Audio can be configured to use either the <strong>Sound Effect</strong> processor which imports audio as a <a class="xref" href="../../api/Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a> which is generally used for short and quick audio sounds. Alternatively, by selecting the <strong>Song</strong> processor, the audio will be imported as a <strong>Song</strong> which is used for long-running audio using the Media Player class.</p>
 <table>
@@ -180,7 +180,7 @@
 </tbody>
 </table>
 <h3 id="models">Models</h3>
-<p><img src="images/MGCB-ModelProperties.png" alt="Image Properties"></p>
+<p><img src="images/mgcb_model_properties.png" alt="Image Properties"></p>
 <table>
 <thead>
 <tr>
@@ -248,7 +248,7 @@
 </tbody>
 </table>
 <h3 id="fonts"><a href="adding_ttf_fonts.html">Fonts</a></h3>
-<p><img src="images/MGCB-Fontproperties.png" alt="Font Properties"></p>
+<p><img src="images/mgcb_font_properties.png" alt="Font Properties"></p>
 <p>MonoGame uses a <strong>Font descriptor</strong> file to describe the type of font to import, the font in question needs to be installed in the machines Font library for it to enable the project to build, else this will result in a Font importer error.</p>
 <blockquote>
 <p>It is recommended you keep a copy of the Font file in the content folder for reference to avoid issues with missing Fonts, that way any developer on the project can re-add the Font to their machine when needed.</p>
@@ -273,7 +273,7 @@
 </table>
 <p>See the <a href="adding_ttf_fonts.html">TrueType fonts</a> section for more detail on working with Fonts. Additionally, check out the <a href="localization.html">Localization</a> section for details on working with managing translated text within your project using <a href="https://msdn.microsoft.com/en-us/library/aa992030(v=vs.100).aspx">resx</a> files.</p>
 <h3 id="effects"><a href="custom_effects.html">Effects</a></h3>
-<p><img src="images/MGCB-EffectProperties.png" alt="Effect Properties"></p>
+<p><img src="images/mgcb_effect_properties.png" alt="Effect Properties"></p>
 <p>Effects in MonoGame are shaders that have been built with a supported shader language (HLSL / GLSL) which will then be pre-processed into a common shader language / effect used by MonoGame.</p>
 <table>
 <thead>
@@ -295,11 +295,11 @@
 </table>
 <p>See the <a href="custom_effects.html">Effects</a> section for more detail on the built-in effects with MonoGame and how to generate your own custom effects.</p>
 <h3 id="video">Video</h3>
-<p><img src="images/MGCB-VideoProperties.png" alt="Image Properties"></p>
+<p><img src="images/mgcb_video_properties.png" alt="Image Properties"></p>
 <p>MonoGame uses a custom video player which converts video files into a format that can be used and rendered by MonoGame using a series of VideoTextures.</p>
 <p>There are no configurable properties for the Video Player currently.</p>
 <h3 id="text-eg-xml">Text (e.g. XML)</h3>
-<p><img src="images/MGCB-TextProperties.png" alt="Image Properties"></p>
+<p><img src="images/mgcb_text_properties.png" alt="Image Properties"></p>
 <p>One of the most powerful processors in MonoGame is the text processor, ideally used for XML files used to manage Game Class content in text files rather than writing it all in code.</p>
 <p>So long as the XML file conforms to the MonoGame (XNA) standard, it will generate data within the game for use in the solution.</p>
 <p>For an example on how to use XML in your MonoGame project, <a href="https://dzone.com/articles/getting-started-with-monogame-using-xml">check out this article</a>.</p>
@@ -319,7 +319,7 @@
 <p>Once you have built your content, you have a few different ways to add it to your game project. They all have the same goal, to get the built XNB's in your project output folder so a <a class="xref" href="../../api/Microsoft.Xna.Framework.Content.ContentManager.html"><code>ContentManager</code></a> can easily find and load them.</p>
 <h3 id="monogamecontentreference">MonoGameContentReference</h3>
 <p>The simplest method is to set up your game project from one of the templates that come with the SDK. When you create a new project, it will include a Content.mgcb file with its Build Action set to <strong>MonoGameContentReference</strong> and a reference to <code>MonoGame.Content.Builder.Task</code> which processes <em>MonoGameContentReference</em> items.</p>
-<p><img src="images/MGCB-ContentReference.png" alt="MonoGame Content Reference"></p>
+<p><img src="images/mgcb_content_reference.png" alt="MonoGame Content Reference"></p>
 <blockquote>
 <p>This build action is defined in the .targets file <a href="https://github.com/MonoGame/MonoGame/blob/develop/Tools/MonoGame.Content.Builder.Task/MonoGame.Content.Builder.Task.targets">here</a>.</p>
 </blockquote>
