@@ -1,2 +1,2 @@
 
-{"items":[{"name":"Articles","href":"articles/index.html","tocHref":"articles/toc.html","topicHref":"articles/index.html"},{"name":"Api Documentation","href":"api/index.html","tocHref":"api/toc.html","topicHref":"api/index.html","homepage":"api/index.html"}]}
+{"items":[{"name":"Documentation","href":"articles/index.html","tocHref":"articles/toc.html","topicHref":"articles/index.html"},{"name":"Reference","href":"api/index.html","tocHref":"api/toc.html","topicHref":"api/index.html","homepage":"api/index.html"},{"name":"Community","href":"https://community.monogame.net/","topicHref":"https://community.monogame.net/"},{"name":"About","href":"about.html","topicHref":"about.html"}]}

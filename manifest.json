@@ -5570,16 +5570,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "community.md",
-      "output": {
-        ".html": {
-          "relative_path": "community.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "images/favicon.png",
       "output": {
@@ -5591,10 +5581,630 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/monogame.svg",
+      "source_relative_path": "images/gitty.png",
       "output": {
         "resource": {
-          "relative_path": "images/monogame.svg"
+          "relative_path": "images/gitty.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/monogametitle.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/monogametitle.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/apotheon-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/apotheon-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/apotheon-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/apotheon-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/armed-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/armed-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/armed-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/armed-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/axiom-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/axiom-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/axiom-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/axiom-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bastion-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bastion-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bastion-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bastion-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bastion-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bastion-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bleed-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bleed-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bleed-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bleed-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bleed2-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bleed2-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bleed2-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bleed2-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bta-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bta-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/bta-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/bta-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/celeste-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/celeste-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/celeste-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/celeste-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/chasm-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/chasm-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/chasm-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/chasm-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/daryl-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/daryl-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/daryl-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/daryl-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/fez-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/fez-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/fez-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/fez-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/fhook-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/fhook-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/fhook-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/fhook-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/flight-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/flight-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/flight-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/flight-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/goat2-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/goat2-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/goat2-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/goat2-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/mgforms-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/mgforms-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/mgforms-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/mgforms-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/mkings-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/mkings-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/mkings-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/mkings-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/neurovoider-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/neurovoider-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/neurovoider-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/neurovoider-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/oldtimehockey-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/oldtimehockey-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/oth-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/oth-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/paladin-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/paladin-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/paladin-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/paladin-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/rblob-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/rblob-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/rblob-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/rblob-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/redungeon-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/redungeon-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/redungeon-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/redungeon-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/skulls-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/skulls-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/skulls-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/skulls-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/skulls-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/skulls-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/sor4-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/sor4-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/sor4-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/sor4-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/squareheroes-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/squareheroes-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/squareheroes-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/squareheroes-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/stardew-logo4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/stardew-logo4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/stardew-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/stardew-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/toothandtail-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/toothandtail-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/toothandtail-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/toothandtail-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/towerfall-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/towerfall-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/towerfall-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/towerfall-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/towerfall-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/towerfall-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/ty-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/ty-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/ty-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/ty-screenshot.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/wayward-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/wayward-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/wayward-screenshot.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/wayward-screenshot.jpg"
         }
       },
       "version": ""
@@ -5605,6 +6215,16 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "scripts/game-banners.js",
+      "output": {
+        "resource": {
+          "relative_path": "scripts/game-banners.js"
         }
       },
       "version": ""
