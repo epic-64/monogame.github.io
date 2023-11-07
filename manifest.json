@@ -5601,10 +5601,20 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/monogametitle.svg",
+      "source_relative_path": "images/monogame_title_dark.svg",
       "output": {
         "resource": {
-          "relative_path": "images/monogametitle.svg"
+          "relative_path": "images/monogame_title_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/monogame_title_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/monogame_title_light.svg"
         }
       },
       "version": ""
