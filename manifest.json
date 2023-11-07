@@ -5591,6 +5591,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/horizontallogo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/horizontallogo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/monogametitle.svg",
       "output": {
         "resource": {
