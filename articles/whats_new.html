@@ -88,24 +88,24 @@
 <p>The MonoGame 3.8.1 release marks some big changes since 3.8.0 in how we build and distribute.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Refer to the <a href="https://github.com/MonoGame/MonoGame/blob/develop/CHANGELOG.md">CHANGELOG</a> for a more complete list of changes.</p>
+<p>Refer to the <a href="https://github.com/MonoGame/MonoGame/blob/develop/CHANGELOG.md">CHANGELOG</a> for a more complete list of the changes.</p>
 </div>
 <h2 id="net-6-support">.NET 6 Support</h2>
 <p>We now support <a href="https://docs.microsoft.com/en-us/dotnet/core/introduction">.NET 6</a> exclusively.  This brings us up to date with the latest improvements in the .NET ecosystem and allows for exciting new features like <a href="https://github.com/dotnet/runtimelab/tree/feature/NativeAOT">.NET NativeAOT Runtime</a> and much easier distribution of your games for Windows, macOS and Linux.</p>
 <h2 id="visual-studio-2022-extension">Visual Studio 2022 extension</h2>
-<p>MonoGame 3.8.1 now comes with an optional Visual Studio extension which will install all the MonoGame project templates and will allow a quick access to the <a href="tools/mgcb_editor.html">MGCB Editor</a>.</p>
+<p>MonoGame 3.8.1 now comes with an optional Visual Studio extension which will install all the MonoGame project templates and will allow for quick access to the <a href="tools/mgcb_editor.html">MGCB Editor</a>.</p>
 <p>This extension is avaible for Visual Studio 2022, and Visual Studio 2022 for Mac.</p>
 <h2 id="visual-studio-2019-and-prior-are-no-longer-supported">Visual Studio 2019 and prior are no longer supported</h2>
-<p>Because .NET 6 isn't supported by Visual Studio 2019, starting with MonoGame 3.8.1 it will no longer be possible to build games with it.</p>
+<p>Since .NET 6 is not supported by Visual Studio 2019, starting with MonoGame 3.8.1 it will no longer be possible to build games with it.</p>
 <p>Moving forward, we will only support Visual Studio 2022, and Visual Studio 2022 for Mac.</p>
 <p>If you need to use Visual Studio 2019, we encourage you to stick to MonoGame 3.8.0.</p>
 <p>JetBrains Rider and Visual Studio Code can be used regardless of the version of MonoGame.</p>
 <h2 id="last-version-to-support-32bit-windows">Last version to support 32bit Windows</h2>
 <p>MonoGame 3.8.1 will be the last version to support building and running 32bit games on Windows.</p>
-<p>This is motivated by the fact that 32bit players are near full extinction (less than 0.24% of the Steam user base). It will also help developers with less complex distribution and less confusing debug/build experiences.</p>
-<h2 id="apple-m1-silicon-support">Apple M1 silicon support</h2>
-<p>Games built using the <code>DesktopGL</code> <a href="platforms.html">platform</a> and targeting <code>osx-arm64</code> will now run natively on Apple M1 silicon without Rosetta emulation.</p>
-<p><strong>However</strong>, it is not yet possible to use the <a href="tools/mgcb.html">MGCB</a> or the <a href="tools/mgcb_editor.html">MGCB Editor</a> on Apple M1 silicon, unless you are running the <code>osx-x64</code> variant of the .NET SDK (and therefore using Rosetta emulation). We are working toward resolving this inconvenience.</p>
+<p>This is motivated by the fact that 32bit players are nearly extinct (less than 0.24% of the Steam user base). It will also help developers with less complex distribution and less confusing debug/build experiences.</p>
+<h2 id="apple-silicon-m1-support">Apple silicon (M1+) support</h2>
+<p>Games built using the <code>DesktopGL</code> <a href="platforms.html">platform</a> and targeting <code>osx-arm64</code> will now run natively on Apple silicon without Rosetta emulation.</p>
+<p><strong>However</strong>, it is not yet possible to use the <a href="tools/mgcb.html">MGCB</a> or the <a href="tools/mgcb_editor.html">MGCB Editor</a> on Apple silicon, unless you are running the <code>osx-x64</code> variant of the .NET SDK (and therefore using Rosetta emulation). We are working toward resolving this inconvenience.</p>
 </article>
 
         <div class="contribution d-print-none">
