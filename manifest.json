@@ -5570,6 +5570,26 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "foundation/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "foundation/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "foundation/meeting-2023-10-24.md",
+      "output": {
+        ".html": {
+          "relative_path": "foundation/meeting-2023-10-24.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/favicon.png",
       "output": {
