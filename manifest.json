@@ -6073,6 +6073,26 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "scripts/game-data.js",
+      "output": {
+        "resource": {
+          "relative_path": "scripts/game-data.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "scripts/showcase-filters.js",
+      "output": {
+        "resource": {
+          "relative_path": "scripts/showcase-filters.js"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "showcase.md",
       "output": {
