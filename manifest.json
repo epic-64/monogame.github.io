@@ -5504,6 +5504,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/showcase-header/barotrauma-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/barotrauma-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/barotrauma-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/barotrauma-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/showcase-header/bastion-logo.png",
       "output": {
         "resource": {
@@ -5958,6 +5978,46 @@
       "output": {
         "resource": {
           "relative_path": "images/showcase-header/stardew-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/stay-safe-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/stay-safe-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/stay-safe-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/stay-safe-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/tiny-life-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/tiny-life-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/tiny-life-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/tiny-life-screenshot.png"
         }
       },
       "version": ""
