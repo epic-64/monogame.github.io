@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="One framework for creatingpowerful cross-platform games ">
+      <meta name="title" content="Managed Code ">
 
       <!-- HTML Meta Tags -->
       <title>MonoGame </title>
@@ -63,7 +63,7 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="images/monogame_title_dark.svg" alt="">
+            <img id="logo" class="svg" alt="">
             
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,102 +77,241 @@
       </nav>
     </header>
 
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+
+<section class="hero">
+	<div id="hero-background-image"></div>
+	<div class="hero-content">
+		<p class="slogan">
+			One framework for creating<br>
+			powerful cross-platform games
+		<div class="hero-button-container">
+			<a type="button" class="btn btn-lrg btn-monogame" href="/articles/getting_started/index.html">
+				Getting Started <i class="bi bi-arrow-right"></i>
+			</a>
+			<a type="button" class="btn btn-lrg btn-monogame" href="https://github.com/MonoGame/MonoGame">
+				Fork Us <i class="bi bi-github"></i>
+			</a>
+		</div>
+	</div>
+	<div class="hero-credits">
+		<a href=""><img id="credits-logo" src=""></a><br>
+		<a id="credits-built-with" href="https://twitter.com/search?q=BuiltWithMonoGame">#BuiltWithMonoGame</a>
+	</div>
+</section>
+<section class="container-xxl my-5">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<h3 class="fw-semibold mb-4 text-body-emphasis">Managed Code</h3>
+			<p class="lead">
+				By leveraging C# and other .NET languages on Microsoft and Mono platforms you can write modern, fast, and reliable game code using your editor of choice.
+		   </p>
+		   <ul class="list-unstyled">
+			<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Visual Studio (recommended)</li>
+			<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Visual Studio Code</li>
+			<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> JetBrains Rider</li>
+		   </ul>
+		</div>
+		<div class="col-12 col-md-6 d-flex flex-row justify-content-center">
+			<img src="/images/home-page/managed-code.png" style="width: 100%; height: auto; margin-bottom: 1rem;" loading="lazy">
+		</div>
+	</div>
+</section>
+<section class="container-xxl my-5">
+	<div class="row">
+		<div class="col-12 col-md-6 mb-5">
+			<div class="d-flex flex-row flex-wrap gap-5">
+				<img id="windows-logo" class="cross-platform-logo" loading="lazy">
+				<img id="apple-logo" class="cross-platform-logo" loading="lazy">
+				<img id="linux-logo" class="cross-platform-logo" loading="lazy">
+				<img id="android-logo" class="cross-platform-logo" loading="lazy">
+				<img id="ios-logo" class="cross-platform-logo" loading="lazy">
+				<img id="playstation-logo" class="cross-platform-logo" loading="lazy">
+				<img id="xbox-one-logo" class="cross-platform-logo" loading="lazy">
+				<img id="switch-logo" class="cross-platform-logo" loading="lazy">
+			</div>
+		</div>
+		<div class="col-12 col-md-6">
+			<h3 class="fw-semibold mb-4 text-body-emphasis">Cross-Platform</h3>
+			<p class="lead">
+				Build your game for multiple platforms.  MonoGame currently supports:
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<h5>Desktop</h5>
+						<ul class="list-unstyled">
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Windows</li>
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> MacOS</li>
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Linux</li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4">
+						<h5>Mobile</h5>
+						<ul class="list-unstyled">
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Android</li>
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> iOS</li>
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> iPadOS</li>
+						</ul>
+					</div>	
+					<div class="col-12 col-md-4">
+						<h5>Console <i class="color-monogame fs-4">*</i></h5>			
+						<ul class="list-unstyled">
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Playstation 4</li>
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Playstation 5</li>
+							<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> Xbox One</li>
+							<li class="mb-3 lead text-nowrap"><i class="bi bi-check-lg color-monogame pe-2"></i> Nintendo Switch</li>
+						</ul>
+					</div>								
+				</div>
+			
+		</div>
+	</div>
+	<div class="row">
+	 <p class="text-secondary">
+	 	<i class="color-monogame fs-4">*</i> Console exporting requires access to the SDK for that console.  After completing the sign up processes for the console, your representative will be able to walk you through the steps of gaining accesses to the tools for exporting MonoGame to that console.
+	</p>
+	</div>
+</section>
+<section class="container-xxl my-5">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<h3 class="fw-semibold mb-4 text-body-emphasis">Open-Source</h3>
+			<p class="lead">
+				All the code is available to you ensuring you'll have the ability to make changes when you need to or even port to whole new platforms. This means MonoGame is free to use, forever.
+		   </p>
+		   <ul class="list-unstyled">
+			<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> No licensing cost!</li>
+			<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> No royalties!</li>
+			<li class="mb-3 lead"><i class="bi bi-check-lg color-monogame pe-2"></i> No runtime fee!</li>
+		   </ul>
+		</div>
+		<div class="col-12 col-md-6 d-flex flex-row justify-content-center">
+			<img id="github-logo" class="object-fit-contain" style="max-width: 250px; height: auto; margin-bottom: 1rem;" loading="lazy">
+		</div>		
+	</div>
+</section>
+<section id="getting-involved" class="container-xxl my-4">
+	<h2>Get Involved</h2>
+	<p class="lead">
+		With 1000s of shipped games we have built up a vibrant community of developers which use MonoGame for both fun and profit.
+	</p>
+    <div class="row align-items-md-center g-5 py-5">
+      <div class="col">
+        <div class="row g-4">
+          <div class="col-12 col-md-4 d-flex flex-column gap-2 mb-5">
+			<img src="/images/home-page/code.svg" class="mb-3" loading="lazy">
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Code</h4>
+            <p class="text-body-secondary">
+				MonoGame is open source and anyone can contribute by fixing bugs or working with maintainers to implement new features.
+			</p>
+			<a class="btn btn-lg btn-monogame w-100 mt-auto" type="button" href="https://github.com/MonoGame/MonoGame/blob/develop/CONTRIBUTING.md">
+				Contributing Guidelines
+			</a>
           </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
+          <div class="col-12 col-md-4 d-flex flex-column gap-2 mb-5">
+			<img src="/images/home-page/documentation.svg" class="mb-3" loading="lazy">
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Documentation</h4>
+            <p class="text-body-secondary">
+				Quality documentation is an important part of MonoGame. You can help improve it by updating the API documentation, writing tutorials, or by submitting updates to existing documentation.
+			</p>
+			<a class="btn btn-lg btn-monogame w-100 mt-auto" type="button" href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md">
+				Documentation Guidelines
+			</a>
+          </div>
+          <div class="col-12 col-md-4 d-flex flex-column gap-2 mb-5">
+			<img src="/images/home-page/report-issue.svg" class="mb-3" loading="lazy">
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Report Issues</h4>
+            <p class="text-body-secondary">
+				If you find any bugs or issues, don't forget to report them to the Issues page on GitHub so maintainers and other contributors can track and resolve the issues. 
+			</p>
+			<a class="btn btn-lg btn-monogame w-100 mt-auto" type="button" href="https://github.com/MonoGame/MonoGame/issues/new/choose">
+				Submit Issue
+			</a>
           </div>
         </div>
       </div>
-
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
-          <nav id="breadcrumb"></nav>
-        </div>
-
-        <article data-uid="">
-
-<div id="big-image-header"></div>
-<div id="big-image-slogan">
-	<h1>One framework for creating<br>powerful cross-platform games</h1>
-</div>
-<br>
-<div id="big-image-quick-start">
-	<a href="/articles/index.html">Get started</a>
-	<a id="fork-button" href="https://github.com/mono/MonoGame">Fork us</a>
-</div>
-<br>
-<div id="big-image-title">
-	<a id="built-with-monogame" href=""><img id="big-image-logo" src=""></a><br>
-	<a id="built-with-monogame" href="https://twitter.com/search?q=BuiltWithMonoGame">#BuiltWithMonoGame</a>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section class="features-showcase">
-<div class="container-xxl content-center">
-<section>
-<div class="showcase-feature">
-	<!--<img src="https://www.monogame.net/wp-content/themes/monogame/images/feature.png" alt="feature showcase">-->
-	<h4>Managed Code</h4>
-	<p>By leveraging C# and other .NET languages on Microsoft and Mono platforms you can write modern, fast, and reliable game code.</p>
-</div>
-<div class="showcase-feature">
-	<!--<img src="https://www.monogame.net/wp-content/themes/monogame/images/feature.png" alt="feature showcase">-->
-	<h4>Cross-Platform</h4>
-	<p>MonoGame currently supports Windows, MacOS, Linux, iOS/iPadOS, Android, PlayStation 4, PlayStation 5, Xbox One, and Nintendo Switch.</p>
-</div>
-<div class="showcase-feature">
-	<!--<img src="https://www.monogame.net/wp-content/themes/monogame/images/feature.png" alt="feature showcase">-->
-	<h4>Open-Source</h4>
-	<p>All the code is available to you ensuring you'll have the ability to make changes when you need to or even port to whole new platforms.</p>
-</div>
-<div class="showcase-feature">
-	<!--<img src="https://www.monogame.net/wp-content/themes/monogame/images/feature.png" alt="feature showcase">-->
-	<h4>Community</h4>
-	<p>With 1000s of shipped games we have built up a vibrant community of developers which use MonoGame for both fun and profit.</p>
-</div>
+    </div>
 </section>
-</div>
+<section class="container-xxl my-4">
+	<h2>Community Discussion</h2>
+	<p class="lead">
+		Join the MonoGame community.  From beginners to experts, hobbyist to pros, all are welcome.  Meet other developers, show off your work, ask questions, and support each other as we create gaming experiences with MonoGame.
+	</p>
+	<div class="row">
+		<div class="col-12 col-md-6 d-flex flex-column gap-2">
+			<img id="discord-logo" class="mb-3" style="width: 250px; height: auto; align-self: center;" loading="lazy">
+			<a class="btn btn-lg btn-monogame w-100 mt-auto" type="button" href="https://discord.gg/monogame">Join The Discord</a>
+		</div>		
+		<div class="col-12 col-md-6 d-flex flex-column gap-2">
+			<img id="forums-logo" class="mb-3" style="width: 250px; height: auto; align-self: center;" loading="lazy">
+			<a class="btn btn-lg btn-monogame w-100 mt-auto" type="button" href="https://community.monogame.net">Join The Forums</a>
+		</div>			
+	</div>
+</section>
+<section class="container-xxl my-4">
+	<div class="row">
+		<div class="col-12 col-md-6 d-flex flex-column justify-space-between" id="latest-news">
+			<h3>Latest News</h3>
+		</div>
+		<div class="col-12 col-md-6 d-flex flex-column justify-space-between" id="latest-community">
+			<h3>Latest Community Posts</h3>
+		</div>
+	</div>
 </section>
 <script src="/scripts/game-data.js"></script>
 <script src="/scripts/game-banners.js"></script>
-</article>
+<script type="text/javascript" src="/scripts/latest-posts.js"></script>
+<script type="text/javascript" src="/scripts/game-banners.js"></script>
 
-        <div class="contribution d-print-none">
-          <a href="https://github.com/MonoGame/monogame.github.io/blob/main/index.md/#L1" class="edit-link">Edit this page</a>
+
+    <div class="container-xxl">
+      <footer class="border-top my-5 pt-5">
+        <div class="row justify-content-between">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>MonoGame</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/articles/index.html" class="footer-link p-0 text-body-secondary">Documentation</a></li>
+              <li class="nav-item mb-2"><a href="/api/index.html" class="footer-link p-0 text-body-secondary">API Reference</a></li>
+              <li class="nav-item mb-2"><a href="/showcase.html" class="footer-link p-0 text-body-secondary">Showcase</a></li>
+              <li class="nav-item mb-2"><a href="/about.html" class="footer-link p-0 text-body-secondary">About</a></li>
+              <li class="nav-item mb-2"><a href="/foundation/index.html" class="footer-link p-0 text-body-secondary">MonoGame Foundation Bylaws</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Get Involved</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="https://github.com/MonoGame/MonoGame" class="footer-link p-0 text-body-secondary">Source Code</a></li>
+              <li class="nav-item mb-2"><a href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md" class="footer-link p-0 text-body-secondary">Update Documentation</a></li>
+              <li class="nav-item mb-2"><a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="footer-link p-0 text-body-secondary">Report Issues</a></li>
+              <li class="nav-item mb-2"><a href="https://www.patreon.com/MonoGame" class="footer-link p-0 text-body-secondary">Patreon</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Community</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="https://community.monogame.net" class="footer-link p-0 text-body-secondary">Forums</a></li>
+                <li class="nav-item mb-2"><a href="https://discord.gg/monogame" class="footer-link p-0 text-body-secondary">Discord</a></li>
+                <li class="nav-item mb-2"><a href="https://twitter.com/MonoGameTeam" class="footer-link p-0 text-body-secondary">Twitter</a></li>
+                <li class="nav-item mb-2"><a href="https://www.youtube.com/MonoGame" class="footer-link p-0 text-body-secondary">YouTube</a></li>
+                <li class="nav-item mb-2"><a href="https://www.reddit.com/r/monogame/" class="footer-link p-0 text-body-secondary">Reddit</a></li>
+                <li class="nav-item mb-2"><a href="https://www.facebook.com/monogamecommunity" class="footer-link p-0 text-body-secondary">Facebook</a></li>
+              </ul>
+          </div>
         </div>
-
-        <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
-      </div>
-
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-
-    <footer class="border-top">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <p align='center'>Copyright © 2009-2023 MonoGame Foundation, Inc.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+          <div>
+            Copyright &#169; 2009-2023 MonoGame Foundation, Inc. <br>
+            Designed with ❤ by <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+          </div>
+          <ul class="list-unstyled d-flex gap-3">
+            <li class="ms-3"><a class="link-body-emphasis" href="https://github.com/MonoGame/MonoGame"><i class="bi bi-github"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://www.patreon.com/MonoGame"><i class="bi bi-p-circle-fill"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://discord.gg/monogame"><i class="bi bi-discord"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/MonoGameTeam"><i class="bi bi-twitter"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://www.youtube.com/MonoGame"><i class="bi bi-youtube"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://www.reddit.com/r/monogame/"><i class="bi bi-reddit"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/monogamecommunity"><i class="bi bi-facebook"></i></a></li>
+          </ul>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

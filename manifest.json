@@ -5414,10 +5414,50 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/gitty.png",
+      "source_relative_path": "images/home-page/code.svg",
       "output": {
         "resource": {
-          "relative_path": "images/gitty.png"
+          "relative_path": "images/home-page/code.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/home-page/documentation.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/home-page/documentation.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/home-page/managed-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/home-page/managed-code.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/home-page/managed-code.xcf",
+      "output": {
+        "resource": {
+          "relative_path": "images/home-page/managed-code.xcf"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/home-page/report-issue.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/home-page/report-issue.svg"
         }
       },
       "version": ""
@@ -5428,6 +5468,226 @@
       "output": {
         "resource": {
           "relative_path": "images/horizontallogo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/android_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/android_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/android_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/android_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/apple_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/apple_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/apple_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/apple_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/discord_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/discord_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/discord_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/discord_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/forums_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/forums_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/forums_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/forums_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/github_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/github_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/github_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/github_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/ios_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/ios_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/ios_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/ios_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/linux_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/linux_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/linux_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/linux_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/playstation_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/playstation_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/playstation_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/playstation_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/switch_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/switch_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/switch_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/switch_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/windows_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/windows_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/windows_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/windows_logo_light.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/xbox_one_logo_dark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/xbox_one_logo_dark.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logos/xbox_one_logo_light.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logos/xbox_one_logo_light.svg"
         }
       },
       "version": ""
@@ -6148,6 +6408,16 @@
       "output": {
         "resource": {
           "relative_path": "scripts/game-data.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "scripts/latest-posts.js",
+      "output": {
+        "resource": {
+          "relative_path": "scripts/latest-posts.js"
         }
       },
       "version": ""
