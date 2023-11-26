@@ -6124,6 +6124,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/showcase-header/palmride-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/palmride-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/palmride-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/palmride-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/showcase-header/rblob-logo.png",
       "output": {
         "resource": {
