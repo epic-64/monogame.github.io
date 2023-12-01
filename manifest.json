@@ -5414,6 +5414,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/home-page/chevron-left.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/home-page/chevron-left.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/home-page/chevron-right.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/home-page/chevron-right.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/home-page/code.svg",
       "output": {
         "resource": {
@@ -6414,10 +6434,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "scripts/game-banners.js",
+      "source_relative_path": "scripts/carousel.js",
       "output": {
         "resource": {
-          "relative_path": "scripts/game-banners.js"
+          "relative_path": "scripts/carousel.js"
         }
       },
       "version": ""
