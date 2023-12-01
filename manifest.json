@@ -6404,6 +6404,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/showcase-header/vlad-circus-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/vlad-circus-logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/showcase-header/vlad-circus-screenshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/showcase-header/vlad-circus-screenshot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/showcase-header/wayward-logo.png",
       "output": {
         "resource": {
