@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="title" content="MonoGame | MonoGame"/>
+<meta name="description" content="One framework for creating powerful cross-platform games"/>
+<meta name="theme-color" content="#E73C00" />
+
+
+<title>MonoGame | MonoGame</title>
+
+
+<meta name="og:url" content="https://monogame.net/api/MonoGame.Framework.Utilities.Deflate.ZlibCodec/"/>
+<meta name="og:type" content="website"/>
+<meta name="og:title" content="MonoGame | MonoGame"/>
+<meta name="og:description" content="One framework for creating powerful cross-platform games"/>
+<meta name="og:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="https://monogame.net"/>
+<meta property="twitter:url" content="https://monogame.net/api/MonoGame.Framework.Utilities.Deflate.ZlibCodec/"/>
+<meta name="twitter:title" content="MonoGame | MonoGame"/>
+<meta name="twitter:description" content="One framework for creating powerful cross-platform games"/>
+<meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<link rel="icon" href="https://monogame.net/favicon.png"/>
+
+
+<link rel="stylesheet" href="/bundle.css"/>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>
+
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body shadow sticky-md-top" aria-label="Navigation Bar">
+    <div class="container-xl">
+        <a class="navbar-brand" href="/" title="Return to Home">
+            <img class="mg-logo svg" style="height: 36px;" alt="MonoGame Logo">
+        </a>
+        <button
+            class="btn btn-lg d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#topNavBar"
+            aria-controls="topNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/documentation/">
+                            Documentation
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://community.monogame.net">
+                            Community
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/showcase/">
+                            Showcase
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/blog/">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about/">
+                            About
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/donate/">
+                            Donate
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="d-flex flex-row">
+                
+                    <a class="btn border-0" href="https://github.com/monogame/monogame" title="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                
+                    <a class="btn border-0" href="https://www.patreon.com/MonoGame" title="Patreon">
+                        <i class="bi bi-p-circle-fill"></i>
+                    </a>
+                
+                    <a class="btn border-0" href="https://discord.gg/monogame" title="Discord">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                
+                    <a class="btn border-0" href="https://www.youtube.com/MonoGame" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                
+                    <a class="btn border-0" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                        <i class="bi bi-reddit"></i>
+                    </a>
+                
+                    <a class="btn border-0" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                
+                    <a class="btn border-0" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                
+            </div>
+            <div class="dropdown bd-mode-toggle">
+    <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)">
+        <i id="active-theme-icon" class="bi bi-circle-half"></i>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <i class="bi bi-sun-fill"></i>&nbsp;Light
+            </button>
+        </li>
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <i class="bi bi-moon-stars-fill"></i>&nbsp;Dark
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true">
+                <i class="bi bi-circle-half"></i>&nbsp;Auto
+            </button>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+        
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+                
+                
+                    <aside class="col-lg-3 col-xxl-2 p-3" style="z-index: 999;">
+                            
+    <nav class="navbar navbar-vertical navbar-expand-lg toc" aria-label="Offcanvas Table of Contents">
+                <button class="btn btn-lg border-0 d-lg-none" 
+                        type="button" 
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#tableOfContents"
+                        aria-controls="tableOfContents"
+                        aria-expanded="false"
+                        aria-label="Toggle Table of Contents">
+                        <i class="bi bi-list"></i>
+                </button>
+                <div id="tableOfContents" class="offcanvas offcanvas-start" aria-labelledby="tableOfContentsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="tableOfContentsLabel">Table of Contents</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-block">
+                        <form class="filter">
+                            <i class="bi bi-filter"></i>
+                            <input id="toc-filter" class="form-control" type="search" autocomplete="off" value="" placeholder="Filter by title" aria-label="Filter by title">
+                        </form>
+                        <ul class="nav flex-column nav-verticle w-100">
+                            <li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-audio"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-audio"
+                   href="/api/Microsoft.Xna.Framework.Audio">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Audio
+                </a>
+                <div id="toc-microsoft-xna-framework-audio"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-audio">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioCategory">AudioCategory</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioChannels">AudioChannels</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioEmitter">AudioEmitter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioEngine">AudioEngine</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioListener">AudioListener</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioStopOptions">AudioStopOptions</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.Cue">Cue</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.DynamicSoundEffectInstance">DynamicSoundEffectInstance</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.InstancePlayLimitException">InstancePlayLimitException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.Microphone">Microphone</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.MicrophoneState">MicrophoneState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.NoAudioHardwareException">NoAudioHardwareException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.NoMicrophoneConnectedException">NoMicrophoneConnectedException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundBank">SoundBank</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundEffect">SoundEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundEffectInstance">SoundEffectInstance</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundState">SoundState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.WaveBank">WaveBank</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ChildCollection-2">ChildCollection<TParent, TChild></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentBuildLogger">ContentBuildLogger</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentIdentity">ContentIdentity</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentImporter-1">ContentImporter<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentImporterAttribute">ContentImporterAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext">ContentImporterContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentItem">ContentItem</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentProcessor-2">ContentProcessor<TInput, TOutput></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentProcessorAttribute">ContentProcessorAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentProcessorContext">ContentProcessorContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentStats">ContentStats</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection">ContentStatsCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.EffectImporter">EffectImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ExternalReference-1">ExternalReference<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.FbxImporter">FbxImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.FontDescriptionImporter">FontDescriptionImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.H264Importer">H264Importer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.IContentImporter">IContentImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.IContentProcessor">IContentProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.InvalidContentException">InvalidContentException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.LoadedTypeCollection-1">LoadedTypeCollection<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Mp3Importer">Mp3Importer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary-1">NamedValueDictionary<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.OggImporter">OggImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary">OpaqueDataDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.OpenAssetImporter">OpenAssetImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.PipelineComponentScanner">PipelineComponentScanner</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.PipelineException">PipelineException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ProcessorParameter">ProcessorParameter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ProcessorParameterCollection">ProcessorParameterCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.TargetPlatform">TargetPlatform</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.TextureImporter">TextureImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.VideoContent">VideoContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.WavImporter">WavImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.WmaImporter">WmaImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.WmvImporter">WmvImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.XImporter">XImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.XmlImporter">XmlImporter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-audio"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-audio"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Audio
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-audio"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-audio">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioContent">AudioContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioFileType">AudioFileType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioFormat">AudioFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioProfile">AudioProfile</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.ConversionFormat">ConversionFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.ConversionQuality">ConversionQuality</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-builder-convertors"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-builder-convertors"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Builder.Convertors">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Builder<wbr />.Convertors
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-builder-convertors"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-builder-convertors">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Builder.Convertors.StringToColorConverter">StringToColorConverter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-graphics"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-graphics"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Graphics
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-graphics"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-graphics">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.ABCFloat">ABCFloat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AlphaTestMaterialContent">AlphaTestMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationChannel">AnimationChannel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationChannelDictionary">AnimationChannelDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContent">AnimationContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContentDictionary">AnimationContentDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationKeyframe">AnimationKeyframe</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcBitmapContent">AtcBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcExplicitBitmapContent">AtcExplicitBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcInterpolatedBitmapContent">AtcInterpolatedBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BasicMaterialContent">BasicMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BitmapContent">BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneContent">BoneContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeight">BoneWeight</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeightCollection">BoneWeightCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegion">CharacterRegion</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegionTypeConverter">CharacterRegionTypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.DualTextureMaterialContent">DualTextureMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt1BitmapContent">Dxt1BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt3BitmapContent">Dxt3BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt5BitmapContent">Dxt5BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.DxtBitmapContent">DxtBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.EffectContent">EffectContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.EffectMaterialContent">EffectMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.EnvironmentMapMaterialContent">EnvironmentMapMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Etc1BitmapContent">Etc1BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription">FontDescription</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle">FontDescriptionStyle</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GeometryContent">GeometryContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GeometryContentCollection">GeometryContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GraphicsUtil">GraphicsUtil</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GrowRule">GrowRule</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.IndexCollection">IndexCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.IndirectPositionCollection">IndirectPositionCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.LocalizedFontDescription">LocalizedFontDescription</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaterialContent">MaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaxRectsBin">MaxRectsBin</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaxRectsHeuristic">MaxRectsHeuristic</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshBuilder">MeshBuilder</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshContent">MeshContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshHelper">MeshHelper</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChain">MipmapChain</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChainCollection">MipmapChainCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContent">NodeContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContentCollection">NodeContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PixelBitmapContent-1">PixelBitmapContent<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PositionCollection">PositionCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcBitmapContent">PvrtcBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgb2BitmapContent">PvrtcRgb2BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgb4BitmapContent">PvrtcRgb4BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgba2BitmapContent">PvrtcRgba2BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgba4BitmapContent">PvrtcRgba4BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.SkinnedMaterialContent">SkinnedMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.SpriteFontContent">SpriteFontContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Texture2DContent">Texture2DContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Texture3DContent">Texture3DContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureContent">TextureContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureCubeContent">TextureCubeContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureProfile">TextureProfile</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureReferenceDictionary">TextureReferenceDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel">VertexChannel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel-1">VertexChannel<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelCollection">VertexChannelCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelNames">VertexChannelNames</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent">VertexContent</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-processors"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-processors"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Processors
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-processors"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-processors">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.CompiledEffectContent">CompiledEffectContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor">EffectProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessorDebugMode">EffectProcessorDebugMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.FontDescriptionProcessor">FontDescriptionProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.FontTextureProcessor">FontTextureProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.LocalizedFontProcessor">LocalizedFontProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.MaterialProcessor">MaterialProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.MaterialProcessorDefaultEffect">MaterialProcessorDefaultEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelBoneContent">ModelBoneContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelBoneContentCollection">ModelBoneContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelContent">ModelContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshContent">ModelMeshContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshContentCollection">ModelMeshContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshPartContent">ModelMeshPartContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshPartContentCollection">ModelMeshPartContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor">ModelProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.PassThroughProcessor">PassThroughProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongContent">SongContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongProcessor">SongProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectContent">SoundEffectContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectProcessor">SoundEffectProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor">TextureProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessorOutputFormat">TextureProcessorOutputFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexBufferContent">VertexBufferContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexDeclarationContent">VertexDeclarationContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VideoProcessor">VideoProcessor</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-serialization-compiler"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-serialization-compiler"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Serialization<wbr />.Compiler
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-serialization-compiler"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-serialization-compiler">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentCompiler">ContentCompiler</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriter">ContentTypeWriter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriter-1">ContentTypeWriter<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriterAttribute">ContentTypeWriterAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentWriter">ContentWriter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.SpriteFontContentWriter">SpriteFontContentWriter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-serialization-intermediate"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-serialization-intermediate"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Serialization<wbr />.Intermediate
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-serialization-intermediate"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-serialization-intermediate">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer">ContentTypeSerializer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer.ChildCallback">ContentTypeSerializer<wbr/>.ChildCallback</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer-1">ContentTypeSerializer<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializerAttribute">ContentTypeSerializerAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateReader">IntermediateReader</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateSerializer">IntermediateSerializer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateWriter">IntermediateWriter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-design"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-design"
+                   href="/api/Microsoft.Xna.Framework.Design">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Design
+                </a>
+                <div id="toc-microsoft-xna-framework-design"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-design">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Vector2TypeConverter">Vector2TypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Vector3TypeConverter">Vector3TypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Vector4TypeConverter">Vector4TypeConverter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-graphics-packedvector"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-graphics-packedvector"
+                   href="/api/Microsoft.Xna.Framework.Graphics.PackedVector">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Graphics<wbr />.PackedVector
+                </a>
+                <div id="toc-microsoft-xna-framework-graphics-packedvector"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-graphics-packedvector">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Alpha8">Alpha8</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgr565">Bgr565</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgra4444">Bgra4444</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgra5551">Bgra5551</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Byte4">Byte4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.HalfSingle">HalfSingle</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.HalfVector2">HalfVector2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.HalfVector4">HalfVector4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector">IPackedVector</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector-1">IPackedVector<TPacked></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedByte2">NormalizedByte2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedByte4">NormalizedByte4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedShort2">NormalizedShort2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedShort4">NormalizedShort4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rg32">Rg32</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rgba1010102">Rgba1010102</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rgba64">Rgba64</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short2">Short2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short4">Short4</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-input"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-input"
+                   href="/api/Microsoft.Xna.Framework.Input">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Input
+                </a>
+                <div id="toc-microsoft-xna-framework-input"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-input">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Buttons">Buttons</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.ButtonState">ButtonState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePad">GamePad</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadButtons">GamePadButtons</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadCapabilities">GamePadCapabilities</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadDeadZone">GamePadDeadZone</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadDPad">GamePadDPad</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadState">GamePadState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadThumbSticks">GamePadThumbSticks</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadTriggers">GamePadTriggers</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadType">GamePadType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Joystick">Joystick</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.JoystickCapabilities">JoystickCapabilities</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.JoystickHat">JoystickHat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.JoystickState">JoystickState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Keyboard">Keyboard</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.KeyboardState">KeyboardState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Keys">Keys</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.KeyState">KeyState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Mouse">Mouse</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.MouseCursor">MouseCursor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.MouseState">MouseState</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-input-touch"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-input-touch"
+                   href="/api/Microsoft.Xna.Framework.Input.Touch">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Input<wbr />.Touch
+                </a>
+                <div id="toc-microsoft-xna-framework-input-touch"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-input-touch">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.GestureSample">GestureSample</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.GestureType">GestureType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection">TouchCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection.Enumerator">TouchCollection<wbr/>.Enumerator</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchLocation">TouchLocation</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchLocationState">TouchLocationState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchPanel">TouchPanel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelCapabilities">TouchPanelCapabilities</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelState">TouchPanelState</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-media"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-media"
+                   href="/api/Microsoft.Xna.Framework.Media">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Media
+                </a>
+                <div id="toc-microsoft-xna-framework-media"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-media">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Album">Album</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.AlbumCollection">AlbumCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Artist">Artist</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Genre">Genre</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaLibrary">MediaLibrary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaPlayer">MediaPlayer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaQueue">MediaQueue</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaSource">MediaSource</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaSourceType">MediaSourceType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaState">MediaState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Playlist">Playlist</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.PlaylistCollection">PlaylistCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Song">Song</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.SongCollection">SongCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.VideoSoundtrackType">VideoSoundtrackType</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-monogame-framework-content-pipeline-builder"
+                   aria-expanded="false"
+                   aria-controls="toc-monogame-framework-content-pipeline-builder"
+                   href="/api/MonoGame.Framework.Content.Pipeline.Builder">
+                   MonoGame<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Builder
+                </a>
+                <div id="toc-monogame-framework-content-pipeline-builder"
+                     class=" collapse "
+                     data-bs-parent="#toc-monogame-framework-content-pipeline-builder">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.FileHelper">FileHelper</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PathHelper">PathHelper</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildEvent">PipelineBuildEvent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildEvent.Pair">PipelineBuildEvent<wbr/>.Pair</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildLogger">PipelineBuildLogger</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineImporterContext">PipelineImporterContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineManager">PipelineManager</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineProcessorContext">PipelineProcessorContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.TypeExtensions">TypeExtensions</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.XmlColor">XmlColor</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break active"
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-monogame-framework-utilities-deflate"
+                   aria-expanded="true"
+                   aria-controls="toc-monogame-framework-utilities-deflate"
+                   href="/api/MonoGame.Framework.Utilities.Deflate">
+                   MonoGame<wbr />.Framework<wbr />.Utilities<wbr />.Deflate
+                </a>
+                <div id="toc-monogame-framework-utilities-deflate"
+                     class="active collapse show"
+                     data-bs-parent="#toc-monogame-framework-utilities-deflate">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CompressionMode">CompressionMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CompressionStrategy">CompressionStrategy</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CRC32">CRC32</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CrcCalculatorStream">CrcCalculatorStream</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.DeflateStream">DeflateStream</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.FlushType">FlushType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.GZipStream">GZipStream</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break active"
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibCodec">ZlibCodec</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibConstants">ZlibConstants</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibException">ZlibException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibStream">ZlibStream</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-monogame-opengl"
+                   aria-expanded="false"
+                   aria-controls="toc-monogame-opengl"
+                   href="/api/MonoGame.OpenGL">
+                   MonoGame<wbr />.OpenGL
+                </a>
+                <div id="toc-monogame-opengl"
+                     class=" collapse "
+                     data-bs-parent="#toc-monogame-opengl">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.OpenGL.IWindowInfo">IWindowInfo</a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+                    </aside>
+                
+
+            
+            <article class="col-lg-9 col-xxl-10 ps-0 content">
+                <div class="row justify-content-between content-body">
+                    
+    <article class="col-md-9 col-xxl-8 api-content-body">
+        <h1 id="class-zlibcodec" tabindex="-1"><a class="header-anchor" href="#class-zlibcodec"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec"></a> Class ZlibCodec</a></h1>
+<p>Namespace: <a href="/api/MonoGame.Framework.Utilities.Deflate">MonoGame.Framework.Utilities.Deflate</a><br>
+Assembly: MonoGame.Framework.dll</p>
+<p>Encoder and Decoder for ZLIB and DEFLATE (IETF RFC1950 and RFC1951).</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">sealed</span> <span class="token keyword">class</span> <span class="token class-name">ZlibCodec</span></code></pre>
+<h4 id="inheritance" tabindex="-1"><a class="header-anchor" href="#inheritance">Inheritance</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">object</a> ←
+<a href="/api/MonoGame.Framework.Utilities.Deflate.ZlibCodec">ZlibCodec</a></p>
+<h4 id="inherited-members" tabindex="-1"><a class="header-anchor" href="#inherited-members">Inherited Members</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)" target="_blank" rel="noopener noreferrer">object.Equals(object?)</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)" target="_blank" rel="noopener noreferrer">object.Equals(object?, object?)</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode" target="_blank" rel="noopener noreferrer">object.GetHashCode()</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.gettype" target="_blank" rel="noopener noreferrer">object.GetType()</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals" target="_blank" rel="noopener noreferrer">object.ReferenceEquals(object?, object?)</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.tostring" target="_blank" rel="noopener noreferrer">object.ToString()</a></p>
+<h2 id="remarks" tabindex="-1"><a class="header-anchor" href="#remarks">Remarks</a></h2>
+<p>This class compresses and decompresses data according to the Deflate algorithm
+and optionally, the ZLIB format, as documented in <a href="http://www.ietf.org/rfc/rfc1950.txt">RFC 1950 - ZLIB</a> and <a href="http://www.ietf.org/rfc/rfc1951.txt">RFC 1951 - DEFLATE</a>.</p>
+<h2 id="constructors" tabindex="-1"><a class="header-anchor" href="#constructors">Constructors</a></h2>
+<h3 id="zlibcodec" tabindex="-1"><a class="header-anchor" href="#zlibcodec"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec__ctor"></a> ZlibCodec()</a></h3>
+<p>Create a ZlibCodec.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token function">ZlibCodec</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h4 id="remarks-1" tabindex="-1"><a class="header-anchor" href="#remarks-1">Remarks</a></h4>
+<p>If you use this default constructor, you will later have to explicitly call
+InitializeInflate() or InitializeDeflate() before using the ZlibCodec to compress
+or decompress.</p>
+<h3 id="zlibcodec-compressionmode" tabindex="-1"><a class="header-anchor" href="#zlibcodec-compressionmode"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec__ctor_MonoGame_Framework_Utilities_Deflate_CompressionMode_"></a> ZlibCodec(CompressionMode)</a></h3>
+<p>Create a ZlibCodec that either compresses or decompresses.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token function">ZlibCodec</span><span class="token punctuation">(</span><span class="token class-name">CompressionMode</span> mode<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters" tabindex="-1"><a class="header-anchor" href="#parameters">Parameters</a></h4>
+<p><code>mode</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionMode">CompressionMode</a></p>
+<p>Indicates whether the codec should compress (deflate) or decompress (inflate).</p>
+<h2 id="fields" tabindex="-1"><a class="header-anchor" href="#fields">Fields</a></h2>
+<h3 id="availablebytesin" tabindex="-1"><a class="header-anchor" href="#availablebytesin"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_AvailableBytesIn"></a> AvailableBytesIn</a></h3>
+<p>The number of bytes available in the InputBuffer, starting at NextIn.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">int</span> AvailableBytesIn</code></pre>
+<h4 id="field-value" tabindex="-1"><a class="header-anchor" href="#field-value">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<h4 id="remarks-2" tabindex="-1"><a class="header-anchor" href="#remarks-2">Remarks</a></h4>
+<p>Generally you should set this to InputBuffer.Length before the first Inflate() or Deflate() call.
+The class will update this number as calls to Inflate/Deflate are made.</p>
+<h3 id="availablebytesout" tabindex="-1"><a class="header-anchor" href="#availablebytesout"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_AvailableBytesOut"></a> AvailableBytesOut</a></h3>
+<p>The number of bytes available in the OutputBuffer, starting at NextOut.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">int</span> AvailableBytesOut</code></pre>
+<h4 id="field-value-1" tabindex="-1"><a class="header-anchor" href="#field-value-1">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<h4 id="remarks-3" tabindex="-1"><a class="header-anchor" href="#remarks-3">Remarks</a></h4>
+<p>Generally you should set this to OutputBuffer.Length before the first Inflate() or Deflate() call.
+The class will update this number as calls to Inflate/Deflate are made.</p>
+<h3 id="compresslevel" tabindex="-1"><a class="header-anchor" href="#compresslevel"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_CompressLevel"></a> CompressLevel</a></h3>
+<p>The compression level to use in this codec.  Useful only in compression mode.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> CompressionLevel CompressLevel</code></pre>
+<h4 id="field-value-2" tabindex="-1"><a class="header-anchor" href="#field-value-2">Field Value</a></h4>
+<p><a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a></p>
+<h3 id="inputbuffer" tabindex="-1"><a class="header-anchor" href="#inputbuffer"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InputBuffer"></a> InputBuffer</a></h3>
+<p>The buffer from which data is taken.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> InputBuffer</code></pre>
+<h4 id="field-value-3" tabindex="-1"><a class="header-anchor" href="#field-value-3">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.byte" target="_blank" rel="noopener noreferrer">byte</a>[]</p>
+<h3 id="message" tabindex="-1"><a class="header-anchor" href="#message"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_Message"></a> Message</a></h3>
+<p>used for diagnostics, when something goes wrong!</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">string</span> Message</code></pre>
+<h4 id="field-value-4" tabindex="-1"><a class="header-anchor" href="#field-value-4">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">string</a></p>
+<h3 id="nextin" tabindex="-1"><a class="header-anchor" href="#nextin"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_NextIn"></a> NextIn</a></h3>
+<p>An index into the InputBuffer array, indicating where to start reading.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">int</span> NextIn</code></pre>
+<h4 id="field-value-5" tabindex="-1"><a class="header-anchor" href="#field-value-5">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<h3 id="nextout" tabindex="-1"><a class="header-anchor" href="#nextout"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_NextOut"></a> NextOut</a></h3>
+<p>An index into the OutputBuffer array, indicating where to start writing.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">int</span> NextOut</code></pre>
+<h4 id="field-value-6" tabindex="-1"><a class="header-anchor" href="#field-value-6">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<h3 id="outputbuffer" tabindex="-1"><a class="header-anchor" href="#outputbuffer"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_OutputBuffer"></a> OutputBuffer</a></h3>
+<p>Buffer to store output data.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> OutputBuffer</code></pre>
+<h4 id="field-value-7" tabindex="-1"><a class="header-anchor" href="#field-value-7">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.byte" target="_blank" rel="noopener noreferrer">byte</a>[]</p>
+<h3 id="strategy" tabindex="-1"><a class="header-anchor" href="#strategy"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_Strategy"></a> Strategy</a></h3>
+<p>The compression strategy to use.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> CompressionStrategy Strategy</code></pre>
+<h4 id="field-value-8" tabindex="-1"><a class="header-anchor" href="#field-value-8">Field Value</a></h4>
+<p><a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionStrategy">CompressionStrategy</a></p>
+<h4 id="remarks-4" tabindex="-1"><a class="header-anchor" href="#remarks-4">Remarks</a></h4>
+<p>This is only effective in compression.  The theory offered by ZLIB is that different
+strategies could potentially produce significant differences in compression behavior
+for different data sets.  Unfortunately I don't have any good recommendations for how
+to set it differently.  When I tested changing the strategy I got minimally different
+compression performance. It's best to leave this property alone if you don't have a
+good feel for it.  Or, you may want to produce a test harness that runs through the
+different strategy options and evaluates them on different file types. If you do that,
+let me know your results.</p>
+<h3 id="totalbytesin" tabindex="-1"><a class="header-anchor" href="#totalbytesin"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_TotalBytesIn"></a> TotalBytesIn</a></h3>
+<p>Total number of bytes read so far, through all calls to Inflate()/Deflate().</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">long</span> TotalBytesIn</code></pre>
+<h4 id="field-value-9" tabindex="-1"><a class="header-anchor" href="#field-value-9">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int64" target="_blank" rel="noopener noreferrer">long</a></p>
+<h3 id="totalbytesout" tabindex="-1"><a class="header-anchor" href="#totalbytesout"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_TotalBytesOut"></a> TotalBytesOut</a></h3>
+<p>Total number of bytes written to the output so far, through all calls to Inflate()/Deflate().</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">long</span> TotalBytesOut</code></pre>
+<h4 id="field-value-10" tabindex="-1"><a class="header-anchor" href="#field-value-10">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int64" target="_blank" rel="noopener noreferrer">long</a></p>
+<h3 id="windowbits" tabindex="-1"><a class="header-anchor" href="#windowbits"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_WindowBits"></a> WindowBits</a></h3>
+<p>The number of Window Bits to use.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">int</span> WindowBits</code></pre>
+<h4 id="field-value-11" tabindex="-1"><a class="header-anchor" href="#field-value-11">Field Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<h4 id="remarks-5" tabindex="-1"><a class="header-anchor" href="#remarks-5">Remarks</a></h4>
+<p>This gauges the size of the sliding window, and hence the
+compression effectiveness as well as memory consumption. It's best to just leave this
+setting alone if you don't know what it is.  The maximum value is 15 bits, which implies
+a 32k window.</p>
+<h2 id="properties" tabindex="-1"><a class="header-anchor" href="#properties">Properties</a></h2>
+<h3 id="adler" tabindex="-1"><a class="header-anchor" href="#adler"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_Adler32"></a> Adler32</a></h3>
+<p>The Adler32 checksum on the data transferred through the codec so far. You probably don't need to look at this.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Adler32 <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+<h4 id="property-value" tabindex="-1"><a class="header-anchor" href="#property-value">Property Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<h2 id="methods" tabindex="-1"><a class="header-anchor" href="#methods">Methods</a></h2>
+<h3 id="deflate-flushtype" tabindex="-1"><a class="header-anchor" href="#deflate-flushtype"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_Deflate_MonoGame_Framework_Utilities_Deflate_FlushType_"></a> Deflate(FlushType)</a></h3>
+<p>Deflate one batch of data.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">Deflate</span><span class="token punctuation">(</span><span class="token class-name">FlushType</span> flush<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-1" tabindex="-1"><a class="header-anchor" href="#parameters-1">Parameters</a></h4>
+<p><code>flush</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.FlushType">FlushType</a></p>
+<p>whether to flush all data as you deflate. Generally you will want to
+use Z_NO_FLUSH here, in a series of calls to Deflate(), and then call EndDeflate() to
+flush everything.</p>
+<h4 id="returns" tabindex="-1"><a class="header-anchor" href="#returns">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h4 id="examples" tabindex="-1"><a class="header-anchor" href="#examples">Examples</a></h4>
+<pre><code class="lang-csharp">private void DeflateBuffer(CompressionLevel level)
+{
+    int bufferSize = 1024;
+    byte[] buffer = new byte[bufferSize];
+    ZlibCodec compressor = new ZlibCodec();
+
+    Console.WriteLine("\n============================================");
+    Console.WriteLine("Size of Buffer to Deflate: {0} bytes.", UncompressedBytes.Length);
+    MemoryStream ms = new MemoryStream();
+
+    int rc = compressor.InitializeDeflate(level);
+
+    compressor.InputBuffer = UncompressedBytes;
+    compressor.NextIn = 0;
+    compressor.AvailableBytesIn = UncompressedBytes.Length;
+
+    compressor.OutputBuffer = buffer;
+
+    // pass 1: deflate 
+    do
+    {
+        compressor.NextOut = 0;
+        compressor.AvailableBytesOut = buffer.Length;
+        rc = compressor.Deflate(FlushType.None);
+
+        if (rc != ZlibConstants.Z_OK &amp;&amp; rc != ZlibConstants.Z_STREAM_END)
+            throw new Exception("deflating: " + compressor.Message);
+
+        ms.Write(compressor.OutputBuffer, 0, buffer.Length - compressor.AvailableBytesOut);
+    }
+    while (compressor.AvailableBytesIn &gt; 0 || compressor.AvailableBytesOut == 0);
+
+    // pass 2: finish and flush
+    do
+    {
+        compressor.NextOut = 0;
+        compressor.AvailableBytesOut = buffer.Length;
+        rc = compressor.Deflate(FlushType.Finish);
+
+        if (rc != ZlibConstants.Z_STREAM_END &amp;&amp; rc != ZlibConstants.Z_OK)
+            throw new Exception("deflating: " + compressor.Message);
+
+        if (buffer.Length - compressor.AvailableBytesOut &gt; 0)
+            ms.Write(buffer, 0, buffer.Length - compressor.AvailableBytesOut);
+    }
+    while (compressor.AvailableBytesIn &gt; 0 || compressor.AvailableBytesOut == 0);
+
+    compressor.EndDeflate();
+
+    ms.Seek(0, SeekOrigin.Begin);
+    CompressedBytes = new byte[compressor.TotalBytesOut];
+    ms.Read(CompressedBytes, 0, CompressedBytes.Length);
+}</code></pre>
+<h4 id="remarks-6" tabindex="-1"><a class="header-anchor" href="#remarks-6">Remarks</a></h4>
+<p>You must have set InputBuffer and OutputBuffer before calling this method.</p>
+<h3 id="enddeflate" tabindex="-1"><a class="header-anchor" href="#enddeflate"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_EndDeflate"></a> EndDeflate()</a></h3>
+<p>End a deflation session.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">EndDeflate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h4 id="returns-1" tabindex="-1"><a class="header-anchor" href="#returns-1">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h4 id="remarks-7" tabindex="-1"><a class="header-anchor" href="#remarks-7">Remarks</a></h4>
+<p>Call this after making a series of one or more calls to Deflate(). All buffers are flushed.</p>
+<h3 id="endinflate" tabindex="-1"><a class="header-anchor" href="#endinflate"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_EndInflate"></a> EndInflate()</a></h3>
+<p>Ends an inflation session.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">EndInflate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h4 id="returns-2" tabindex="-1"><a class="header-anchor" href="#returns-2">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if everything goes well.</p>
+<h4 id="remarks-8" tabindex="-1"><a class="header-anchor" href="#remarks-8">Remarks</a></h4>
+<p>Call this after successively calling Inflate().  This will cause all buffers to be flushed.
+After calling this you cannot call Inflate() without a intervening call to one of the
+InitializeInflate() overloads.</p>
+<h3 id="inflate-flushtype" tabindex="-1"><a class="header-anchor" href="#inflate-flushtype"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_Inflate_MonoGame_Framework_Utilities_Deflate_FlushType_"></a> Inflate(FlushType)</a></h3>
+<p>Inflate the data in the InputBuffer, placing the result in the OutputBuffer.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">Inflate</span><span class="token punctuation">(</span><span class="token class-name">FlushType</span> flush<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-2" tabindex="-1"><a class="header-anchor" href="#parameters-2">Parameters</a></h4>
+<p><code>flush</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.FlushType">FlushType</a></p>
+<p>The flush to use when inflating.</p>
+<h4 id="returns-3" tabindex="-1"><a class="header-anchor" href="#returns-3">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if everything goes well.</p>
+<h4 id="examples-1" tabindex="-1"><a class="header-anchor" href="#examples-1">Examples</a></h4>
+<pre><code class="lang-csharp">private void InflateBuffer()
+{
+    int bufferSize = 1024;
+    byte[] buffer = new byte[bufferSize];
+    ZlibCodec decompressor = new ZlibCodec();
+
+    Console.WriteLine("\n============================================");
+    Console.WriteLine("Size of Buffer to Inflate: {0} bytes.", CompressedBytes.Length);
+    MemoryStream ms = new MemoryStream(DecompressedBytes);
+
+    int rc = decompressor.InitializeInflate();
+
+    decompressor.InputBuffer = CompressedBytes;
+    decompressor.NextIn = 0;
+    decompressor.AvailableBytesIn = CompressedBytes.Length;
+
+    decompressor.OutputBuffer = buffer;
+
+    // pass 1: inflate 
+    do
+    {
+        decompressor.NextOut = 0;
+        decompressor.AvailableBytesOut = buffer.Length;
+        rc = decompressor.Inflate(FlushType.None);
+
+        if (rc != ZlibConstants.Z_OK &amp;&amp; rc != ZlibConstants.Z_STREAM_END)
+            throw new Exception("inflating: " + decompressor.Message);
+
+        ms.Write(decompressor.OutputBuffer, 0, buffer.Length - decompressor.AvailableBytesOut);
+    }
+    while (decompressor.AvailableBytesIn &gt; 0 || decompressor.AvailableBytesOut == 0);
+
+    // pass 2: finish and flush
+    do
+    {
+        decompressor.NextOut = 0;
+        decompressor.AvailableBytesOut = buffer.Length;
+        rc = decompressor.Inflate(FlushType.Finish);
+
+        if (rc != ZlibConstants.Z_STREAM_END &amp;&amp; rc != ZlibConstants.Z_OK)
+            throw new Exception("inflating: " + decompressor.Message);
+
+        if (buffer.Length - decompressor.AvailableBytesOut &gt; 0)
+            ms.Write(buffer, 0, buffer.Length - decompressor.AvailableBytesOut);
+    }
+    while (decompressor.AvailableBytesIn &gt; 0 || decompressor.AvailableBytesOut == 0);
+
+    decompressor.EndInflate();
+}</code></pre>
+<h4 id="remarks-9" tabindex="-1"><a class="header-anchor" href="#remarks-9">Remarks</a></h4>
+<p>You must have set InputBuffer and OutputBuffer, NextIn and NextOut, and AvailableBytesIn and
+AvailableBytesOut  before calling this method.</p>
+<h3 id="initializedeflate" tabindex="-1"><a class="header-anchor" href="#initializedeflate"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeDeflate"></a> InitializeDeflate()</a></h3>
+<p>Initialize the ZlibCodec for deflation operation.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeDeflate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h4 id="returns-4" tabindex="-1"><a class="header-anchor" href="#returns-4">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well. You generally don't need to check the return code.</p>
+<h4 id="examples-2" tabindex="-1"><a class="header-anchor" href="#examples-2">Examples</a></h4>
+<pre><code class="lang-csharp">int bufferSize = 40000;
+byte[] CompressedBytes = new byte[bufferSize];
+byte[] DecompressedBytes = new byte[bufferSize];
+
+ZlibCodec compressor = new ZlibCodec();
+
+compressor.InitializeDeflate(CompressionLevel.Default);
+
+compressor.InputBuffer = System.Text.ASCIIEncoding.ASCII.GetBytes(TextToCompress);
+compressor.NextIn = 0;
+compressor.AvailableBytesIn = compressor.InputBuffer.Length;
+
+compressor.OutputBuffer = CompressedBytes;
+compressor.NextOut = 0;
+compressor.AvailableBytesOut = CompressedBytes.Length;
+
+while (compressor.TotalBytesIn != TextToCompress.Length &amp;&amp; compressor.TotalBytesOut &lt; bufferSize)
+{
+  compressor.Deflate(FlushType.None);
+}
+
+while (true)
+{
+  int rc= compressor.Deflate(FlushType.Finish);
+  if (rc == ZlibConstants.Z_STREAM_END) break;
+}
+
+compressor.EndDeflate();</code></pre>
+<h4 id="remarks-10" tabindex="-1"><a class="header-anchor" href="#remarks-10">Remarks</a></h4>
+<p>The codec will use the MAX window bits and the default level of compression.</p>
+<h3 id="initializedeflate-compressionlevel" tabindex="-1"><a class="header-anchor" href="#initializedeflate-compressionlevel"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeDeflate_MonoGame_Framework_Utilities_Deflate_CompressionLevel_"></a> InitializeDeflate(CompressionLevel)</a></h3>
+<p>Initialize the ZlibCodec for deflation operation, using the specified CompressionLevel.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeDeflate</span><span class="token punctuation">(</span><span class="token class-name">CompressionLevel</span> level<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-3" tabindex="-1"><a class="header-anchor" href="#parameters-3">Parameters</a></h4>
+<p><code>level</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a></p>
+<p>The compression level for the codec.</p>
+<h4 id="returns-5" tabindex="-1"><a class="header-anchor" href="#returns-5">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h4 id="remarks-11" tabindex="-1"><a class="header-anchor" href="#remarks-11">Remarks</a></h4>
+<p>The codec will use the maximum window bits (15) and the specified
+CompressionLevel.  It will emit a ZLIB stream as it compresses.</p>
+<h3 id="initializedeflate-compressionlevel-bool" tabindex="-1"><a class="header-anchor" href="#initializedeflate-compressionlevel-bool"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeDeflate_MonoGame_Framework_Utilities_Deflate_CompressionLevel_System_Boolean_"></a> InitializeDeflate(CompressionLevel, bool)</a></h3>
+<p>Initialize the ZlibCodec for deflation operation, using the specified CompressionLevel,
+and the explicit flag governing whether to emit an RFC1950 header byte pair.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeDeflate</span><span class="token punctuation">(</span><span class="token class-name">CompressionLevel</span> level<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> wantRfc1950Header<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-4" tabindex="-1"><a class="header-anchor" href="#parameters-4">Parameters</a></h4>
+<p><code>level</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a></p>
+<p>The compression level for the codec.</p>
+<p><code>wantRfc1950Header</code> <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
+<p>whether to emit an initial RFC1950 byte pair in the compressed stream.</p>
+<h4 id="returns-6" tabindex="-1"><a class="header-anchor" href="#returns-6">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h4 id="remarks-12" tabindex="-1"><a class="header-anchor" href="#remarks-12">Remarks</a></h4>
+<p>The codec will use the maximum window bits (15) and the specified CompressionLevel.
+If you want to generate a zlib stream, you should specify true for
+wantRfc1950Header. In this case, the library will emit a ZLIB
+header, as defined in <a href="http://www.ietf.org/rfc/rfc1950.txt">RFC
+1950</a>, in the compressed stream.</p>
+<h3 id="initializedeflate-compressionlevel-int" tabindex="-1"><a class="header-anchor" href="#initializedeflate-compressionlevel-int"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeDeflate_MonoGame_Framework_Utilities_Deflate_CompressionLevel_System_Int32_"></a> InitializeDeflate(CompressionLevel, int)</a></h3>
+<p>Initialize the ZlibCodec for deflation operation, using the specified CompressionLevel,
+and the specified number of window bits.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeDeflate</span><span class="token punctuation">(</span><span class="token class-name">CompressionLevel</span> level<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> bits<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-5" tabindex="-1"><a class="header-anchor" href="#parameters-5">Parameters</a></h4>
+<p><code>level</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a></p>
+<p>The compression level for the codec.</p>
+<p><code>bits</code> <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>the number of window bits to use.  If you don't know what this means, don't use this method.</p>
+<h4 id="returns-7" tabindex="-1"><a class="header-anchor" href="#returns-7">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h4 id="remarks-13" tabindex="-1"><a class="header-anchor" href="#remarks-13">Remarks</a></h4>
+<p>The codec will use the specified number of window bits and the specified CompressionLevel.</p>
+<h3 id="initializedeflate-compressionlevel-int-bool" tabindex="-1"><a class="header-anchor" href="#initializedeflate-compressionlevel-int-bool"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeDeflate_MonoGame_Framework_Utilities_Deflate_CompressionLevel_System_Int32_System_Boolean_"></a> InitializeDeflate(CompressionLevel, int, bool)</a></h3>
+<p>Initialize the ZlibCodec for deflation operation, using the specified
+CompressionLevel, the specified number of window bits, and the explicit flag
+governing whether to emit an RFC1950 header byte pair.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeDeflate</span><span class="token punctuation">(</span><span class="token class-name">CompressionLevel</span> level<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> bits<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> wantRfc1950Header<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-6" tabindex="-1"><a class="header-anchor" href="#parameters-6">Parameters</a></h4>
+<p><code>level</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a></p>
+<p>The compression level for the codec.</p>
+<p><code>bits</code> <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>the number of window bits to use.  If you don't know what this means, don't use this method.</p>
+<p><code>wantRfc1950Header</code> <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
+<p>whether to emit an initial RFC1950 byte pair in the compressed stream.</p>
+<h4 id="returns-8" tabindex="-1"><a class="header-anchor" href="#returns-8">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h3 id="initializeinflate" tabindex="-1"><a class="header-anchor" href="#initializeinflate"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeInflate"></a> InitializeInflate()</a></h3>
+<p>Initialize the inflation state.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeInflate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h4 id="returns-9" tabindex="-1"><a class="header-anchor" href="#returns-9">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if everything goes well.</p>
+<h4 id="remarks-14" tabindex="-1"><a class="header-anchor" href="#remarks-14">Remarks</a></h4>
+<p>It is not necessary to call this before using the ZlibCodec to inflate data;
+It is implicitly called when you call the constructor.</p>
+<h3 id="initializeinflate-bool" tabindex="-1"><a class="header-anchor" href="#initializeinflate-bool"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeInflate_System_Boolean_"></a> InitializeInflate(bool)</a></h3>
+<p>Initialize the inflation state with an explicit flag to
+govern the handling of RFC1950 header bytes.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeInflate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">bool</span></span> expectRfc1950Header<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-7" tabindex="-1"><a class="header-anchor" href="#parameters-7">Parameters</a></h4>
+<p><code>expectRfc1950Header</code> <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
+<p>whether to expect an RFC1950 header byte
+pair when reading the stream of data to be inflated.</p>
+<h4 id="returns-10" tabindex="-1"><a class="header-anchor" href="#returns-10">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if everything goes well.</p>
+<h4 id="remarks-15" tabindex="-1"><a class="header-anchor" href="#remarks-15">Remarks</a></h4>
+<p>By default, the ZLIB header defined in <a href="http://www.ietf.org/rfc/rfc1950.txt">RFC 1950</a> is expected.  If
+you want to read a zlib stream you should specify true for
+expectRfc1950Header.  If you have a deflate stream, you will want to specify
+false. It is only necessary to invoke this initializer explicitly if you
+want to specify false.</p>
+<h3 id="initializeinflate-int" tabindex="-1"><a class="header-anchor" href="#initializeinflate-int"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeInflate_System_Int32_"></a> InitializeInflate(int)</a></h3>
+<p>Initialize the ZlibCodec for inflation, with the specified number of window bits.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeInflate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> windowBits<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-8" tabindex="-1"><a class="header-anchor" href="#parameters-8">Parameters</a></h4>
+<p><code>windowBits</code> <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>The number of window bits to use. If you need to ask what that is,
+then you shouldn't be calling this initializer.</p>
+<h4 id="returns-11" tabindex="-1"><a class="header-anchor" href="#returns-11">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h3 id="initializeinflate-int-bool" tabindex="-1"><a class="header-anchor" href="#initializeinflate-int-bool"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_InitializeInflate_System_Int32_System_Boolean_"></a> InitializeInflate(int, bool)</a></h3>
+<p>Initialize the inflation state with an explicit flag to govern the handling of
+RFC1950 header bytes.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">InitializeInflate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> windowBits<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> expectRfc1950Header<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-9" tabindex="-1"><a class="header-anchor" href="#parameters-9">Parameters</a></h4>
+<p><code>windowBits</code> <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>The number of window bits to use. If you need to ask what that is,
+then you shouldn't be calling this initializer.</p>
+<p><code>expectRfc1950Header</code> <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
+<p>whether to expect an RFC1950 header byte pair when reading
+the stream of data to be inflated.</p>
+<h4 id="returns-12" tabindex="-1"><a class="header-anchor" href="#returns-12">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if everything goes well.</p>
+<h4 id="remarks-16" tabindex="-1"><a class="header-anchor" href="#remarks-16">Remarks</a></h4>
+<p>If you want to read a zlib stream you should specify true for
+expectRfc1950Header. In this case, the library will expect to find a ZLIB
+header, as defined in <a href="http://www.ietf.org/rfc/rfc1950.txt">RFC
+1950</a>, in the compressed stream.  If you will be reading a DEFLATE or
+GZIP stream, which does not have such a header, you will want to specify
+false.</p>
+<h3 id="resetdeflate" tabindex="-1"><a class="header-anchor" href="#resetdeflate"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_ResetDeflate"></a> ResetDeflate()</a></h3>
+<p>Reset a codec for another deflation session.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">ResetDeflate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h4 id="remarks-17" tabindex="-1"><a class="header-anchor" href="#remarks-17">Remarks</a></h4>
+<p>Call this to reset the deflation state.  For example if a thread is deflating
+non-consecutive blocks, you can call Reset() after the Deflate(Sync) of the first
+block and before the next Deflate(None) of the second block.</p>
+<h3 id="setdeflateparams-compressionlevel-compressionstrategy" tabindex="-1"><a class="header-anchor" href="#setdeflateparams-compressionlevel-compressionstrategy"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_SetDeflateParams_MonoGame_Framework_Utilities_Deflate_CompressionLevel_MonoGame_Framework_Utilities_Deflate_CompressionStrategy_"></a> SetDeflateParams(CompressionLevel, CompressionStrategy)</a></h3>
+<p>Set the CompressionStrategy and CompressionLevel for a deflation session.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">SetDeflateParams</span><span class="token punctuation">(</span><span class="token class-name">CompressionLevel</span> level<span class="token punctuation">,</span> <span class="token class-name">CompressionStrategy</span> strategy<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-10" tabindex="-1"><a class="header-anchor" href="#parameters-10">Parameters</a></h4>
+<p><code>level</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a></p>
+<p>the level of compression to use.</p>
+<p><code>strategy</code> <a href="/api/MonoGame.Framework.Utilities.Deflate.CompressionStrategy">CompressionStrategy</a></p>
+<p>the strategy to use for compression.</p>
+<h4 id="returns-13" tabindex="-1"><a class="header-anchor" href="#returns-13">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h3 id="setdictionary-byte" tabindex="-1"><a class="header-anchor" href="#setdictionary-byte"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_SetDictionary_System_Byte___"></a> SetDictionary(byte[])</a></h3>
+<p>Set the dictionary to be used for either Inflation or Deflation.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">SetDictionary</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> dictionary<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-11" tabindex="-1"><a class="header-anchor" href="#parameters-11">Parameters</a></h4>
+<p><code>dictionary</code> <a href="https://learn.microsoft.com/dotnet/api/system.byte" target="_blank" rel="noopener noreferrer">byte</a>[]</p>
+<p>The dictionary bytes to use.</p>
+<h4 id="returns-14" tabindex="-1"><a class="header-anchor" href="#returns-14">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if all goes well.</p>
+<h3 id="syncinflate" tabindex="-1"><a class="header-anchor" href="#syncinflate"><a id="MonoGame_Framework_Utilities_Deflate_ZlibCodec_SyncInflate"></a> SyncInflate()</a></h3>
+<p>I don't know what this does!</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">SyncInflate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h4 id="returns-15" tabindex="-1"><a class="header-anchor" href="#returns-15">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
+<p>Z_OK if everything goes well.</p>
+
+    </article>
+
+                    <aside class="col-3 d-none d-lg-block">
+                        <div class="affix">
+    <h5>In This Article</h5>
+<nav class="nav flex-column">
+                <ol>
+                    
+                    <li><a href="#remarks">Remarks</a>
+            		</li>
+
+                    <li><a href="#constructors">Constructors</a>
+            
+                <ol>
+                    
+                    <li><a href="#zlibcodec">ZlibCodec()</a>
+            		</li>
+
+                    <li><a href="#zlibcodec-compressionmode">ZlibCodec(CompressionMode)</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#fields">Fields</a>
+            
+                <ol>
+                    
+                    <li><a href="#availablebytesin">AvailableBytesIn</a>
+            		</li>
+
+                    <li><a href="#availablebytesout">AvailableBytesOut</a>
+            		</li>
+
+                    <li><a href="#compresslevel">CompressLevel</a>
+            		</li>
+
+                    <li><a href="#inputbuffer">InputBuffer</a>
+            		</li>
+
+                    <li><a href="#message">Message</a>
+            		</li>
+
+                    <li><a href="#nextin">NextIn</a>
+            		</li>
+
+                    <li><a href="#nextout">NextOut</a>
+            		</li>
+
+                    <li><a href="#outputbuffer">OutputBuffer</a>
+            		</li>
+
+                    <li><a href="#strategy">Strategy</a>
+            		</li>
+
+                    <li><a href="#totalbytesin">TotalBytesIn</a>
+            		</li>
+
+                    <li><a href="#totalbytesout">TotalBytesOut</a>
+            		</li>
+
+                    <li><a href="#windowbits">WindowBits</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#properties">Properties</a>
+            
+                <ol>
+                    
+                    <li><a href="#adler">Adler32</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#methods">Methods</a>
+            
+                <ol>
+                    
+                    <li><a href="#deflate-flushtype">Deflate(FlushType)</a>
+            		</li>
+
+                    <li><a href="#enddeflate">EndDeflate()</a>
+            		</li>
+
+                    <li><a href="#endinflate">EndInflate()</a>
+            		</li>
+
+                    <li><a href="#inflate-flushtype">Inflate(FlushType)</a>
+            		</li>
+
+                    <li><a href="#initializedeflate">InitializeDeflate()</a>
+            		</li>
+
+                    <li><a href="#initializedeflate-compressionlevel">InitializeDeflate(CompressionLevel)</a>
+            		</li>
+
+                    <li><a href="#initializedeflate-compressionlevel-bool">InitializeDeflate(CompressionLevel, bool)</a>
+            		</li>
+
+                    <li><a href="#initializedeflate-compressionlevel-int">InitializeDeflate(CompressionLevel, int)</a>
+            		</li>
+
+                    <li><a href="#initializedeflate-compressionlevel-int-bool">InitializeDeflate(CompressionLevel, int, bool)</a>
+            		</li>
+
+                    <li><a href="#initializeinflate">InitializeInflate()</a>
+            		</li>
+
+                    <li><a href="#initializeinflate-bool">InitializeInflate(bool)</a>
+            		</li>
+
+                    <li><a href="#initializeinflate-int">InitializeInflate(int)</a>
+            		</li>
+
+                    <li><a href="#initializeinflate-int-bool">InitializeInflate(int, bool)</a>
+            		</li>
+
+                    <li><a href="#resetdeflate">ResetDeflate()</a>
+            		</li>
+
+                    <li><a href="#setdeflateparams-compressionlevel-compressionstrategy">SetDeflateParams(CompressionLevel, CompressionStrategy)</a>
+            		</li>
+
+                    <li><a href="#setdictionary-byte">SetDictionary(byte[])</a>
+            		</li>
+
+                    <li><a href="#syncinflate">SyncInflate()</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+</div>
+
+                    </aside>
+                </div>
+            </article>
+        </div>
+    </div>
+
+        <section class="container-xxl">
+    <footer class="border-top my-5 pt-5">
+        <div class="row justify-content-between">
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>MonoGame</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/articles/" class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/api/" class="p-0">API Reference</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/showcase/" class="p-0">Showcase</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/about/" class="p-0">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Get Involved</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a
+                            href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md"
+                            class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                            Issues</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Public Relations</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/blog/" class="p-0">Blog</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/community/" class="p-0">Community</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/presskit/" class="p-0">Press Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h3 class="fw-bold"><a href="/about/#contact-us">Contact Us</a></h1>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+            <div>
+                Copyright © 2009-2023 MonoGame Foundation, Inc. <br/> Designed with
+                <span class="text-danger">❤</span>
+                by
+                <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+            </div>
+        </div>
+    </footer>
+</section>
+
+        <script type="text/javascript" src="/js/bundle.js"></script>
+        
+        <script type="text/javascript" src="/js/tocFilter.js"></script>
+    
+    </body>
+</html>
