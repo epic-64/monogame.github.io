@@ -389,11 +389,11 @@ If the font is installed on the system, just type the name of the font.</p>
 </ol>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FontName</span><span class="token punctuation">></span></span>Arial<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>FontName</span><span class="token punctuation">></span></span></code></pre>
 <h2 id="usage-example" tabindex="-1"><a class="header-anchor" href="#usage-example">Usage Example</a></h2>
-<p>Make a class variable of type <a href="/articles/content_pipeline/xref:Microsoft.Xna.Framework.Graphics.SpriteFont"><code>Spritefont</code></a></p>
+<p>Make a class variable of type <a href="/api/Microsoft.Xna.Framework.Graphics.SpriteFont"><code>Spritefont</code></a></p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token class-name">SpriteFont</span> font<span class="token punctuation">;</span></code></pre>
-<p>Load the font with <a href="/articles/content_pipeline/xref:Microsoft.Xna.Framework.Content.ContentManager"><code>ContentManager.Load</code></a></p>
+<p>Load the font with <a href="/api/Microsoft.Xna.Framework.Content.ContentManager"><code>ContentManager.Load</code></a></p>
 <pre class="language-csharp"><code class="language-csharp">font <span class="token operator">=</span> myGame<span class="token punctuation">.</span>Content<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Load</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>SpriteFont<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token string">"Fonts/myFont"</span><span class="token punctuation">)</span></code></pre>
-<p>Draw text with <a href="/articles/content_pipeline/xref:Microsoft.Xna.Framework.Graphics.SpriteBatch"><code>SpriteBatch.Draw</code></a></p>
+<p>Draw text with <a href="/api/Microsoft.Xna.Framework.Graphics.SpriteBatch"><code>SpriteBatch.Draw</code></a></p>
 <pre class="language-csharp"><code class="language-csharp">spriteBatch<span class="token punctuation">.</span><span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Finds the center of the string in coordinates inside the text rectangle</span>
 <span class="token class-name">Vector2</span> textMiddlePoint <span class="token operator">=</span> font<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>

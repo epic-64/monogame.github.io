@@ -389,11 +389,11 @@ The way MonoGame handles shaders imposes some restrictions and causes some cavea
 <h2 id="half-pixel-offset" tabindex="-1"><a class="header-anchor" href="#half-pixel-offset">Half pixel offset</a></h2>
 <p>XNA uses the DirectX 9 graphics API. MonoGame uses the newer Direct X 11 API for DirectX platforms.</p>
 <p>DirectX 9 interprets UV coordinates differently from other graphics API's. This is typically referred to as the half-pixel offset.</p>
-<p>MonoGame supports replicating XNA's behavior (currently only on OpenGL platforms) by setting the <code>PreferHalfPixelOffset</code> flag in <a href="/articles/xref:Microsoft.Xna.Framework.GraphicsDeviceManager"><code>GraphicsDeviceManager</code></a> to <code>true</code>. This flag is set to <code>false</code> by default to encourage users to use the modern style of pixel addressing.</p>
+<p>MonoGame supports replicating XNA's behavior (currently only on OpenGL platforms) by setting the <code>PreferHalfPixelOffset</code> flag in <a href="/api/Microsoft.Xna.Framework.GraphicsDeviceManager"><code>GraphicsDeviceManager</code></a> to <code>true</code>. This flag is set to <code>false</code> by default to encourage users to use the modern style of pixel addressing.</p>
 <p>DirectX platforms will ignore setting the <code>PreferHalfPixelOffset</code> flag and will
 always render with a half pixel offset compared to XNA. This is usually not noticeable.</p>
-<p>This value is passed to <code>UseHalfPixelOffset</code> in <a href="/articles/xref:Microsoft.Xna.Framework.Graphics.GraphicsDevice"><code>GraphicsDevice</code></a>. If <code>UseHalfPixelOffset</code> is <code>true</code>, you have to add half-pixel offset to a Projection matrix.</p>
-<p><a href="/articles/xref:Microsoft.Xna.Framework.Graphics.SpriteBatch"><code>SpriteBatch</code></a> rendering is not affected by the flag.</p>
+<p>This value is passed to <code>UseHalfPixelOffset</code> in <a href="/api/Microsoft.Xna.Framework.Graphics.GraphicsDevice"><code>GraphicsDevice</code></a>. If <code>UseHalfPixelOffset</code> is <code>true</code>, you have to add half-pixel offset to a Projection matrix.</p>
+<p><a href="/api/Microsoft.Xna.Framework.Graphics.SpriteBatch"><code>SpriteBatch</code></a> rendering is not affected by the flag.</p>
 <p>Regardless of what value the flag has, <code>SpriteBatch</code> will render things exactly the same as in XNA.</p>
 <p>If you migrated your game from XNA and some things seem blurred out or very slightly offset, you may want to try to enable the <code>PreferHalfPixelOffset</code> flag.</p>
 

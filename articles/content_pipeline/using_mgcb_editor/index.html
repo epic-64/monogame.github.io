@@ -371,7 +371,7 @@
                     
     <article class="col-md-9 col-xxl-8 article-content-body">
         <h1 id="using-mgcb-editor" tabindex="-1"><a class="header-anchor" href="#using-mgcb-editor">Using MGCB Editor</a></h1>
-<p>The <a href="/articles/content_pipeline/~/articles/tools/mgcb_editor/">MGCB Editor</a> is used to organize and build content for use with MonoGame. It is accessed by double-clicking a &quot;<strong>.mgcb</strong>&quot; file from within the Visual Studio solution explorer (providing that you installed <a href="/articles/content_pipeline/Documentation/articles/getting_started/1_setting_up_your_development_environment_windows/">MonoGame's Visual Studio extension</a>).</p>
+<p>The <a href="/articles/tools/mgcb_editor/">MGCB Editor</a> is used to organize and build content for use with MonoGame. It is accessed by double-clicking a &quot;<strong>.mgcb</strong>&quot; file from within the Visual Studio solution explorer (providing that you installed <a href="/articles/getting_started/1_setting_up_your_development_environment_windows/">MonoGame's Visual Studio extension</a>).</p>
 <p>Alternatively, you can build it <a href="https://github.com/MonoGame/MonoGame/tree/develop/Tools/MonoGame.Content.Builder.Editor" target="_blank" rel="noopener noreferrer">directly from source</a> if needed.</p>
 <h2 id="create-a-project" tabindex="-1"><a class="header-anchor" href="#create-a-project">Create A Project</a></h2>
 <p>To start a new project just select “New...” from the “File” menu.</p>
@@ -445,7 +445,7 @@
 <h3 id="audio" tabindex="-1"><a class="header-anchor" href="#audio">Audio</a></h3>
 <p><img src="/articles/content_pipeline/images/mgcb_audio_properties.png" alt="Image Properties"></p>
 <p>MonoGame supports several audio formats to cope with a wide variety of audio needs, from Wav files for effects to MP3's for songs/background music. The type of audio you use will depend on the audio needs for your project.</p>
-<p>Audio can be configured to use either the <strong>Sound Effect</strong> processor which imports audio as a <a href="/articles/content_pipeline/xref:Microsoft.Xna.Framework.Audio.SoundEffect">SoundEffect</a> which is generally used for short and quick audio sounds. Alternatively, by selecting the <strong>Song</strong> processor, the audio will be imported as a <strong>Song</strong> which is used for long-running audio using the Media Player class.</p>
+<p>Audio can be configured to use either the <strong>Sound Effect</strong> processor which imports audio as a <a href="/api/Microsoft.Xna.Framework.Audio.SoundEffect">SoundEffect</a> which is generally used for short and quick audio sounds. Alternatively, by selecting the <strong>Song</strong> processor, the audio will be imported as a <strong>Song</strong> which is used for long-running audio using the Media Player class.</p>
 <table class="table table-bordered table-condensed"><thead>
 <tr>
 <th>Property</th>
@@ -597,7 +597,7 @@
 <li><strong>Clean</strong> - Cleaning the project will empty the output and intermediate directories.</li>
 </ul>
 <h2 id="linking-content-to-your-game" tabindex="-1"><a class="header-anchor" href="#linking-content-to-your-game">Linking Content To Your Game</a></h2>
-<p>Once you have built your content, you have a few different ways to add it to your game project. They all have the same goal, to get the built XNB's in your project output folder so a <a href="/articles/content_pipeline/xref:Microsoft.Xna.Framework.Content.ContentManager"><code>ContentManager</code></a> can easily find and load them.</p>
+<p>Once you have built your content, you have a few different ways to add it to your game project. They all have the same goal, to get the built XNB's in your project output folder so a <a href="/api/Microsoft.Xna.Framework.Content.ContentManager"><code>ContentManager</code></a> can easily find and load them.</p>
 <h3 id="monogamecontentreference" tabindex="-1"><a class="header-anchor" href="#monogamecontentreference">MonoGameContentReference</a></h3>
 <p>The simplest method is to set up your game project from one of the templates that come with the SDK. When you create a new project, it will include a Content.mgcb file with its Build Action set to <strong>MonoGameContentReference</strong> and a reference to <code>MonoGame.Content.Builder.Task</code> which processes <em>MonoGameContentReference</em> items.</p>
 <p><img src="/articles/content_pipeline/images/mgcb_content_reference.png" alt="MonoGame Content Reference"></p>

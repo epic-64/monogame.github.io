@@ -399,8 +399,8 @@
 <h2 id="custom-effects-1" tabindex="-1"><a class="header-anchor" href="#custom-effects-1">Custom Effects</a></h2>
 <p>To use a custom effect with MonoGame you must do one of the following:</p>
 <ul>
-<li>Run the effect file through the <a href="/articles/content_pipeline/~/articles/tools/mgcb/">MonoGame Effect content processor</a> for loading via the <a href="/articles/content_pipeline/xref:Microsoft.Xna.Framework.Content.ContentManager"><code>ContentManager</code></a> (Recommended).</li>
-<li>Process your effect file with the <a href="/articles/content_pipeline/~/articles/tools/mgfxc/">MGFXC tool</a> and load them yourself at runtime.</li>
+<li>Run the effect file through the <a href="/articles/tools/mgcb/">MonoGame Effect content processor</a> for loading via the <a href="/api/Microsoft.Xna.Framework.Content.ContentManager"><code>ContentManager</code></a> (Recommended).</li>
+<li>Process your effect file with the <a href="/articles/tools/mgfxc/">MGFXC tool</a> and load them yourself at runtime.</li>
 </ul>
 <h2 id="effect-writing-tips" tabindex="-1"><a class="header-anchor" href="#effect-writing-tips">Effect Writing Tips</a></h2>
 <p>These are some tips for writing or converting effects for use with MonoGame.</p>
@@ -478,7 +478,7 @@
         <span class="token class-name">PixelShader</span> <span class="token operator">=</span> <span class="token keyword">compile</span> PS_SHADERMODEL <span class="token function">MainPS</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<p>Custom symbols can be defined from the <a href="/articles/content_pipeline/~/articles/tools/mgcb_editor/">MGCB Editor</a> or via <a href="/articles/content_pipeline/~/articles/tools/mgfxc/">MGFXC</a>.</p>
+<p>Custom symbols can be defined from the <a href="/articles/tools/mgcb_editor/">MGCB Editor</a> or via <a href="/articles/tools/mgfxc/">MGFXC</a>.</p>
 <ul>
 <li>Make sure the pixel shaders inputs <strong>exactly match</strong> the vertex shader outputs so the parameters are passed in the correct registers. The parameters need to have the same size and order. Omitting parameters might not break compilation, but can cause unexpected results.</li>
 <li>Note that on GL platforms default values on Effect parameters do not work.  Either set the parameter from code or use a real constant like a #define.</li>
