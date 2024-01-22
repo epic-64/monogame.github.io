@@ -376,7 +376,12 @@
 <h2 id="install-net-sdk" tabindex="-1"><a class="header-anchor" href="#install-net-sdk">Install .NET 6 SDK</a></h2>
 <ul>
 <li>.NET SDK at: <a href="https://dotnet.microsoft.com/en-us/download" target="_blank" rel="noopener noreferrer">https://dotnet.microsoft.com/en-us/download</a></li>
+<li>If you are intending to target mobile platforms, make sure that you have the corresponding workload installed</li>
 </ul>
+<pre class="language-sh"><code class="language-sh">dotnet workload <span class="token function">install</span> ios
+dotnet workload <span class="token function">install</span> android</code></pre>
+<h2 id="macos-considerations" tabindex="-1"><a class="header-anchor" href="#macos-considerations">macOS considerations</a></h2>
+<p>For the time being, MonoGame requires that you install the x64 version of the .NET SDK even if you are running on an Apple Silicon mac. It is also required that <a href="https://support.apple.com/en-us/HT211861" target="_blank" rel="noopener noreferrer">Rosetta</a> is enabled.</p>
 <h2 id="optional-install-visual-studio-code" tabindex="-1"><a class="header-anchor" href="#optional-install-visual-studio-code">[Optional] Install Visual Studio Code</a></h2>
 <p>You can install Visual Studio Code at: <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/Download</a></p>
 <p>In order to code and build C# projects, you will also need to install a Visual Studio Code C# extension. You can do this with the following commands:</p>
@@ -404,6 +409,9 @@ code --install-extension ms-dotnettools.dotnet-maui</code></pre>
                 <ol>
                     
                     <li><a href="#install-net-sdk">Install .NET 6 SDK</a>
+            		</li>
+
+                    <li><a href="#macos-considerations">macOS considerations</a>
             		</li>
 
                     <li><a href="#optional-install-visual-studio-code">[Optional] Install Visual Studio Code</a>
