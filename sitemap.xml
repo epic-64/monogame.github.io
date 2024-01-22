@@ -217,11 +217,6 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Audio.AudioChannels/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
@@ -242,17 +237,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.SoundBank/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.WaveBank/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.SoundEffectInstance/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Audio/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -262,7 +247,27 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Audio.SoundEffectInstance/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Audio.WaveBank/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Audio.Cue/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/Microsoft.Xna.Framework.Audio.DynamicSoundEffectInstance/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Audio.SoundBank/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -277,21 +282,6 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.Cue/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.ChildCollection-2/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.NoAudioHardwareException/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Audio.InstancePlayLimitException/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
@@ -302,12 +292,22 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.AudioListener/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Audio.NoAudioHardwareException/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.ContentIdentity/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Audio.AudioEmitter/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Audio.Microphone/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Audio.AudioListener/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -467,11 +467,6 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.AudioEmitter/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.ContentStats/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
@@ -482,17 +477,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.IContentProcessor/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -502,7 +487,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioFileType/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -517,6 +507,11 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioFileType/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.ConversionFormat/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
@@ -527,47 +522,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationChannelDictionary/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Audio/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContentDictionary/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationKeyframe/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcBitmapContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcExplicitBitmapContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcInterpolatedBitmapContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BasicMaterialContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -587,12 +542,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BitmapContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneContent/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.ContentBuildLogger/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -602,17 +552,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeightCollection/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegionTypeConverter/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.DualTextureMaterialContent/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationChannelDictionary/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -627,12 +567,17 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaterialContent/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt5BitmapContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt5BitmapContent/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContentDictionary/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -647,6 +592,11 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationKeyframe/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.EffectMaterialContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
@@ -657,7 +607,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Audio.Microphone/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcBitmapContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -667,7 +617,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshHelper/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcExplicitBitmapContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcInterpolatedBitmapContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -677,17 +632,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChain/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BasicMaterialContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GeometryContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChainCollection/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -702,17 +652,17 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.IndexCollection/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContentCollection/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BitmapContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -722,12 +672,57 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PixelBitmapContent-1/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.LocalizedFontDescription/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.LocalizedFontDescription/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeightCollection/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaterialContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegionTypeConverter/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.DualTextureMaterialContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshHelper/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChain/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChainCollection/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContentCollection/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PixelBitmapContent-1/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -807,67 +802,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel-1/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelCollection/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelNames/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.ABCFloat/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GrowRule/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaxRectsBin/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeight/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaxRectsHeuristic/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.CompiledEffectContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegion/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel-1/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -882,27 +822,22 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.CompiledEffectContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshPartContentCollection/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelCollection/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.FontDescriptionProcessor/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongProcessor/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -917,57 +852,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.PassThroughProcessor/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectProcessor/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.MaterialProcessorDefaultEffect/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessorOutputFormat/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexBufferContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexDeclarationContent/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentCompiler/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelNames/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -992,16 +877,6 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriter/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessorDebugMode/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshContent/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
@@ -1017,6 +892,121 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshPartContentCollection/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.ContentIdentity/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.ABCFloat/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeight/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.PassThroughProcessor/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongProcessor/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegion/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectProcessor/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessorOutputFormat/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GrowRule/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentCompiler/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaxRectsHeuristic/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexBufferContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexDeclarationContent/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessorDebugMode/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VideoProcessor/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
@@ -1027,12 +1017,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializerAttribute/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriter/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Keyboard/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.MaterialProcessorDefaultEffect/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1042,32 +1032,22 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Mouse/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector-1/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateReader/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateSerializer/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short2/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateWriter/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer.ChildCallback/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1077,7 +1057,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.MouseCursor/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short4/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.GamePad/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1097,7 +1082,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Design.Vector2TypeConverter/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Joystick/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1107,17 +1092,77 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.JoystickState/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.Keyboard/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializerAttribute/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateReader/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateSerializer/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateWriter/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.Mouse/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer.ChildCallback/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.KeyboardState/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Design.Vector2TypeConverter/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.MouseCursor/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/Microsoft.Xna.Framework.Design.Vector3TypeConverter/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.GamePadButtons/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.ButtonState/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.GamePadTriggers/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.MouseState/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1132,22 +1177,17 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.GamePadButtons/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Alpha8/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.JoystickCapabilities/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.ContentBuildLogger/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.GamePadCapabilities/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Buttons/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1167,7 +1207,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.JoystickHat/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgra4444/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1177,17 +1217,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.GamePadDPad/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgra4444/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.JoystickState/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.GamePadCapabilities/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1197,32 +1227,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.GamePadState/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Byte4/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.KeyboardState/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.GamePadThumbSticks/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.MouseState/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchPanel/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.GamePadDPad/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1232,22 +1242,12 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.ButtonState/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.HalfVector2/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelState/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.GestureSample/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.GamePadState/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1257,12 +1257,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Buttons/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchLocationState/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.GamePadThumbSticks/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1272,12 +1267,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.GamePadTriggers/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1287,17 +1277,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection.Enumerator/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.Album/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.AlbumCollection/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.JoystickCapabilities/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1307,57 +1287,22 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchLocation/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelCapabilities/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.Artist/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedShort4/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Touch.GestureType/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.Genre/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.MediaLibrary/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.MediaQueue/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.MediaSource/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.Playlist/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
 		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rg32/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.JoystickHat/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rgba1010102/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1372,27 +1317,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.MediaPlayer/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rgba1010102/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineManager/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/MonoGame.Framework.Utilities.Deflate.FlushType/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Media.PlaylistCollection/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Content.Pipeline.ChildCollection-2/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1402,12 +1327,7 @@
 	</url>
 	
 	<url>
-		<loc>/api/MonoGame.Framework.Utilities.Deflate/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/MonoGame.OpenGL.IWindowInfo/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Media.Playlist/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1417,7 +1337,32 @@
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short2/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.GestureSample/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchPanel/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelState/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Media.PlaylistCollection/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection.Enumerator/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1427,32 +1372,27 @@
 	</url>
 	
 	<url>
-		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineProcessorContext/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchLocation/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.TypeExtensions/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelCapabilities/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector-1/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.GestureType/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch.TouchLocationState/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short4/</loc>
-		<lastmod>2024-01-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>/api/Microsoft.Xna.Framework.Graphics.PackedVector/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Input.Touch/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1487,27 +1427,47 @@
 	</url>
 	
 	<url>
+		<loc>/api/Microsoft.Xna.Framework.Media.Album/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.PathHelper/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.GamePad/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Media.AlbumCollection/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/Microsoft.Xna.Framework.Input.Joystick/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Media.Artist/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.XmlColor/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Media.Genre/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder/</loc>
+		<loc>/api/Microsoft.Xna.Framework.Media.MediaLibrary/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Media.MediaPlayer/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Media.MediaQueue/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/Microsoft.Xna.Framework.Media.MediaSource/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1527,12 +1487,37 @@
 	</url>
 	
 	<url>
-		<loc>/api/MonoGame.Framework.Utilities.Deflate.CRC32/</loc>
+		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineImporterContext/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineImporterContext/</loc>
+		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineManager/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineProcessorContext/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.TypeExtensions/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder.XmlColor/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.Framework.Content.Pipeline.Builder/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.Framework.Utilities.Deflate.CRC32/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 	
@@ -1583,6 +1568,21 @@
 	
 	<url>
 		<loc>/api/MonoGame.Framework.Utilities.Deflate.CompressionStrategy/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.Framework.Utilities.Deflate.FlushType/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.Framework.Utilities.Deflate/</loc>
+		<lastmod>2024-01-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>/api/MonoGame.OpenGL.IWindowInfo/</loc>
 		<lastmod>2024-01-22</lastmod>
 	</url>
 </urlset>
