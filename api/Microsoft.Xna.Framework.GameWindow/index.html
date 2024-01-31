@@ -1039,6 +1039,9 @@
                     <ul class="nav flex-column ps-3">
                         <li class="nav-item w-100">
         <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Byte4TypeConverter">Byte4TypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Design.Vector2TypeConverter">Vector2TypeConverter</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
@@ -1540,6 +1543,9 @@
         href="/api/Microsoft.Xna.Framework.Input.Keyboard">Keyboard</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.KeyboardInput">KeyboardInput</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Input.KeyboardState">KeyboardState</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
@@ -1547,6 +1553,9 @@
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Input.KeyState">KeyState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.MessageBox">MessageBox</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Input.Mouse">Mouse</a>
@@ -1657,6 +1666,12 @@
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Media.SongCollection">SongCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Video">Video</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.VideoPlayer">VideoPlayer</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Media.VideoSoundtrackType">VideoSoundtrackType</a>
@@ -1877,9 +1892,9 @@ Assembly: MonoGame.Framework.dll</p>
 <p>For WindowsDX this is the Win32 window handle (HWND).
 For DesktopGL this is the SDL window handle.
 For UWP this is a handle to an IUnknown interface for the CoreWindow.</p>
-<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token return-type class-name">IntPtr</span> Handle <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token return-type class-name">nint</span> Handle <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
 <h4 id="property-value-4" tabindex="-1"><a class="header-anchor" href="#property-value-4">Property Value</a></h4>
-<p><a href="https://learn.microsoft.com/dotnet/api/system.intptr" target="_blank" rel="noopener noreferrer">IntPtr</a></p>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.intptr" target="_blank" rel="noopener noreferrer">nint</a></p>
 <h3 id="isborderless" tabindex="-1"><a class="header-anchor" href="#isborderless"><a id="Microsoft_Xna_Framework_GameWindow_IsBorderless"></a> IsBorderless</a></h3>
 <p>Determines whether the border of the window is visible. Currently only supported on the WindowsDX and DesktopGL platforms.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> IsBorderless <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>

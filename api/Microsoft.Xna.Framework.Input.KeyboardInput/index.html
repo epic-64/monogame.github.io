@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="title" content="MonoGame | MonoGame"/>
+<meta name="description" content="One framework for creating powerful cross-platform games"/>
+
+
+<title>MonoGame | MonoGame</title>
+
+
+<meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Input.KeyboardInput/"/>
+<meta name="og:type" content="website"/>
+<meta name="og:title" content="MonoGame | MonoGame"/>
+<meta name="og:description" content="One framework for creating powerful cross-platform games"/>
+<meta name="og:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="https://monogame.net"/>
+<meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Input.KeyboardInput/"/>
+<meta name="twitter:title" content="MonoGame | MonoGame"/>
+<meta name="twitter:description" content="One framework for creating powerful cross-platform games"/>
+<meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<link rel="icon" href="https://monogame.net/favicon.png"/>
+
+
+<link rel="alternate" type="application/atom+xml" title="MonoGame Blog"  href="/blog/feed.xml" />
+
+
+<link rel="stylesheet" href="/bundle.css"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38431038-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-38431038-1');
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>
+
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body shadow sticky-md-top" aria-label="Navigation Bar">
+    <div class="container-xl">
+        <a class="navbar-brand" href="/" title="Return to Home">
+            <img class="mg-logo svg" style="height: 36px; display: inline-block;" alt="MonoGame Logo">
+        </a>
+        <button
+            class="btn btn-lg d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#topNavBar"
+            aria-controls="topNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/documentation/">
+                            Documentation
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/community/">
+                            Community
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/showcase/">
+                            Showcase
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/blog/">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/bounties/">
+                            Bounties
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about/">
+                            About
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/donate/">
+                            Donate
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="dropdown bd-mode-toggle">
+    <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)">
+        <i id="active-theme-icon" class="bi bi-circle-half"></i>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <i class="bi bi-sun-fill"></i>&nbsp;Light
+            </button>
+        </li>
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <i class="bi bi-moon-stars-fill"></i>&nbsp;Dark
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true">
+                <i class="bi bi-circle-half"></i>&nbsp;Auto
+            </button>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+        
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+                
+                
+                    <aside class="col-lg-3 col-xxl-2 p-3" style="z-index: 999;">
+                            
+    <nav class="navbar navbar-vertical navbar-expand-lg toc" aria-label="Offcanvas Table of Contents">
+                <button class="btn btn-lg border-0 d-lg-none" 
+                        type="button" 
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#tableOfContents"
+                        aria-controls="tableOfContents"
+                        aria-expanded="false"
+                        aria-label="Toggle Table of Contents">
+                        <i class="bi bi-list"></i>
+                </button>
+                <div id="tableOfContents" class="offcanvas offcanvas-start" aria-labelledby="tableOfContentsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="tableOfContentsLabel">Table of Contents</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-block">
+                        <form class="filter">
+                            <i class="bi bi-filter"></i>
+                            <input id="toc-filter" class="form-control" type="search" autocomplete="off" value="" placeholder="Filter by title" aria-label="Filter by title">
+                        </form>
+                        <ul class="nav flex-column nav-verticle w-100">
+                            <li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework"
+                   href="/api/Microsoft.Xna.Framework">
+                   Microsoft<wbr />.Xna<wbr />.Framework
+                </a>
+                <div id="toc-microsoft-xna-framework"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.BoundingBox">BoundingBox</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.BoundingFrustum">BoundingFrustum</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.BoundingSphere">BoundingSphere</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Color">Color</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.ContainmentType">ContainmentType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Curve">Curve</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.CurveContinuity">CurveContinuity</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.CurveKey">CurveKey</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.CurveKeyCollection">CurveKeyCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.CurveLoopType">CurveLoopType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.CurveTangent">CurveTangent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.DisplayOrientation">DisplayOrientation</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.DrawableGameComponent">DrawableGameComponent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.FileDropEventArgs">FileDropEventArgs</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.FrameworkDispatcher">FrameworkDispatcher</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Game">Game</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GameComponent">GameComponent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GameComponentCollection">GameComponentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GameComponentCollectionEventArgs">GameComponentCollectionEventArgs</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GameRunBehavior">GameRunBehavior</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GameServiceContainer">GameServiceContainer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GameTime">GameTime</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GameWindow">GameWindow</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GraphicsDeviceInformation">GraphicsDeviceInformation</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.GraphicsDeviceManager">GraphicsDeviceManager</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.ICurveEvaluator-1">ICurveEvaluator<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.IDrawable">IDrawable</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.IGameComponent">IGameComponent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.IGraphicsDeviceManager">IGraphicsDeviceManager</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.InputKeyEventArgs">InputKeyEventArgs</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.IPlatformBackButton">IPlatformBackButton</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.IUpdateable">IUpdateable</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.LaunchParameters">LaunchParameters</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.MathHelper">MathHelper</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Matrix">Matrix</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Plane">Plane</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.PlaneIntersectionType">PlaneIntersectionType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.PlayerIndex">PlayerIndex</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Point">Point</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.PreparingDeviceSettingsEventArgs">PreparingDeviceSettingsEventArgs</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Quaternion">Quaternion</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Ray">Ray</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Rectangle">Rectangle</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.TextInputEventArgs">TextInputEventArgs</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.TitleContainer">TitleContainer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Vector3">Vector3</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Vector4">Vector4</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-audio"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-audio"
+                   href="/api/Microsoft.Xna.Framework.Audio">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Audio
+                </a>
+                <div id="toc-microsoft-xna-framework-audio"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-audio">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioCategory">AudioCategory</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioChannels">AudioChannels</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioEmitter">AudioEmitter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioEngine">AudioEngine</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioListener">AudioListener</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.AudioStopOptions">AudioStopOptions</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.Cue">Cue</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.DynamicSoundEffectInstance">DynamicSoundEffectInstance</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.InstancePlayLimitException">InstancePlayLimitException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.Microphone">Microphone</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.MicrophoneState">MicrophoneState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.NoAudioHardwareException">NoAudioHardwareException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.NoMicrophoneConnectedException">NoMicrophoneConnectedException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundBank">SoundBank</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundEffect">SoundEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundEffectInstance">SoundEffectInstance</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.SoundState">SoundState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Audio.WaveBank">WaveBank</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content"
+                   href="/api/Microsoft.Xna.Framework.Content">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content
+                </a>
+                <div id="toc-microsoft-xna-framework-content"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentLoadException">ContentLoadException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentManager">ContentManager</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentReader">ContentReader</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentReaderExtensions">ContentReaderExtensions</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentSerializerAttribute">ContentSerializerAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentSerializerCollectionItemNameAttribute">ContentSerializerCollectionItemNameAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentSerializerIgnoreAttribute">ContentSerializerIgnoreAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentSerializerRuntimeTypeAttribute">ContentSerializerRuntimeTypeAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentSerializerTypeVersionAttribute">ContentSerializerTypeVersionAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentTypeReader">ContentTypeReader</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentTypeReader-1">ContentTypeReader<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ContentTypeReaderManager">ContentTypeReaderManager</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.ResourceContentManager">ResourceContentManager</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ChildCollection-2">ChildCollection<TParent, TChild></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentBuildLogger">ContentBuildLogger</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentIdentity">ContentIdentity</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentImporter-1">ContentImporter<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentImporterAttribute">ContentImporterAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext">ContentImporterContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentItem">ContentItem</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentProcessor-2">ContentProcessor<TInput, TOutput></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentProcessorAttribute">ContentProcessorAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentProcessorContext">ContentProcessorContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentStats">ContentStats</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection">ContentStatsCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.EffectImporter">EffectImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ExternalReference-1">ExternalReference<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.FbxImporter">FbxImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.FontDescriptionImporter">FontDescriptionImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.H264Importer">H264Importer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.IContentImporter">IContentImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.IContentProcessor">IContentProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.InvalidContentException">InvalidContentException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.LoadedTypeCollection-1">LoadedTypeCollection<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Mp3Importer">Mp3Importer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary-1">NamedValueDictionary<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.OggImporter">OggImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary">OpaqueDataDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.OpenAssetImporter">OpenAssetImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.PipelineComponentScanner">PipelineComponentScanner</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.PipelineException">PipelineException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ProcessorParameter">ProcessorParameter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.ProcessorParameterCollection">ProcessorParameterCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.TargetPlatform">TargetPlatform</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.TextureImporter">TextureImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.VideoContent">VideoContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.WavImporter">WavImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.WmaImporter">WmaImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.WmvImporter">WmvImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.XImporter">XImporter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.XmlImporter">XmlImporter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-audio"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-audio"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Audio
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-audio"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-audio">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioContent">AudioContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioFileType">AudioFileType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioFormat">AudioFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.AudioProfile">AudioProfile</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.ConversionFormat">ConversionFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Audio.ConversionQuality">ConversionQuality</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-builder-convertors"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-builder-convertors"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Builder.Convertors">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Builder<wbr />.Convertors
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-builder-convertors"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-builder-convertors">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Builder.Convertors.StringToColorConverter">StringToColorConverter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-graphics"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-graphics"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Graphics
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-graphics"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-graphics">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.ABCFloat">ABCFloat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AlphaTestMaterialContent">AlphaTestMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationChannel">AnimationChannel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationChannelDictionary">AnimationChannelDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContent">AnimationContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContentDictionary">AnimationContentDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationKeyframe">AnimationKeyframe</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcBitmapContent">AtcBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcExplicitBitmapContent">AtcExplicitBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.AtcInterpolatedBitmapContent">AtcInterpolatedBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BasicMaterialContent">BasicMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BitmapContent">BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneContent">BoneContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeight">BoneWeight</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.BoneWeightCollection">BoneWeightCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegion">CharacterRegion</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.CharacterRegionTypeConverter">CharacterRegionTypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.DualTextureMaterialContent">DualTextureMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt1BitmapContent">Dxt1BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt3BitmapContent">Dxt3BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Dxt5BitmapContent">Dxt5BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.DxtBitmapContent">DxtBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.EffectContent">EffectContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.EffectMaterialContent">EffectMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.EnvironmentMapMaterialContent">EnvironmentMapMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Etc1BitmapContent">Etc1BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription">FontDescription</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle">FontDescriptionStyle</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GeometryContent">GeometryContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GeometryContentCollection">GeometryContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GraphicsUtil">GraphicsUtil</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.GrowRule">GrowRule</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.IndexCollection">IndexCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.IndirectPositionCollection">IndirectPositionCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.LocalizedFontDescription">LocalizedFontDescription</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaterialContent">MaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaxRectsBin">MaxRectsBin</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MaxRectsHeuristic">MaxRectsHeuristic</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshBuilder">MeshBuilder</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshContent">MeshContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MeshHelper">MeshHelper</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChain">MipmapChain</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.MipmapChainCollection">MipmapChainCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContent">NodeContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.NodeContentCollection">NodeContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PixelBitmapContent-1">PixelBitmapContent<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PositionCollection">PositionCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcBitmapContent">PvrtcBitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgb2BitmapContent">PvrtcRgb2BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgb4BitmapContent">PvrtcRgb4BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgba2BitmapContent">PvrtcRgba2BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.PvrtcRgba4BitmapContent">PvrtcRgba4BitmapContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.SkinnedMaterialContent">SkinnedMaterialContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.SpriteFontContent">SpriteFontContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Texture2DContent">Texture2DContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.Texture3DContent">Texture3DContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureContent">TextureContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureCubeContent">TextureCubeContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureProfile">TextureProfile</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureReferenceDictionary">TextureReferenceDictionary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel">VertexChannel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel-1">VertexChannel<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelCollection">VertexChannelCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelNames">VertexChannelNames</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent">VertexContent</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-processors"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-processors"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Processors
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-processors"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-processors">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.CompiledEffectContent">CompiledEffectContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor">EffectProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessorDebugMode">EffectProcessorDebugMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.FontDescriptionProcessor">FontDescriptionProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.FontTextureProcessor">FontTextureProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.LocalizedFontProcessor">LocalizedFontProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.MaterialProcessor">MaterialProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.MaterialProcessorDefaultEffect">MaterialProcessorDefaultEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelBoneContent">ModelBoneContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelBoneContentCollection">ModelBoneContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelContent">ModelContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshContent">ModelMeshContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshContentCollection">ModelMeshContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshPartContent">ModelMeshPartContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelMeshPartContentCollection">ModelMeshPartContentCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor">ModelProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.PassThroughProcessor">PassThroughProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongContent">SongContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SongProcessor">SongProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectContent">SoundEffectContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.SoundEffectProcessor">SoundEffectProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor">TextureProcessor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessorOutputFormat">TextureProcessorOutputFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexBufferContent">VertexBufferContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexDeclarationContent">VertexDeclarationContent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Processors.VideoProcessor">VideoProcessor</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-serialization-compiler"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-serialization-compiler"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Serialization<wbr />.Compiler
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-serialization-compiler"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-serialization-compiler">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentCompiler">ContentCompiler</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriter">ContentTypeWriter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriter-1">ContentTypeWriter<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentTypeWriterAttribute">ContentTypeWriterAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.ContentWriter">ContentWriter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler.SpriteFontContentWriter">SpriteFontContentWriter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-content-pipeline-serialization-intermediate"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-content-pipeline-serialization-intermediate"
+                   href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Serialization<wbr />.Intermediate
+                </a>
+                <div id="toc-microsoft-xna-framework-content-pipeline-serialization-intermediate"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-content-pipeline-serialization-intermediate">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer">ContentTypeSerializer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer.ChildCallback">ContentTypeSerializer<wbr/>.ChildCallback</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializer-1">ContentTypeSerializer<T></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.ContentTypeSerializerAttribute">ContentTypeSerializerAttribute</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateReader">IntermediateReader</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateSerializer">IntermediateSerializer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate.IntermediateWriter">IntermediateWriter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-design"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-design"
+                   href="/api/Microsoft.Xna.Framework.Design">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Design
+                </a>
+                <div id="toc-microsoft-xna-framework-design"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-design">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Byte4TypeConverter">Byte4TypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Vector2TypeConverter">Vector2TypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Vector3TypeConverter">Vector3TypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Vector4TypeConverter">Vector4TypeConverter</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-graphics"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-graphics"
+                   href="/api/Microsoft.Xna.Framework.Graphics">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Graphics
+                </a>
+                <div id="toc-microsoft-xna-framework-graphics"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-graphics">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.AlphaTestEffect">AlphaTestEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.BasicEffect">BasicEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Blend">Blend</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.BlendFunction">BlendFunction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.BlendState">BlendState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.BufferUsage">BufferUsage</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ClearOptions">ClearOptions</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ColorWriteChannels">ColorWriteChannels</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.CompareFunction">CompareFunction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.CubeMapFace">CubeMapFace</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.CullMode">CullMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DefaultColorProcessors">DefaultColorProcessors</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DepthFormat">DepthFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DepthStencilState">DepthStencilState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DeviceLostException">DeviceLostException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DeviceNotResetException">DeviceNotResetException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DirectionalLight">DirectionalLight</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DisplayMode">DisplayMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DisplayModeCollection">DisplayModeCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DualTextureEffect">DualTextureEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DynamicIndexBuffer">DynamicIndexBuffer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.DynamicVertexBuffer">DynamicVertexBuffer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Effect">Effect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectAnnotation">EffectAnnotation</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectAnnotationCollection">EffectAnnotationCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectMaterial">EffectMaterial</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectParameter">EffectParameter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectParameterClass">EffectParameterClass</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectParameterCollection">EffectParameterCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectParameterType">EffectParameterType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectPass">EffectPass</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectPassCollection">EffectPassCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectPassCollection.Enumerator">EffectPassCollection<wbr/>.Enumerator</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectTechnique">EffectTechnique</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EffectTechniqueCollection">EffectTechniqueCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.EnvironmentMapEffect">EnvironmentMapEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.FillMode">FillMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsAdapter">GraphicsAdapter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsAdapter.DriverType">GraphicsAdapter<wbr/>.DriverType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsDebug">GraphicsDebug</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsDebugMessage">GraphicsDebugMessage</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsDevice">GraphicsDevice</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsDeviceStatus">GraphicsDeviceStatus</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsMetrics">GraphicsMetrics</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsProfile">GraphicsProfile</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.GraphicsResource">GraphicsResource</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IEffectBones">IEffectBones</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IEffectFog">IEffectFog</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IEffectLights">IEffectLights</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IEffectMatrices">IEffectMatrices</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IGraphicsDeviceService">IGraphicsDeviceService</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IndexBuffer">IndexBuffer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IndexElementSize">IndexElementSize</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.IVertexType">IVertexType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Model">Model</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelBone">ModelBone</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelBoneCollection">ModelBoneCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelBoneCollection.Enumerator">ModelBoneCollection<wbr/>.Enumerator</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelEffectCollection">ModelEffectCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelEffectCollection.Enumerator">ModelEffectCollection<wbr/>.Enumerator</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelMesh">ModelMesh</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelMeshCollection">ModelMeshCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelMeshCollection.Enumerator">ModelMeshCollection<wbr/>.Enumerator</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelMeshPart">ModelMeshPart</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ModelMeshPartCollection">ModelMeshPartCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.NoSuitableGraphicsDeviceException">NoSuitableGraphicsDeviceException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.OcclusionQuery">OcclusionQuery</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PresentationParameters">PresentationParameters</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PresentInterval">PresentInterval</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PrimitiveType">PrimitiveType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.RasterizerState">RasterizerState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.RenderTarget2D">RenderTarget2D</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.RenderTargetBinding">RenderTargetBinding</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.RenderTargetCube">RenderTargetCube</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.RenderTargetUsage">RenderTargetUsage</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ResourceCreatedEventArgs">ResourceCreatedEventArgs</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.ResourceDestroyedEventArgs">ResourceDestroyedEventArgs</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SamplerState">SamplerState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SamplerStateCollection">SamplerStateCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SetDataOptions">SetDataOptions</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SkinnedEffect">SkinnedEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SpriteBatch">SpriteBatch</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SpriteEffect">SpriteEffect</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SpriteEffects">SpriteEffects</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SpriteFont">SpriteFont</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SpriteFont.Glyph">SpriteFont<wbr/>.Glyph</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SpriteSortMode">SpriteSortMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.StencilOperation">StencilOperation</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.SurfaceFormat">SurfaceFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.TargetBlendState">TargetBlendState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Texture">Texture</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Texture2D">Texture2D</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Texture2D.SurfaceType">Texture2D<wbr/>.SurfaceType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Texture3D">Texture3D</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.TextureAddressMode">TextureAddressMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.TextureCollection">TextureCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.TextureCube">TextureCube</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.TextureFilter">TextureFilter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.TextureFilterMode">TextureFilterMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexBuffer">VertexBuffer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexBufferBinding">VertexBufferBinding</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexDeclaration">VertexDeclaration</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexElement">VertexElement</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexElementFormat">VertexElementFormat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexElementUsage">VertexElementUsage</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexPosition">VertexPosition</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexPositionColor">VertexPositionColor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexPositionColorNormal">VertexPositionColorNormal</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexPositionColorNormalTexture">VertexPositionColorNormalTexture</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture">VertexPositionColorTexture</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture">VertexPositionNormalTexture</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.VertexPositionTexture">VertexPositionTexture</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.Viewport">Viewport</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-graphics-packedvector"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-graphics-packedvector"
+                   href="/api/Microsoft.Xna.Framework.Graphics.PackedVector">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Graphics<wbr />.PackedVector
+                </a>
+                <div id="toc-microsoft-xna-framework-graphics-packedvector"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-graphics-packedvector">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Alpha8">Alpha8</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgr565">Bgr565</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgra4444">Bgra4444</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Bgra5551">Bgra5551</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Byte4">Byte4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.HalfSingle">HalfSingle</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.HalfVector2">HalfVector2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.HalfVector4">HalfVector4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector">IPackedVector</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.IPackedVector-1">IPackedVector<TPacked></a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedByte2">NormalizedByte2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedByte4">NormalizedByte4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedShort2">NormalizedShort2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.NormalizedShort4">NormalizedShort4</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rg32">Rg32</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rgba1010102">Rgba1010102</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Rgba64">Rgba64</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short2">Short2</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Graphics.PackedVector.Short4">Short4</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break active"
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-input"
+                   aria-expanded="true"
+                   aria-controls="toc-microsoft-xna-framework-input"
+                   href="/api/Microsoft.Xna.Framework.Input">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Input
+                </a>
+                <div id="toc-microsoft-xna-framework-input"
+                     class="active collapse show"
+                     data-bs-parent="#toc-microsoft-xna-framework-input">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Buttons">Buttons</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.ButtonState">ButtonState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePad">GamePad</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadButtons">GamePadButtons</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadCapabilities">GamePadCapabilities</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadDeadZone">GamePadDeadZone</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadDPad">GamePadDPad</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadState">GamePadState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadThumbSticks">GamePadThumbSticks</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadTriggers">GamePadTriggers</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.GamePadType">GamePadType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Joystick">Joystick</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.JoystickCapabilities">JoystickCapabilities</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.JoystickHat">JoystickHat</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.JoystickState">JoystickState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Keyboard">Keyboard</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break active"
+        href="/api/Microsoft.Xna.Framework.Input.KeyboardInput">KeyboardInput</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.KeyboardState">KeyboardState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Keys">Keys</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.KeyState">KeyState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.MessageBox">MessageBox</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Mouse">Mouse</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.MouseCursor">MouseCursor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.MouseState">MouseState</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-input-touch"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-input-touch"
+                   href="/api/Microsoft.Xna.Framework.Input.Touch">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Input<wbr />.Touch
+                </a>
+                <div id="toc-microsoft-xna-framework-input-touch"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-input-touch">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.GestureSample">GestureSample</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.GestureType">GestureType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection">TouchCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchCollection.Enumerator">TouchCollection<wbr/>.Enumerator</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchLocation">TouchLocation</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchLocationState">TouchLocationState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchPanel">TouchPanel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelCapabilities">TouchPanelCapabilities</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.Touch.TouchPanelState">TouchPanelState</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-microsoft-xna-framework-media"
+                   aria-expanded="false"
+                   aria-controls="toc-microsoft-xna-framework-media"
+                   href="/api/Microsoft.Xna.Framework.Media">
+                   Microsoft<wbr />.Xna<wbr />.Framework<wbr />.Media
+                </a>
+                <div id="toc-microsoft-xna-framework-media"
+                     class=" collapse "
+                     data-bs-parent="#toc-microsoft-xna-framework-media">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Album">Album</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.AlbumCollection">AlbumCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Artist">Artist</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Genre">Genre</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaLibrary">MediaLibrary</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaPlayer">MediaPlayer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaQueue">MediaQueue</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaSource">MediaSource</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaSourceType">MediaSourceType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.MediaState">MediaState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Playlist">Playlist</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.PlaylistCollection">PlaylistCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Song">Song</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.SongCollection">SongCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Video">Video</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.VideoPlayer">VideoPlayer</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.VideoSoundtrackType">VideoSoundtrackType</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-monogame-framework-content-pipeline-builder"
+                   aria-expanded="false"
+                   aria-controls="toc-monogame-framework-content-pipeline-builder"
+                   href="/api/MonoGame.Framework.Content.Pipeline.Builder">
+                   MonoGame<wbr />.Framework<wbr />.Content<wbr />.Pipeline<wbr />.Builder
+                </a>
+                <div id="toc-monogame-framework-content-pipeline-builder"
+                     class=" collapse "
+                     data-bs-parent="#toc-monogame-framework-content-pipeline-builder">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.FileHelper">FileHelper</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PathHelper">PathHelper</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildEvent">PipelineBuildEvent</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildEvent.Pair">PipelineBuildEvent<wbr/>.Pair</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildLogger">PipelineBuildLogger</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineImporterContext">PipelineImporterContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineManager">PipelineManager</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineProcessorContext">PipelineProcessorContext</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.TypeExtensions">TypeExtensions</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Content.Pipeline.Builder.XmlColor">XmlColor</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-monogame-framework-utilities"
+                   aria-expanded="false"
+                   aria-controls="toc-monogame-framework-utilities"
+                   href="/api/MonoGame.Framework.Utilities">
+                   MonoGame<wbr />.Framework<wbr />.Utilities
+                </a>
+                <div id="toc-monogame-framework-utilities"
+                     class=" collapse "
+                     data-bs-parent="#toc-monogame-framework-utilities">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.CompressionLevel">CompressionLevel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.CompressionMode">CompressionMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.FlushType">FlushType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.GraphicsBackend">GraphicsBackend</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.MonoGamePlatform">MonoGamePlatform</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.PlatformInfo">PlatformInfo</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.ZlibStream">ZlibStream</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-monogame-framework-utilities-deflate"
+                   aria-expanded="false"
+                   aria-controls="toc-monogame-framework-utilities-deflate"
+                   href="/api/MonoGame.Framework.Utilities.Deflate">
+                   MonoGame<wbr />.Framework<wbr />.Utilities<wbr />.Deflate
+                </a>
+                <div id="toc-monogame-framework-utilities-deflate"
+                     class=" collapse "
+                     data-bs-parent="#toc-monogame-framework-utilities-deflate">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CompressionLevel">CompressionLevel</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CompressionMode">CompressionMode</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CompressionStrategy">CompressionStrategy</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CRC32">CRC32</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.CrcCalculatorStream">CrcCalculatorStream</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.DeflateStream">DeflateStream</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.FlushType">FlushType</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.GZipStream">GZipStream</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibCodec">ZlibCodec</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibConstants">ZlibConstants</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibException">ZlibException</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.Framework.Utilities.Deflate.ZlibStream">ZlibStream</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-monogame-opengl"
+                   aria-expanded="false"
+                   aria-controls="toc-monogame-opengl"
+                   href="/api/MonoGame.OpenGL">
+                   MonoGame<wbr />.OpenGL
+                </a>
+                <div id="toc-monogame-opengl"
+                     class=" collapse "
+                     data-bs-parent="#toc-monogame-opengl">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/MonoGame.OpenGL.IWindowInfo">IWindowInfo</a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+                    </aside>
+                
+
+            
+            <article class="col-lg-9 col-xxl-10 ps-0 content">
+                <div class="row justify-content-between content-body">
+                    
+    <article class="col-md-9 col-xxl-8 api-content-body">
+        <h1 id="class-keyboardinput" tabindex="-1"><a class="header-anchor" href="#class-keyboardinput"><a id="Microsoft_Xna_Framework_Input_KeyboardInput"></a> Class KeyboardInput</a></h1>
+<p>Namespace: <a href="/api/Microsoft.Xna.Framework.Input">Microsoft.Xna.Framework.Input</a><br>
+Assembly: MonoGame.Framework.dll</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">KeyboardInput</span></code></pre>
+<h4 id="inheritance" tabindex="-1"><a class="header-anchor" href="#inheritance">Inheritance</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">object</a> ←
+<a href="/api/Microsoft.Xna.Framework.Input.KeyboardInput">KeyboardInput</a></p>
+<h4 id="inherited-members" tabindex="-1"><a class="header-anchor" href="#inherited-members">Inherited Members</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)" target="_blank" rel="noopener noreferrer">object.Equals(object?)</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)" target="_blank" rel="noopener noreferrer">object.Equals(object?, object?)</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode" target="_blank" rel="noopener noreferrer">object.GetHashCode()</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.gettype" target="_blank" rel="noopener noreferrer">object.GetType()</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone" target="_blank" rel="noopener noreferrer">object.MemberwiseClone()</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals" target="_blank" rel="noopener noreferrer">object.ReferenceEquals(object?, object?)</a>,
+<a href="https://learn.microsoft.com/dotnet/api/system.object.tostring" target="_blank" rel="noopener noreferrer">object.ToString()</a></p>
+<h2 id="properties" tabindex="-1"><a class="header-anchor" href="#properties">Properties</a></h2>
+<h3 id="isvisible" tabindex="-1"><a class="header-anchor" href="#isvisible"><a id="Microsoft_Xna_Framework_Input_KeyboardInput_IsVisible"></a> IsVisible</a></h3>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> IsVisible <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+<h4 id="property-value" tabindex="-1"><a class="header-anchor" href="#property-value">Property Value</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
+<h2 id="methods" tabindex="-1"><a class="header-anchor" href="#methods">Methods</a></h2>
+<h3 id="cancel-string" tabindex="-1"><a class="header-anchor" href="#cancel-string"><a id="Microsoft_Xna_Framework_Input_KeyboardInput_Cancel_System_String_"></a> Cancel(string)</a></h3>
+<p>Hides the keyboard input interface and returns the parameter as the result of <a href="Microsoft.Xna.Framework.Input.KeyboardInput.Show(System.String%2cSystem.String%2cSystem.String%2cSystem.Boolean)">Boolean)</a></p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Cancel</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> result<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters" tabindex="-1"><a class="header-anchor" href="#parameters">Parameters</a></h4>
+<p><code>result</code> <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">string</a></p>
+<p>Result to return</p>
+<h4 id="examples" tabindex="-1"><a class="header-anchor" href="#examples">Examples</a></h4>
+<pre><code class="lang-csharp">var nameTask = KeyboardInput.Show("Name", "What's your name?", "Player");
+KeyboardInput.Cancel("John Doe");
+var name = await nameTask;</code></pre>
+<h4 id="exceptions" tabindex="-1"><a class="header-anchor" href="#exceptions">Exceptions</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.exception" target="_blank" rel="noopener noreferrer">Exception</a></p>
+<p>Thrown when the keyboard input is not visible</p>
+<h3 id="show-string-string-string-bool" tabindex="-1"><a class="header-anchor" href="#show-string-string-string-bool"><a id="Microsoft_Xna_Framework_Input_KeyboardInput_Show_System_String_System_String_System_String_System_Boolean_"></a> Show(string, string, string, bool)</a></h3>
+<p>Displays the keyboard input interface asynchronously.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Task<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> <span class="token function">Show</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> title<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">string</span></span> description<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">string</span></span> defaultText <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> usePasswordMode <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-1" tabindex="-1"><a class="header-anchor" href="#parameters-1">Parameters</a></h4>
+<p><code>title</code> <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">string</a></p>
+<p>Title of the dialog box.</p>
+<p><code>description</code> <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">string</a></p>
+<p>Description of the dialog box.</p>
+<p><code>defaultText</code> <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">string</a></p>
+<p>Default text displayed in the input area.</p>
+<p><code>usePasswordMode</code> <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
+<p>If password mode is enabled, the characters entered are not displayed.</p>
+<h4 id="returns" tabindex="-1"><a class="header-anchor" href="#returns">Returns</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" target="_blank" rel="noopener noreferrer">Task</a>&lt;<a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">string</a>&gt;</p>
+<p>Text entered by the player. Null if back was used.</p>
+<h4 id="examples-1" tabindex="-1"><a class="header-anchor" href="#examples-1">Examples</a></h4>
+<pre><code class="lang-csharp">var name = await KeyboardInput.Show("Name", "What's your name?", "Player");</code></pre>
+<h4 id="exceptions-1" tabindex="-1"><a class="header-anchor" href="#exceptions-1">Exceptions</a></h4>
+<p><a href="https://learn.microsoft.com/dotnet/api/system.exception" target="_blank" rel="noopener noreferrer">Exception</a></p>
+<p>Thrown when the message box is already visible</p>
+
+    </article>
+
+                    <aside class="col-3 d-none d-lg-block">
+                        <div class="affix">
+    <h5>In This Article</h5>
+<nav class="nav flex-column">
+                <ol>
+                    
+                    <li><a href="#properties">Properties</a>
+            
+                <ol>
+                    
+                    <li><a href="#isvisible">IsVisible</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#methods">Methods</a>
+            
+                <ol>
+                    
+                    <li><a href="#cancel-string">Cancel(string)</a>
+            		</li>
+
+                    <li><a href="#show-string-string-string-bool">Show(string, string, string, bool)</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+</div>
+
+                    </aside>
+                </div>
+            </article>
+        </div>
+    </div>
+
+        <section class="container-xxl">
+    <footer class="border-top my-5 pt-5">
+        <div class="row justify-content-between">
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>MonoGame</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/articles/" class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/api/" class="p-0">API Reference</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/showcase/" class="p-0">Showcase</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/about/" class="p-0">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Get Involved</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a
+                            href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md"
+                            class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                            Issues</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Public Relations</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/blog/" class="p-0">Blog</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://community.monogame.net" class="p-0">Community</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/presskit/" class="p-0">Press Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h3 class="fw-bold"><a href="/about/#contact-us">Contact Us</a></h1>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+            <div>
+                Copyright © 2009-2024 MonoGame Foundation, Inc. <br/> Designed with
+                <span class="text-danger">❤</span>
+                by
+                <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+            </div>
+            <div class="d-flex justify-content-between gap-3">
+                
+                    <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                        <i class="bi bi-p-circle-fill"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                        <i class="bi bi-reddit"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="Blog RSS Feed">
+                        <i class="bi bi-rss-fill"></i>
+                    </a>
+                
+            </div>
+        </div>
+    </footer>
+</section>
+
+        <script type="text/javascript" src="/js/bundle.js"></script>
+        
+        <script type="text/javascript" src="/js/tocFilter.js"></script>
+    
+    </body>
+</html>

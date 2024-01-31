@@ -1039,6 +1039,9 @@
                     <ul class="nav flex-column ps-3">
                         <li class="nav-item w-100">
         <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Design.Byte4TypeConverter">Byte4TypeConverter</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Design.Vector2TypeConverter">Vector2TypeConverter</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
@@ -1540,6 +1543,9 @@
         href="/api/Microsoft.Xna.Framework.Input.Keyboard">Keyboard</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.KeyboardInput">KeyboardInput</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Input.KeyboardState">KeyboardState</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
@@ -1547,6 +1553,9 @@
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Input.KeyState">KeyState</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Input.MessageBox">MessageBox</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Input.Mouse">Mouse</a>
@@ -1657,6 +1666,12 @@
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Media.SongCollection">SongCollection</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.Video">Video</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/api/Microsoft.Xna.Framework.Media.VideoPlayer">VideoPlayer</a>
     </li><li class="nav-item w-100">
         <a class="nav-link text-break "
         href="/api/Microsoft.Xna.Framework.Media.VideoSoundtrackType">VideoSoundtrackType</a>
@@ -2429,22 +2444,76 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <p>Reflection normal.</p>
 <p><code>result</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Reflected vector as an output parameter.</p>
+<h3 id="rotate-vector-float" tabindex="-1"><a class="header-anchor" href="#rotate-vector-float"><a id="Microsoft_Xna_Framework_Vector2_Rotate_Microsoft_Xna_Framework_Vector2_System_Single_"></a> Rotate(Vector2, float)</a></h3>
+<p>Rotates a vector by the specified number of radians</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">Rotate</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> radians<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-47" tabindex="-1"><a class="header-anchor" href="#parameters-47">Parameters</a></h4>
+<p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
+<p>The vector to be rotated.</p>
+<p><code>radians</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
+<p>The amount to rotate the vector.</p>
+<h4 id="returns-26" tabindex="-1"><a class="header-anchor" href="#returns-26">Returns</a></h4>
+<p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
+<p>A rotated copy of value.</p>
+<h4 id="remarks" tabindex="-1"><a class="header-anchor" href="#remarks">Remarks</a></h4>
+<p>A positive angle and negative angle
+would rotate counterclockwise and clockwise,
+respectively</p>
+<h3 id="rotate-float" tabindex="-1"><a class="header-anchor" href="#rotate-float"><a id="Microsoft_Xna_Framework_Vector2_Rotate_System_Single_"></a> Rotate(float)</a></h3>
+<p>Rotates a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the specified number of radians</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Rotate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">float</span></span> radians<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-48" tabindex="-1"><a class="header-anchor" href="#parameters-48">Parameters</a></h4>
+<p><code>radians</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
+<p>The amount to rotate this <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
+<h4 id="remarks-1" tabindex="-1"><a class="header-anchor" href="#remarks-1">Remarks</a></h4>
+<p>A positive angle and negative angle
+would rotate counterclockwise and clockwise,
+respectively</p>
+<h3 id="rotatearound-vector-vector-float" tabindex="-1"><a class="header-anchor" href="#rotatearound-vector-vector-float"><a id="Microsoft_Xna_Framework_Vector2_RotateAround_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_"></a> RotateAround(Vector2, Vector2, float)</a></h3>
+<p>Rotates a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> around another <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> representing a location</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">RotateAround</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token class-name">Vector2</span> origin<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> radians<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-49" tabindex="-1"><a class="header-anchor" href="#parameters-49">Parameters</a></h4>
+<p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
+<p>The <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> to be rotated</p>
+<p><code>origin</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
+<p>The origin location to be rotated around</p>
+<p><code>radians</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
+<p>The amount to rotate by in radians</p>
+<h4 id="returns-27" tabindex="-1"><a class="header-anchor" href="#returns-27">Returns</a></h4>
+<p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
+<p>The rotated <a href="Microsoft.Xna.Framework.Vector2">Vector2</a></p>
+<h4 id="remarks-2" tabindex="-1"><a class="header-anchor" href="#remarks-2">Remarks</a></h4>
+<p>A positive angle and negative angle
+would rotate counterclockwise and clockwise,
+respectively</p>
+<h3 id="rotatearound-vector-float" tabindex="-1"><a class="header-anchor" href="#rotatearound-vector-float"><a id="Microsoft_Xna_Framework_Vector2_RotateAround_Microsoft_Xna_Framework_Vector2_System_Single_"></a> RotateAround(Vector2, float)</a></h3>
+<p>Rotates a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> around another <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> representing a location</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">RotateAround</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> origin<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> radians<span class="token punctuation">)</span></code></pre>
+<h4 id="parameters-50" tabindex="-1"><a class="header-anchor" href="#parameters-50">Parameters</a></h4>
+<p><code>origin</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
+<p>The origin location to be rotated around</p>
+<p><code>radians</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
+<p>The amount to rotate by in radians</p>
+<h4 id="remarks-3" tabindex="-1"><a class="header-anchor" href="#remarks-3">Remarks</a></h4>
+<p>A positive angle and negative angle
+would rotate counterclockwise and clockwise,
+respectively</p>
 <h3 id="round" tabindex="-1"><a class="header-anchor" href="#round"><a id="Microsoft_Xna_Framework_Vector2_Round"></a> Round()</a></h3>
 <p>Round the members of this <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> to the nearest integer value.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Round</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h3 id="round-vector" tabindex="-1"><a class="header-anchor" href="#round-vector"><a id="Microsoft_Xna_Framework_Vector2_Round_Microsoft_Xna_Framework_Vector2_"></a> Round(Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains members from another vector rounded to the nearest integer value.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">Round</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-47" tabindex="-1"><a class="header-anchor" href="#parameters-47">Parameters</a></h4>
+<h4 id="parameters-51" tabindex="-1"><a class="header-anchor" href="#parameters-51">Parameters</a></h4>
 <p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
-<h4 id="returns-26" tabindex="-1"><a class="header-anchor" href="#returns-26">Returns</a></h4>
+<h4 id="returns-28" tabindex="-1"><a class="header-anchor" href="#returns-28">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>The rounded <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <h3 id="round-ref-vector-out-vector" tabindex="-1"><a class="header-anchor" href="#round-ref-vector-out-vector"><a id="Microsoft_Xna_Framework_Vector2_Round_Microsoft_Xna_Framework_Vector2__Microsoft_Xna_Framework_Vector2__"></a> Round(ref Vector2, out Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains members from another vector rounded to the nearest integer value.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Round</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name">Vector2</span> result<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-48" tabindex="-1"><a class="header-anchor" href="#parameters-48">Parameters</a></h4>
+<h4 id="parameters-52" tabindex="-1"><a class="header-anchor" href="#parameters-52">Parameters</a></h4>
 <p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>result</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
@@ -2452,20 +2521,20 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="smoothstep-vector-vector-float" tabindex="-1"><a class="header-anchor" href="#smoothstep-vector-vector-float"><a id="Microsoft_Xna_Framework_Vector2_SmoothStep_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_"></a> SmoothStep(Vector2, Vector2, float)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains cubic interpolation of the specified vectors.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">SmoothStep</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> amount<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-49" tabindex="-1"><a class="header-anchor" href="#parameters-49">Parameters</a></h4>
+<h4 id="parameters-53" tabindex="-1"><a class="header-anchor" href="#parameters-53">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>amount</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
 <p>Weighting value.</p>
-<h4 id="returns-27" tabindex="-1"><a class="header-anchor" href="#returns-27">Returns</a></h4>
+<h4 id="returns-29" tabindex="-1"><a class="header-anchor" href="#returns-29">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Cubic interpolation of the specified vectors.</p>
 <h3 id="smoothstep-ref-vector-ref-vector-float-out-vector" tabindex="-1"><a class="header-anchor" href="#smoothstep-ref-vector-ref-vector-float-out-vector"><a id="Microsoft_Xna_Framework_Vector2_SmoothStep_Microsoft_Xna_Framework_Vector2__Microsoft_Xna_Framework_Vector2__System_Single_Microsoft_Xna_Framework_Vector2__"></a> SmoothStep(ref Vector2, ref Vector2, float, out Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains cubic interpolation of the specified vectors.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SmoothStep</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> amount<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name">Vector2</span> result<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-50" tabindex="-1"><a class="header-anchor" href="#parameters-50">Parameters</a></h4>
+<h4 id="parameters-54" tabindex="-1"><a class="header-anchor" href="#parameters-54">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
@@ -2477,18 +2546,18 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="subtract-vector-vector" tabindex="-1"><a class="header-anchor" href="#subtract-vector-vector"><a id="Microsoft_Xna_Framework_Vector2_Subtract_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_"></a> Subtract(Vector2, Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains subtraction of on <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> from a another.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">Subtract</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-51" tabindex="-1"><a class="header-anchor" href="#parameters-51">Parameters</a></h4>
+<h4 id="parameters-55" tabindex="-1"><a class="header-anchor" href="#parameters-55">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
-<h4 id="returns-28" tabindex="-1"><a class="header-anchor" href="#returns-28">Returns</a></h4>
+<h4 id="returns-30" tabindex="-1"><a class="header-anchor" href="#returns-30">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>The result of the vector subtraction.</p>
 <h3 id="subtract-ref-vector-ref-vector-out-vector" tabindex="-1"><a class="header-anchor" href="#subtract-ref-vector-ref-vector-out-vector"><a id="Microsoft_Xna_Framework_Vector2_Subtract_Microsoft_Xna_Framework_Vector2__Microsoft_Xna_Framework_Vector2__Microsoft_Xna_Framework_Vector2__"></a> Subtract(ref Vector2, ref Vector2, out Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains subtraction of on <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> from a another.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Subtract</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name">Vector2</span> result<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-52" tabindex="-1"><a class="header-anchor" href="#parameters-52">Parameters</a></h4>
+<h4 id="parameters-56" tabindex="-1"><a class="header-anchor" href="#parameters-56">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
@@ -2498,36 +2567,36 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="tonumerics" tabindex="-1"><a class="header-anchor" href="#tonumerics"><a id="Microsoft_Xna_Framework_Vector2_ToNumerics"></a> ToNumerics()</a></h3>
 <p>Returns a <a href="System.Numerics.Vector2">Vector2</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name">Vector2</span> <span class="token function">ToNumerics</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<h4 id="returns-29" tabindex="-1"><a class="header-anchor" href="#returns-29">Returns</a></h4>
+<h4 id="returns-31" tabindex="-1"><a class="header-anchor" href="#returns-31">Returns</a></h4>
 <p><a href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2" target="_blank" rel="noopener noreferrer">Vector2</a></p>
 <h3 id="topoint" tabindex="-1"><a class="header-anchor" href="#topoint"><a id="Microsoft_Xna_Framework_Vector2_ToPoint"></a> ToPoint()</a></h3>
 <p>Gets a <a href="Microsoft.Xna.Framework.Point">Point</a> representation for this object.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name">Point</span> <span class="token function">ToPoint</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<h4 id="returns-30" tabindex="-1"><a class="header-anchor" href="#returns-30">Returns</a></h4>
+<h4 id="returns-32" tabindex="-1"><a class="header-anchor" href="#returns-32">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Point">Point</a></p>
 <p>A <a href="Microsoft.Xna.Framework.Point">Point</a> representation for this object.</p>
 <h3 id="tostring" tabindex="-1"><a class="header-anchor" href="#tostring"><a id="Microsoft_Xna_Framework_Vector2_ToString"></a> ToString()</a></h3>
 <p>Returns a <a href="System.String">String</a> representation of this <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> in the format:
 {X:[<a href="Microsoft.Xna.Framework.Vector2.X">X</a>] Y:[<a href="Microsoft.Xna.Framework.Vector2.Y">Y</a>]}</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<h4 id="returns-31" tabindex="-1"><a class="header-anchor" href="#returns-31">Returns</a></h4>
+<h4 id="returns-33" tabindex="-1"><a class="header-anchor" href="#returns-33">Returns</a></h4>
 <p><a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">string</a></p>
 <p>A <a href="System.String">String</a> representation of this <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <h3 id="transform-vector-matrix" tabindex="-1"><a class="header-anchor" href="#transform-vector-matrix"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Matrix_"></a> Transform(Vector2, Matrix)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains a transformation of 2d-vector by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> position<span class="token punctuation">,</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-53" tabindex="-1"><a class="header-anchor" href="#parameters-53">Parameters</a></h4>
+<h4 id="parameters-57" tabindex="-1"><a class="header-anchor" href="#parameters-57">Parameters</a></h4>
 <p><code>position</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>matrix</code> <a href="/api/Microsoft.Xna.Framework.Matrix">Matrix</a></p>
 <p>The transformation <a href="Microsoft.Xna.Framework.Matrix">Matrix</a>.</p>
-<h4 id="returns-32" tabindex="-1"><a class="header-anchor" href="#returns-32">Returns</a></h4>
+<h4 id="returns-34" tabindex="-1"><a class="header-anchor" href="#returns-34">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Transformed <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <h3 id="transform-ref-vector-ref-matrix-out-vector" tabindex="-1"><a class="header-anchor" href="#transform-ref-vector-ref-matrix-out-vector"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Vector2__"></a> Transform(ref Vector2, ref Matrix, out Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains a transformation of 2d-vector by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Vector2</span> position<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name">Vector2</span> result<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-54" tabindex="-1"><a class="header-anchor" href="#parameters-54">Parameters</a></h4>
+<h4 id="parameters-58" tabindex="-1"><a class="header-anchor" href="#parameters-58">Parameters</a></h4>
 <p><code>position</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>matrix</code> <a href="/api/Microsoft.Xna.Framework.Matrix">Matrix</a></p>
@@ -2537,18 +2606,18 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transform-vector-quaternion" tabindex="-1"><a class="header-anchor" href="#transform-vector-quaternion"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Quaternion_"></a> Transform(Vector2, Quaternion)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains a transformation of 2d-vector by the specified <a href="Microsoft.Xna.Framework.Quaternion">Quaternion</a>, representing the rotation.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token class-name">Quaternion</span> rotation<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-55" tabindex="-1"><a class="header-anchor" href="#parameters-55">Parameters</a></h4>
+<h4 id="parameters-59" tabindex="-1"><a class="header-anchor" href="#parameters-59">Parameters</a></h4>
 <p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>rotation</code> <a href="/api/Microsoft.Xna.Framework.Quaternion">Quaternion</a></p>
 <p>The <a href="Microsoft.Xna.Framework.Quaternion">Quaternion</a> which contains rotation transformation.</p>
-<h4 id="returns-33" tabindex="-1"><a class="header-anchor" href="#returns-33">Returns</a></h4>
+<h4 id="returns-35" tabindex="-1"><a class="header-anchor" href="#returns-35">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Transformed <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <h3 id="transform-ref-vector-ref-quaternion-out-vector" tabindex="-1"><a class="header-anchor" href="#transform-ref-vector-ref-quaternion-out-vector"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2__Microsoft_Xna_Framework_Quaternion__Microsoft_Xna_Framework_Vector2__"></a> Transform(ref Vector2, ref Quaternion, out Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains a transformation of 2d-vector by the specified <a href="Microsoft.Xna.Framework.Quaternion">Quaternion</a>, representing the rotation.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Quaternion</span> rotation<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name">Vector2</span> result<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-56" tabindex="-1"><a class="header-anchor" href="#parameters-56">Parameters</a></h4>
+<h4 id="parameters-60" tabindex="-1"><a class="header-anchor" href="#parameters-60">Parameters</a></h4>
 <p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <p><code>rotation</code> <a href="/api/Microsoft.Xna.Framework.Quaternion">Quaternion</a></p>
@@ -2558,7 +2627,7 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transform-vector-int-ref-matrix-vector-int-int" tabindex="-1"><a class="header-anchor" href="#transform-vector-int-ref-matrix-vector-int-int"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2___System_Int32_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Vector2___System_Int32_System_Int32_"></a> Transform(Vector2[], int, ref Matrix, Vector2[], int, int)</a></h3>
 <p>Apply transformation on vectors within array of <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a> and places the results in an another array.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> sourceArray<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> sourceIndex<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">,</span> <span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> destinationArray<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> destinationIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> length<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-57" tabindex="-1"><a class="header-anchor" href="#parameters-57">Parameters</a></h4>
+<h4 id="parameters-61" tabindex="-1"><a class="header-anchor" href="#parameters-61">Parameters</a></h4>
 <p><code>sourceArray</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a>[]</p>
 <p>Source array.</p>
 <p><code>sourceIndex</code> <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
@@ -2574,7 +2643,7 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transform-vector-int-ref-quaternion-vector-int-int" tabindex="-1"><a class="header-anchor" href="#transform-vector-int-ref-quaternion-vector-int-int"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2___System_Int32_Microsoft_Xna_Framework_Quaternion__Microsoft_Xna_Framework_Vector2___System_Int32_System_Int32_"></a> Transform(Vector2[], int, ref Quaternion, Vector2[], int, int)</a></h3>
 <p>Apply transformation on vectors within array of <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the specified <a href="Microsoft.Xna.Framework.Quaternion">Quaternion</a> and places the results in an another array.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> sourceArray<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> sourceIndex<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Quaternion</span> rotation<span class="token punctuation">,</span> <span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> destinationArray<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> destinationIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> length<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-58" tabindex="-1"><a class="header-anchor" href="#parameters-58">Parameters</a></h4>
+<h4 id="parameters-62" tabindex="-1"><a class="header-anchor" href="#parameters-62">Parameters</a></h4>
 <p><code>sourceArray</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a>[]</p>
 <p>Source array.</p>
 <p><code>sourceIndex</code> <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
@@ -2590,7 +2659,7 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transform-vector-ref-matrix-vector" tabindex="-1"><a class="header-anchor" href="#transform-vector-ref-matrix-vector"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Vector2___"></a> Transform(Vector2[], ref Matrix, Vector2[])</a></h3>
 <p>Apply transformation on all vectors within array of <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a> and places the results in an another array.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> sourceArray<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">,</span> <span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> destinationArray<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-59" tabindex="-1"><a class="header-anchor" href="#parameters-59">Parameters</a></h4>
+<h4 id="parameters-63" tabindex="-1"><a class="header-anchor" href="#parameters-63">Parameters</a></h4>
 <p><code>sourceArray</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a>[]</p>
 <p>Source array.</p>
 <p><code>matrix</code> <a href="/api/Microsoft.Xna.Framework.Matrix">Matrix</a></p>
@@ -2600,7 +2669,7 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transform-vector-ref-quaternion-vector" tabindex="-1"><a class="header-anchor" href="#transform-vector-ref-quaternion-vector"><a id="Microsoft_Xna_Framework_Vector2_Transform_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Quaternion__Microsoft_Xna_Framework_Vector2___"></a> Transform(Vector2[], ref Quaternion, Vector2[])</a></h3>
 <p>Apply transformation on all vectors within array of <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the specified <a href="Microsoft.Xna.Framework.Quaternion">Quaternion</a> and places the results in an another array.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transform</span><span class="token punctuation">(</span><span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> sourceArray<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Quaternion</span> rotation<span class="token punctuation">,</span> <span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> destinationArray<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-60" tabindex="-1"><a class="header-anchor" href="#parameters-60">Parameters</a></h4>
+<h4 id="parameters-64" tabindex="-1"><a class="header-anchor" href="#parameters-64">Parameters</a></h4>
 <p><code>sourceArray</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a>[]</p>
 <p>Source array.</p>
 <p><code>rotation</code> <a href="/api/Microsoft.Xna.Framework.Quaternion">Quaternion</a></p>
@@ -2610,18 +2679,18 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transformnormal-vector-matrix" tabindex="-1"><a class="header-anchor" href="#transformnormal-vector-matrix"><a id="Microsoft_Xna_Framework_Vector2_TransformNormal_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Matrix_"></a> TransformNormal(Vector2, Matrix)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains a transformation of the specified normal by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Vector2</span> <span class="token function">TransformNormal</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> normal<span class="token punctuation">,</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-61" tabindex="-1"><a class="header-anchor" href="#parameters-61">Parameters</a></h4>
+<h4 id="parameters-65" tabindex="-1"><a class="header-anchor" href="#parameters-65">Parameters</a></h4>
 <p><code>normal</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> which represents a normal vector.</p>
 <p><code>matrix</code> <a href="/api/Microsoft.Xna.Framework.Matrix">Matrix</a></p>
 <p>The transformation <a href="Microsoft.Xna.Framework.Matrix">Matrix</a>.</p>
-<h4 id="returns-34" tabindex="-1"><a class="header-anchor" href="#returns-34">Returns</a></h4>
+<h4 id="returns-36" tabindex="-1"><a class="header-anchor" href="#returns-36">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Transformed normal.</p>
 <h3 id="transformnormal-ref-vector-ref-matrix-out-vector" tabindex="-1"><a class="header-anchor" href="#transformnormal-ref-vector-ref-matrix-out-vector"><a id="Microsoft_Xna_Framework_Vector2_TransformNormal_Microsoft_Xna_Framework_Vector2__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Vector2__"></a> TransformNormal(ref Vector2, ref Matrix, out Vector2)</a></h3>
 <p>Creates a new <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> that contains a transformation of the specified normal by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">TransformNormal</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Vector2</span> normal<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name">Vector2</span> result<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-62" tabindex="-1"><a class="header-anchor" href="#parameters-62">Parameters</a></h4>
+<h4 id="parameters-66" tabindex="-1"><a class="header-anchor" href="#parameters-66">Parameters</a></h4>
 <p><code>normal</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> which represents a normal vector.</p>
 <p><code>matrix</code> <a href="/api/Microsoft.Xna.Framework.Matrix">Matrix</a></p>
@@ -2631,7 +2700,7 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transformnormal-vector-int-ref-matrix-vector-int-int" tabindex="-1"><a class="header-anchor" href="#transformnormal-vector-int-ref-matrix-vector-int-int"><a id="Microsoft_Xna_Framework_Vector2_TransformNormal_Microsoft_Xna_Framework_Vector2___System_Int32_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Vector2___System_Int32_System_Int32_"></a> TransformNormal(Vector2[], int, ref Matrix, Vector2[], int, int)</a></h3>
 <p>Apply transformation on normals within array of <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a> and places the results in an another array.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">TransformNormal</span><span class="token punctuation">(</span><span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> sourceArray<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> sourceIndex<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">,</span> <span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> destinationArray<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> destinationIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> length<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-63" tabindex="-1"><a class="header-anchor" href="#parameters-63">Parameters</a></h4>
+<h4 id="parameters-67" tabindex="-1"><a class="header-anchor" href="#parameters-67">Parameters</a></h4>
 <p><code>sourceArray</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a>[]</p>
 <p>Source array.</p>
 <p><code>sourceIndex</code> <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">int</a></p>
@@ -2647,7 +2716,7 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="transformnormal-vector-ref-matrix-vector" tabindex="-1"><a class="header-anchor" href="#transformnormal-vector-ref-matrix-vector"><a id="Microsoft_Xna_Framework_Vector2_TransformNormal_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Vector2___"></a> TransformNormal(Vector2[], ref Matrix, Vector2[])</a></h3>
 <p>Apply transformation on all normals within array of <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the specified <a href="Microsoft.Xna.Framework.Matrix">Matrix</a> and places the results in an another array.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">TransformNormal</span><span class="token punctuation">(</span><span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> sourceArray<span class="token punctuation">,</span> <span class="token keyword">ref</span> <span class="token class-name">Matrix</span> matrix<span class="token punctuation">,</span> <span class="token class-name">Vector2<span class="token punctuation">[</span><span class="token punctuation">]</span></span> destinationArray<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-64" tabindex="-1"><a class="header-anchor" href="#parameters-64">Parameters</a></h4>
+<h4 id="parameters-68" tabindex="-1"><a class="header-anchor" href="#parameters-68">Parameters</a></h4>
 <p><code>sourceArray</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a>[]</p>
 <p>Source array.</p>
 <p><code>matrix</code> <a href="/api/Microsoft.Xna.Framework.Matrix">Matrix</a></p>
@@ -2658,117 +2727,117 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
 <h3 id="operator-vector-vector" tabindex="-1"><a class="header-anchor" href="#operator-vector-vector"><a id="Microsoft_Xna_Framework_Vector2_op_Addition_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_"></a> operator +(Vector2, Vector2)</a></h3>
 <p>Adds two vectors.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">+</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-65" tabindex="-1"><a class="header-anchor" href="#parameters-65">Parameters</a></h4>
+<h4 id="parameters-69" tabindex="-1"><a class="header-anchor" href="#parameters-69">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the left of the add sign.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the right of the add sign.</p>
-<h4 id="returns-35" tabindex="-1"><a class="header-anchor" href="#returns-35">Returns</a></h4>
+<h4 id="returns-37" tabindex="-1"><a class="header-anchor" href="#returns-37">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Sum of the vectors.</p>
 <h3 id="operator-vector-vector-1" tabindex="-1"><a class="header-anchor" href="#operator-vector-vector-1"><a id="Microsoft_Xna_Framework_Vector2_op_Division_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_"></a> operator /(Vector2, Vector2)</a></h3>
 <p>Divides the components of a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by the components of another <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">/</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-66" tabindex="-1"><a class="header-anchor" href="#parameters-66">Parameters</a></h4>
+<h4 id="parameters-70" tabindex="-1"><a class="header-anchor" href="#parameters-70">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the left of the div sign.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Divisor <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the right of the div sign.</p>
-<h4 id="returns-36" tabindex="-1"><a class="header-anchor" href="#returns-36">Returns</a></h4>
+<h4 id="returns-38" tabindex="-1"><a class="header-anchor" href="#returns-38">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>The result of dividing the vectors.</p>
 <h3 id="operator-vector-float" tabindex="-1"><a class="header-anchor" href="#operator-vector-float"><a id="Microsoft_Xna_Framework_Vector2_op_Division_Microsoft_Xna_Framework_Vector2_System_Single_"></a> operator /(Vector2, float)</a></h3>
 <p>Divides the components of a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> by a scalar.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">/</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> divider<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-67" tabindex="-1"><a class="header-anchor" href="#parameters-67">Parameters</a></h4>
+<h4 id="parameters-71" tabindex="-1"><a class="header-anchor" href="#parameters-71">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the left of the div sign.</p>
 <p><code>divider</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
 <p>Divisor scalar on the right of the div sign.</p>
-<h4 id="returns-37" tabindex="-1"><a class="header-anchor" href="#returns-37">Returns</a></h4>
+<h4 id="returns-39" tabindex="-1"><a class="header-anchor" href="#returns-39">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>The result of dividing a vector by a scalar.</p>
 <h3 id="operator-vector-vector-2" tabindex="-1"><a class="header-anchor" href="#operator-vector-vector-2"><a id="Microsoft_Xna_Framework_Vector2_op_Equality_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_"></a> operator ==(Vector2, Vector2)</a></h3>
 <p>Compares whether two <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> instances are equal.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">==</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-68" tabindex="-1"><a class="header-anchor" href="#parameters-68">Parameters</a></h4>
+<h4 id="parameters-72" tabindex="-1"><a class="header-anchor" href="#parameters-72">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p><a href="Microsoft.Xna.Framework.Vector2">Vector2</a> instance on the left of the equal sign.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p><a href="Microsoft.Xna.Framework.Vector2">Vector2</a> instance on the right of the equal sign.</p>
-<h4 id="returns-38" tabindex="-1"><a class="header-anchor" href="#returns-38">Returns</a></h4>
+<h4 id="returns-40" tabindex="-1"><a class="header-anchor" href="#returns-40">Returns</a></h4>
 <p><a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
 <p><code>true</code> if the instances are equal; <code>false</code> otherwise.</p>
 <h3 id="implicit-operator-vector-vector" tabindex="-1"><a class="header-anchor" href="#implicit-operator-vector-vector"><a id="Microsoft_Xna_Framework_Vector2_op_Implicit_System_Numerics_Vector2__Microsoft_Xna_Framework_Vector2"></a> implicit operator Vector2(Vector2)</a></h3>
 <p>Converts a <a href="System.Numerics.Vector2">Vector2</a> to a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">implicit</span> <span class="token keyword">operator</span> <span class="token function">Vector2</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-69" tabindex="-1"><a class="header-anchor" href="#parameters-69">Parameters</a></h4>
+<h4 id="parameters-73" tabindex="-1"><a class="header-anchor" href="#parameters-73">Parameters</a></h4>
 <p><code>value</code> <a href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2" target="_blank" rel="noopener noreferrer">Vector2</a></p>
 <p>The converted value.</p>
-<h4 id="returns-39" tabindex="-1"><a class="header-anchor" href="#returns-39">Returns</a></h4>
+<h4 id="returns-41" tabindex="-1"><a class="header-anchor" href="#returns-41">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <h3 id="operator-vector-vector-3" tabindex="-1"><a class="header-anchor" href="#operator-vector-vector-3"><a id="Microsoft_Xna_Framework_Vector2_op_Inequality_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_"></a> operator !=(Vector2, Vector2)</a></h3>
 <p>Compares whether two <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> instances are not equal.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">!=</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-70" tabindex="-1"><a class="header-anchor" href="#parameters-70">Parameters</a></h4>
+<h4 id="parameters-74" tabindex="-1"><a class="header-anchor" href="#parameters-74">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p><a href="Microsoft.Xna.Framework.Vector2">Vector2</a> instance on the left of the not equal sign.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p><a href="Microsoft.Xna.Framework.Vector2">Vector2</a> instance on the right of the not equal sign.</p>
-<h4 id="returns-40" tabindex="-1"><a class="header-anchor" href="#returns-40">Returns</a></h4>
+<h4 id="returns-42" tabindex="-1"><a class="header-anchor" href="#returns-42">Returns</a></h4>
 <p><a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a></p>
 <p><code>true</code> if the instances are not equal; <code>false</code> otherwise.</p>
 <h3 id="operator-vector-vector-4" tabindex="-1"><a class="header-anchor" href="#operator-vector-vector-4"><a id="Microsoft_Xna_Framework_Vector2_op_Multiply_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_"></a> operator *(Vector2, Vector2)</a></h3>
 <p>Multiplies the components of two vectors by each other.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-71" tabindex="-1"><a class="header-anchor" href="#parameters-71">Parameters</a></h4>
+<h4 id="parameters-75" tabindex="-1"><a class="header-anchor" href="#parameters-75">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the left of the mul sign.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the right of the mul sign.</p>
-<h4 id="returns-41" tabindex="-1"><a class="header-anchor" href="#returns-41">Returns</a></h4>
+<h4 id="returns-43" tabindex="-1"><a class="header-anchor" href="#returns-43">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Result of the vector multiplication.</p>
 <h3 id="operator-vector-float-1" tabindex="-1"><a class="header-anchor" href="#operator-vector-float-1"><a id="Microsoft_Xna_Framework_Vector2_op_Multiply_Microsoft_Xna_Framework_Vector2_System_Single_"></a> operator *(Vector2, float)</a></h3>
 <p>Multiplies the components of vector by a scalar.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> scaleFactor<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-72" tabindex="-1"><a class="header-anchor" href="#parameters-72">Parameters</a></h4>
+<h4 id="parameters-76" tabindex="-1"><a class="header-anchor" href="#parameters-76">Parameters</a></h4>
 <p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the left of the mul sign.</p>
 <p><code>scaleFactor</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
 <p>Scalar value on the right of the mul sign.</p>
-<h4 id="returns-42" tabindex="-1"><a class="header-anchor" href="#returns-42">Returns</a></h4>
+<h4 id="returns-44" tabindex="-1"><a class="header-anchor" href="#returns-44">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Result of the vector multiplication with a scalar.</p>
 <h3 id="operator-float-vector" tabindex="-1"><a class="header-anchor" href="#operator-float-vector"><a id="Microsoft_Xna_Framework_Vector2_op_Multiply_System_Single_Microsoft_Xna_Framework_Vector2_"></a> operator *(float, Vector2)</a></h3>
 <p>Multiplies the components of vector by a scalar.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">float</span></span> scaleFactor<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-73" tabindex="-1"><a class="header-anchor" href="#parameters-73">Parameters</a></h4>
+<h4 id="parameters-77" tabindex="-1"><a class="header-anchor" href="#parameters-77">Parameters</a></h4>
 <p><code>scaleFactor</code> <a href="https://learn.microsoft.com/dotnet/api/system.single" target="_blank" rel="noopener noreferrer">float</a></p>
 <p>Scalar value on the left of the mul sign.</p>
 <p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the right of the mul sign.</p>
-<h4 id="returns-43" tabindex="-1"><a class="header-anchor" href="#returns-43">Returns</a></h4>
+<h4 id="returns-45" tabindex="-1"><a class="header-anchor" href="#returns-45">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Result of the vector multiplication with a scalar.</p>
 <h3 id="operator-vector-vector-5" tabindex="-1"><a class="header-anchor" href="#operator-vector-vector-5"><a id="Microsoft_Xna_Framework_Vector2_op_Subtraction_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_"></a> operator -(Vector2, Vector2)</a></h3>
 <p>Subtracts a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> from a <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">-</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> value1<span class="token punctuation">,</span> <span class="token class-name">Vector2</span> value2<span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-74" tabindex="-1"><a class="header-anchor" href="#parameters-74">Parameters</a></h4>
+<h4 id="parameters-78" tabindex="-1"><a class="header-anchor" href="#parameters-78">Parameters</a></h4>
 <p><code>value1</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the left of the sub sign.</p>
 <p><code>value2</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the right of the sub sign.</p>
-<h4 id="returns-44" tabindex="-1"><a class="header-anchor" href="#returns-44">Returns</a></h4>
+<h4 id="returns-46" tabindex="-1"><a class="header-anchor" href="#returns-46">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Result of the vector subtraction.</p>
 <h3 id="operator-vector" tabindex="-1"><a class="header-anchor" href="#operator-vector"><a id="Microsoft_Xna_Framework_Vector2_op_UnaryNegation_Microsoft_Xna_Framework_Vector2_"></a> operator -(Vector2)</a></h3>
 <p>Inverts values in the specified <a href="Microsoft.Xna.Framework.Vector2">Vector2</a>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Vector2 <span class="token keyword">operator</span> <span class="token operator">-</span><span class="token punctuation">(</span><span class="token class-name">Vector2</span> <span class="token keyword">value</span><span class="token punctuation">)</span></code></pre>
-<h4 id="parameters-75" tabindex="-1"><a class="header-anchor" href="#parameters-75">Parameters</a></h4>
+<h4 id="parameters-79" tabindex="-1"><a class="header-anchor" href="#parameters-79">Parameters</a></h4>
 <p><code>value</code> <a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Source <a href="Microsoft.Xna.Framework.Vector2">Vector2</a> on the right of the sub sign.</p>
-<h4 id="returns-45" tabindex="-1"><a class="header-anchor" href="#returns-45">Returns</a></h4>
+<h4 id="returns-47" tabindex="-1"><a class="header-anchor" href="#returns-47">Returns</a></h4>
 <p><a href="/api/Microsoft.Xna.Framework.Vector2">Vector2</a></p>
 <p>Result of the inversion.</p>
 
@@ -2977,6 +3046,18 @@ See remarks section of <a href="Microsoft.Xna.Framework.MathHelper.LerpPrecise(S
             		</li>
 
                     <li><a href="#reflect-ref-vector-ref-vector-out-vector">Reflect(ref Vector2, ref Vector2, out Vector2)</a>
+            		</li>
+
+                    <li><a href="#rotate-vector-float">Rotate(Vector2, float)</a>
+            		</li>
+
+                    <li><a href="#rotate-float">Rotate(float)</a>
+            		</li>
+
+                    <li><a href="#rotatearound-vector-vector-float">RotateAround(Vector2, Vector2, float)</a>
+            		</li>
+
+                    <li><a href="#rotatearound-vector-float">RotateAround(Vector2, float)</a>
             		</li>
 
                     <li><a href="#round">Round()</a>
