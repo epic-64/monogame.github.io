@@ -1,102 +1,366 @@
-﻿<!DOCTYPE html>
-<html>
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Documentation | MonoGame ">
-
-    <title>Documentation | MonoGame </title>
-<meta name="description" content="Welcome to the MonoGame documentation hub!">
-
-    <meta name="og:url" content="https://monogame.net/articles/index.html"><meta name="og:type" content="website">
-    <meta name="og:title" content="Documentation | MonoGame ">
-    <meta name="og:description" content="Welcome to the MonoGame documentation hub!">
-    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="monogame.net">
-    <meta property="twitter:url" content="https://monogame.net/articles/index.html">
-    <meta name="twitter:title" content="Documentation | MonoGame ">
-    <meta name="twitter:description" content="Welcome to the MonoGame documentation hub!">
-    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
-
-    <link rel="icon" href="/favicon.png">
-    <link rel="stylesheet" href="../public/docfx.min.css">
-    <link rel="stylesheet" href="../public/main.css">
-    <meta name="docfx:navrel" content="../toc.html">
-    <meta name="docfx:tocrel" content="toc.html">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="title" content="Documentation | MonoGame"/>
+<meta name="description" content="Welcome to the MonoGame documentation hub!"/>
 
 
+<title>Documentation | MonoGame</title>
 
 
-<meta name="docfx:docurl" content="https://github.com/MonoGame/monogame.github.io/blob/main/documentation/articles/index.md/#L1">
-    <meta name="loc:inThisArticle" content="In this article">
-    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-    <meta name="loc:tocFilter" content="Filter by title">
-    <meta name="loc:nextArticle" content="Next">
-    <meta name="loc:prevArticle" content="Previous">
-    <meta name="loc:themeLight" content="Light">
-    <meta name="loc:themeDark" content="Dark">
-    <meta name="loc:themeAuto" content="Auto">
-    <meta name="loc:changeTheme" content="Change theme">
-    <meta name="loc:copy" content="Copy">    
+<meta name="og:url" content="https://monogame.net/articles/"/>
+<meta name="og:type" content="website"/>
+<meta name="og:title" content="Documentation | MonoGame"/>
+<meta name="og:description" content="Welcome to the MonoGame documentation hub!"/>
+<meta name="og:image" content="https://monogame.net/images/social_embed_image.png"/>
 
-  </head>
 
-      <script type="module" src="./../public/docfx.min.js"></script>
-  <script>
-      const theme = localStorage.getItem('theme') || 'auto'
-      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
-    <header class="bg-body border-bottom">
-        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-            <div class="container-xxl mx-auto flex-nowrap">
-                <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
-            
-                </a>
-                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-three-dots"></i>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="https://monogame.net"/>
+<meta property="twitter:url" content="https://monogame.net/articles/"/>
+<meta name="twitter:title" content="Documentation | MonoGame"/>
+<meta name="twitter:description" content="Welcome to the MonoGame documentation hub!"/>
+<meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<link rel="icon" href="https://monogame.net/favicon.png"/>
+
+
+<link rel="alternate" type="application/atom+xml" title="MonoGame Blog"  href="/blog/feed.xml" />
+
+
+<link rel="stylesheet" href="/bundle.css"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38431038-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-38431038-1');
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>
+
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body shadow sticky-md-top" aria-label="Navigation Bar">
+    <div class="container-xl">
+        <a class="navbar-brand" href="/" title="Return to Home">
+            <img class="mg-logo svg" style="height: 36px; display: inline-block;" alt="MonoGame Logo">
+        </a>
+        <button
+            class="btn btn-lg d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#topNavBar"
+            aria-controls="topNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/documentation/">
+                            Documentation
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/community/">
+                            Community
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/showcase/">
+                            Showcase
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/blog/">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/bounties/">
+                            Bounties
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about/">
+                            About
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/donate/">
+                            Donate
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="dropdown bd-mode-toggle">
+    <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)">
+        <i id="active-theme-icon" class="bi bi-circle-half"></i>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <i class="bi bi-sun-fill"></i>&nbsp;Light
+            </button>
+        </li>
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <i class="bi bi-moon-stars-fill"></i>&nbsp;Dark
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true">
+                <i class="bi bi-circle-half"></i>&nbsp;Auto
+            </button>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+        
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+                
+                
+                    <aside class="col-lg-3 col-xxl-2 p-3" style="z-index: 999;">
+                            
+    <nav class="navbar navbar-vertical navbar-expand-lg toc" aria-label="Offcanvas Table of Contents">
+                <button class="btn btn-lg border-0 d-lg-none" 
+                        type="button" 
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#tableOfContents"
+                        aria-controls="tableOfContents"
+                        aria-expanded="false"
+                        aria-label="Toggle Table of Contents">
+                        <i class="bi bi-list"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navpanel">
-                <div id="navbar">
+                <div id="tableOfContents" class="offcanvas offcanvas-start" aria-labelledby="tableOfContentsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="tableOfContentsLabel">Table of Contents</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-block">
+                        <form class="filter">
+                            <i class="bi bi-filter"></i>
+                            <input id="toc-filter" class="form-control" type="search" autocomplete="off" value="" placeholder="Filter by title" aria-label="Filter by title">
+                        </form>
+                        <ul class="nav flex-column nav-verticle w-100">
+                            <li class="nav-item w-100">
+        <a class="nav-link text-break active"
+        href="/articles/">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/whats_new">What's New</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-getting-started"
+                   aria-expanded="false"
+                   aria-controls="toc-getting-started"
+                   href="/articles/">
+                   Getting Started
+                </a>
+                <div id="toc-getting-started"
+                     class=" collapse "
+                     data-bs-parent="#toc-getting-started">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started">Introduction</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-setting-up-your-development-environment"
+                   aria-expanded="false"
+                   aria-controls="toc-setting-up-your-development-environment"
+                   href="/articles/">
+                   1<wbr />. Setting up your development environment
+                </a>
+                <div id="toc-setting-up-your-development-environment"
+                     class=" collapse "
+                     data-bs-parent="#toc-setting-up-your-development-environment">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_windows">Windows</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_unix">macOS / Linux</a>
+    </li>
+                    </ul>
                 </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-creating-a-new-project"
+                   aria-expanded="false"
+                   aria-controls="toc-creating-a-new-project"
+                   href="/articles/">
+                   2<wbr />. Creating a new project
+                </a>
+                <div id="toc-creating-a-new-project"
+                     class=" collapse "
+                     data-bs-parent="#toc-creating-a-new-project">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_vs">Visual Studio 2022</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_netcore"><wbr/>.NET CLI (Rider or Visual Studio Code)</a>
+    </li>
+                    </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
-        </div>
-      </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/3_understanding_the_code">3<wbr/>. Understanding the Code</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/4_adding_content">4<wbr/>. Adding Content</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/5_adding_basic_code">5<wbr/>. Adding Basic Code</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-tools"
+                   aria-expanded="false"
+                   aria-controls="toc-tools"
+                   href="/articles/">
+                   Tools
+                </a>
+                <div id="toc-tools"
+                     class=" collapse "
+                     data-bs-parent="#toc-tools">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgcb">MGCB</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgcb_editor">MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgfxc">MGFXC</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-content-pipeline"
+                   aria-expanded="false"
+                   aria-controls="toc-content-pipeline"
+                   href="/articles/">
+                   Content Pipeline
+                </a>
+                <div id="toc-content-pipeline"
+                     class=" collapse "
+                     data-bs-parent="#toc-content-pipeline">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/why_content_pipeline">Why use the Content Pipeline</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/using_mgcb_editor">Using MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/custom_effects">Custom Effects</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/adding_ttf_fonts">TrueType fonts</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/localization">Localization</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/platforms">Supported platforms</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_37">Migrating from 3<wbr/>.7</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_38">Migrating from 3<wbr/>.8<wbr/>.0</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_xna">Migrating from XNA</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/packaging_games">Packaging</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/samples">Samples and Demos</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tutorials">Community Tutorials</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/help_and_support">Help and Support</a>
+    </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
+                    </aside>
+                
 
-          <nav id="breadcrumb"></nav>
-        </div>
-
-        <article data-uid="">
-
-
-<p>Welcome to the MonoGame documentation hub!</p>
-<p>MonoGame is a simple and powerful .NET framework for creating games for desktop PCs, video game consoles, and mobile devices using the C# programming language. It has been successfully used to create games such as <a href="https://store.steampowered.com/app/985890/Streets_of_Rage_4/">Streets of Rage 4</a>, <a href="https://store.steampowered.com/app/953490/CARRION/">Carrion</a>, <a href="https://store.steampowered.com/app/504230/Celeste/">Celeste</a>, <a href="https://store.steampowered.com/app/413150/Stardew_Valley/">Stardew Valley</a>, and <a href="https://www.monogame.net/showcase/">many others</a>.</p>
-<p>It is a re-implementation of the discontinued <a href="https://msdn.microsoft.com/en-us/library/bb200104.aspx">Microsoft's XNA Framework</a>, and it provides the following features:</p>
+            
+            <article class="col-lg-9 col-xxl-10 ps-0 content">
+                <div class="row justify-content-between content-body">
+                    
+    <article class="col-md-9 col-xxl-8 article-content-body">
+        <p>Welcome to the MonoGame documentation hub!</p>
+<p>MonoGame is a simple and powerful .NET framework for creating games for desktop PCs, video game consoles, and mobile devices using the C# programming language. It has been successfully used to create games such as <a href="https://store.steampowered.com/app/985890/Streets_of_Rage_4/" target="_blank" rel="noopener noreferrer">Streets of Rage 4</a>, <a href="https://store.steampowered.com/app/953490/CARRION/" target="_blank" rel="noopener noreferrer">Carrion</a>, <a href="https://store.steampowered.com/app/504230/Celeste/" target="_blank" rel="noopener noreferrer">Celeste</a>, <a href="https://store.steampowered.com/app/413150/Stardew_Valley/" target="_blank" rel="noopener noreferrer">Stardew Valley</a>, and <a href="https://www.monogame.net/showcase/" target="_blank" rel="noopener noreferrer">many others</a>.</p>
+<p>It is a re-implementation of the discontinued <a href="https://msdn.microsoft.com/en-us/library/bb200104.aspx" target="_blank" rel="noopener noreferrer">Microsoft's XNA Framework</a>, and it provides the following features:</p>
 <ul>
 <li>Game framework</li>
 <li>2D and 3D rendering</li>
@@ -105,131 +369,154 @@
 <li>Content building and optimization</li>
 <li>Math library optimized for games</li>
 </ul>
-<p>This documentation <a href="getting_started/index.html">helps you to get started</a> by providing overviews of key features and tools, and a complete API reference.</p>
+<p>This documentation <a href="/articles/getting_started/index/">helps you to get started</a> by providing overviews of key features and tools, and a complete API reference.</p>
 <p>Please use the links at the top and left to navigate the documentation sections.</p>
 <blockquote>
 <p>This documentation assume that the reader has a basic knowledge of the C# programming language.</p>
 </blockquote>
-<h2 id="what-is-monogame-exactly">What is MonoGame exactly?</h2>
+<h2 id="what-is-monogame-exactly" tabindex="-1"><a class="header-anchor" href="#what-is-monogame-exactly">What is MonoGame exactly?</a></h2>
 <p>MonoGame is a &quot;bring your own tools&quot; kind of framework, which means that it provides the building blocks to build your own engine and tools, but it isn't quite an engine itself.</p>
 <p>If you are expecting a scene editor (like Unity or Unreal), MonoGame is not that.</p>
 <p>If you love coding and understanding how things work under the hood, MonoGame might be what you are looking for. And fear not, getting a game running with MonoGame only takes a few minutes.</p>
-<p><a href="getting_started/index.html">Let's get started!</a></p>
-<h2 id="we-need-your-help">We Need Your Help!</h2>
+<p><a href="/articles/getting_started/index/">Let's get started!</a></p>
+<h2 id="we-need-your-help" tabindex="-1"><a class="header-anchor" href="#we-need-your-help">We Need Your Help!</a></h2>
 <p>MonoGame is an open-source project maintained by its community. Great open source projects require high-quality documentation. This is a call for volunteers to continue to help us make the MonoGame documentation truly great. If you can create tutorials, feature guides, code snippets, reference docs, video walkthroughs, or make any improvement to the current documentation, we could use your help!</p>
-<p>Check out the <a href="https://github.com/MonoGame/MonoGame/blob/develop/README.md">README on GitHub</a> or <a href="http://community.monogame.net/t/lets-improve-the-monogame-documentation/916">talk with us on the community site</a> to learn how to help! For a quick start, you can jump on this <a href="https://github.com/MonoGame/MonoGame/projects/4">list of documentation tasks</a>.</p>
+<p>Check out the <a href="https://github.com/MonoGame/MonoGame/blob/develop/README.md" target="_blank" rel="noopener noreferrer">README on GitHub</a> or <a href="http://community.monogame.net/t/lets-improve-the-monogame-documentation/916" target="_blank" rel="noopener noreferrer">talk with us on the community site</a> to learn how to help! For a quick start, you can jump on this <a href="https://github.com/MonoGame/MonoGame/projects/4" target="_blank" rel="noopener noreferrer">list of documentation tasks</a>.</p>
 
-</article>
+    </article>
 
-        <div class="contribution d-print-none">
-          <a href="https://github.com/MonoGame/monogame.github.io/blob/main/documentation/articles/index.md/#L1" class="edit-link">Edit this page</a>
+                    <aside class="col-3 d-none d-lg-block">
+                        <div class="affix">
+    <h5>In This Article</h5>
+<nav class="nav flex-column">
+                <ol>
+                    
+                    <li><a href="#what-is-monogame-exactly">What is MonoGame exactly?</a>
+            		</li>
+
+                    <li><a href="#we-need-your-help">We Need Your Help!</a>
+            		</li>
+                </ol>
+            </nav>
+</div>
+
+                    </aside>
+                </div>
+            </article>
+        </div>
+    </div>
+
+        <section class="container-xxl">
+    <footer class="border-top my-5 pt-5">
+        <div class="row justify-content-between">
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>MonoGame</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/articles/" class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/api/" class="p-0">API Reference</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/showcase/" class="p-0">Showcase</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/about/" class="p-0">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Get Involved</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a
+                            href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md"
+                            class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                            Issues</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Public Relations</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/blog/" class="p-0">Blog</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://community.monogame.net" class="p-0">Community</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/presskit/" class="p-0">Press Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h3 class="fw-bold"><a href="/about/#contact-us">Contact Us</a></h1>
+            </div>
         </div>
 
-        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+            <div>
+                Copyright © 2009-2024 MonoGame Foundation, Inc. <br/> Designed with
+                <span class="text-danger">❤</span>
+                by
+                <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+            </div>
+            <div class="d-flex justify-content-between gap-3">
+                
+                    <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                        <i class="bi bi-p-circle-fill"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                        <i class="bi bi-reddit"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="Blog RSS Feed">
+                        <i class="bi bi-rss-fill"></i>
+                    </a>
+                
+            </div>
+        </div>
+    </footer>
+</section>
 
-      </div>
-
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-
-      <section class="container-xxl">
-          <footer class="border-top my-5 pt-5">
-              <div class="row justify-content-between">
-                  <div class="col-6 col-lg-3 mb-3">
-                      <h5>MonoGame</h5>
-                      <ul class="nav flex-column">
-                          <li class="nav-item mb-2">
-                              <a href="/articles/" class="p-0">Documentation</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="/api/" class="p-0">API Reference</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="/showcase/" class="p-0">Showcase</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="/about/" class="p-0">About</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="col-6 col-lg-3 mb-3">
-                      <h5>Get Involved</h5>
-                      <ul class="nav flex-column">
-                          <li class="nav-item mb-2">
-                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md" class="p-0">Documentation</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
-                                  Issues</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="col-6 col-lg-3 mb-3">
-                      <h5>Public Relations</h5>
-                      <ul class="nav flex-column">
-                          <li class="nav-item mb-2">
-                              <a href="/blog/" class="p-0">Blog</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="https://community.monogame.net" class="p-0">Community</a>
-                          </li>
-                          <li class="nav-item mb-2">
-                              <a href="/presskit/" class="p-0">Press Kit</a>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="col-6 col-lg-3 mb-3">
-                      <h3 class="fw-bold"><a href="/about/#contact-us">Contact Us</a>
-                  </h3></div>
-              </div>
-
-              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
-                  <div>
-                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
-                      <span class="text-danger">❤</span>
-                      by
-                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
-                  </div>
-                  <div class="d-flex justify-content-between gap-3">
-                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
-                          <i class="bi bi-github"></i>
-                      </a>
-                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
-                          <i class="bi bi-p-circle-fill"></i>
-                      </a>                    
-                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
-                          <i class="bi bi-discord"></i>
-                      </a>    
-                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
-                          <i class="bi bi-youtube"></i>
-                      </a>  
-                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
-                          <i class="bi bi-reddit"></i>
-                      </a>
-                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
-                          <i class="bi bi-facebook"></i>
-                      </a>
-                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
-                          <i class="bi bi-twitter"></i>
-                      </a>     
-                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
-                          <i class="bi bi-rss-fill"></i>
-                      </a>                                                   
-                  </div>
-              </div>
-          </footer>
-      </section>
-  </body>
+        <script type="text/javascript" src="/js/bundle.js"></script>
+        
+        <script type="text/javascript" src="/js/tocFilter.js"></script>
+    
+    </body>
 </html>

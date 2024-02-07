@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="title" content="Package games for distribution | MonoGame"/>
+<meta name="description" content="How to package your game for distribution."/>
+
+
+<title>Package games for distribution | MonoGame</title>
+
+
+<meta name="og:url" content="https://monogame.net/articles/packaging_games/"/>
+<meta name="og:type" content="website"/>
+<meta name="og:title" content="Package games for distribution | MonoGame"/>
+<meta name="og:description" content="How to package your game for distribution."/>
+<meta name="og:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="https://monogame.net"/>
+<meta property="twitter:url" content="https://monogame.net/articles/packaging_games/"/>
+<meta name="twitter:title" content="Package games for distribution | MonoGame"/>
+<meta name="twitter:description" content="How to package your game for distribution."/>
+<meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<link rel="icon" href="https://monogame.net/favicon.png"/>
+
+
+<link rel="alternate" type="application/atom+xml" title="MonoGame Blog"  href="/blog/feed.xml" />
+
+
+<link rel="stylesheet" href="/bundle.css"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38431038-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-38431038-1');
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>
+
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body shadow sticky-md-top" aria-label="Navigation Bar">
+    <div class="container-xl">
+        <a class="navbar-brand" href="/" title="Return to Home">
+            <img class="mg-logo svg" style="height: 36px; display: inline-block;" alt="MonoGame Logo">
+        </a>
+        <button
+            class="btn btn-lg d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#topNavBar"
+            aria-controls="topNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/documentation/">
+                            Documentation
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/community/">
+                            Community
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/showcase/">
+                            Showcase
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/blog/">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/bounties/">
+                            Bounties
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about/">
+                            About
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/donate/">
+                            Donate
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="dropdown bd-mode-toggle">
+    <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)">
+        <i id="active-theme-icon" class="bi bi-circle-half"></i>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <i class="bi bi-sun-fill"></i>&nbsp;Light
+            </button>
+        </li>
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <i class="bi bi-moon-stars-fill"></i>&nbsp;Dark
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true">
+                <i class="bi bi-circle-half"></i>&nbsp;Auto
+            </button>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+        
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+                
+                
+                    <aside class="col-lg-3 col-xxl-2 p-3" style="z-index: 999;">
+                            
+    <nav class="navbar navbar-vertical navbar-expand-lg toc" aria-label="Offcanvas Table of Contents">
+                <button class="btn btn-lg border-0 d-lg-none" 
+                        type="button" 
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#tableOfContents"
+                        aria-controls="tableOfContents"
+                        aria-expanded="false"
+                        aria-label="Toggle Table of Contents">
+                        <i class="bi bi-list"></i>
+                </button>
+                <div id="tableOfContents" class="offcanvas offcanvas-start" aria-labelledby="tableOfContentsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="tableOfContentsLabel">Table of Contents</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-block">
+                        <form class="filter">
+                            <i class="bi bi-filter"></i>
+                            <input id="toc-filter" class="form-control" type="search" autocomplete="off" value="" placeholder="Filter by title" aria-label="Filter by title">
+                        </form>
+                        <ul class="nav flex-column nav-verticle w-100">
+                            <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/whats_new">What's New</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-getting-started"
+                   aria-expanded="false"
+                   aria-controls="toc-getting-started"
+                   href="/articles/">
+                   Getting Started
+                </a>
+                <div id="toc-getting-started"
+                     class=" collapse "
+                     data-bs-parent="#toc-getting-started">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started">Introduction</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-setting-up-your-development-environment"
+                   aria-expanded="false"
+                   aria-controls="toc-setting-up-your-development-environment"
+                   href="/articles/">
+                   1<wbr />. Setting up your development environment
+                </a>
+                <div id="toc-setting-up-your-development-environment"
+                     class=" collapse "
+                     data-bs-parent="#toc-setting-up-your-development-environment">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_windows">Windows</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_unix">macOS / Linux</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-creating-a-new-project"
+                   aria-expanded="false"
+                   aria-controls="toc-creating-a-new-project"
+                   href="/articles/">
+                   2<wbr />. Creating a new project
+                </a>
+                <div id="toc-creating-a-new-project"
+                     class=" collapse "
+                     data-bs-parent="#toc-creating-a-new-project">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_vs">Visual Studio 2022</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_netcore"><wbr/>.NET CLI (Rider or Visual Studio Code)</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/3_understanding_the_code">3<wbr/>. Understanding the Code</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/4_adding_content">4<wbr/>. Adding Content</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/5_adding_basic_code">5<wbr/>. Adding Basic Code</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-tools"
+                   aria-expanded="false"
+                   aria-controls="toc-tools"
+                   href="/articles/">
+                   Tools
+                </a>
+                <div id="toc-tools"
+                     class=" collapse "
+                     data-bs-parent="#toc-tools">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgcb">MGCB</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgcb_editor">MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgfxc">MGFXC</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-content-pipeline"
+                   aria-expanded="false"
+                   aria-controls="toc-content-pipeline"
+                   href="/articles/">
+                   Content Pipeline
+                </a>
+                <div id="toc-content-pipeline"
+                     class=" collapse "
+                     data-bs-parent="#toc-content-pipeline">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/why_content_pipeline">Why use the Content Pipeline</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/using_mgcb_editor">Using MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/custom_effects">Custom Effects</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/adding_ttf_fonts">TrueType fonts</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/localization">Localization</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/platforms">Supported platforms</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_37">Migrating from 3<wbr/>.7</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_38">Migrating from 3<wbr/>.8<wbr/>.0</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_xna">Migrating from XNA</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break active"
+        href="/articles/packaging_games">Packaging</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/samples">Samples and Demos</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tutorials">Community Tutorials</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/help_and_support">Help and Support</a>
+    </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+                    </aside>
+                
+
+            
+            <article class="col-lg-9 col-xxl-10 ps-0 content">
+                <div class="row justify-content-between content-body">
+                    
+    <article class="col-md-9 col-xxl-8 article-content-body">
+        <h1 id="package-games-for-distribution" tabindex="-1"><a class="header-anchor" href="#package-games-for-distribution">Package games for distribution</a></h1>
+<p>Once your game is ready to be published, it is recommended that you package it properly for consumption by players.</p>
+<h2 id="desktop-games" tabindex="-1"><a class="header-anchor" href="#desktop-games">Desktop games</a></h2>
+<p>To publish desktop games, it is recommended that you build your project as a <a href="https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained" target="_blank" rel="noopener noreferrer">self-contained</a> .NET application. As such, your game will require absolutely no external dependencies and should run out-of-the-box as-is.</p>
+<h3 id="building-and-packaging-for-windows" tabindex="-1"><a class="header-anchor" href="#building-and-packaging-for-windows">Building and packaging for Windows</a></h3>
+<p>From the .NET CLI:</p>
+<p><code>dotnet publish -c Release -r win-x64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained</code></p>
+<p>You can then zip the content of the publish folder and distribute the archive as-is.</p>
+<p>If you are targeting WindowsDX, note that players will need <a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank" rel="noopener noreferrer">the DirectX June 2010 runtime</a> to be installed on their machine for audio and gamepads to work properly.</p>
+<h3 id="building-and-packaging-for-linux" tabindex="-1"><a class="header-anchor" href="#building-and-packaging-for-linux">Building and packaging for Linux</a></h3>
+<p>From the .NET CLI:</p>
+<p><code>dotnet publish -c Release -r linux-x64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained</code></p>
+<p>You can then archive the content of the publish folder and distribute the archive as-is.</p>
+<p>We recommend using the .tar.gz archiving format to preserve the execution permissions.</p>
+<h3 id="build-and-packaging-for-macos" tabindex="-1"><a class="header-anchor" href="#build-and-packaging-for-macos">Build and packaging for macOS</a></h3>
+<p>From the .NET CLI:</p>
+<pre><code>dotnet publish -c Release -r osx-x64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained
+dotnet publish -c Release -r osx-arm64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained
+</code></pre>
+<p>We recommend that you distribute your game as an <a href="https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html" target="_blank" rel="noopener noreferrer">application bundle</a>. Application bundles are directories with the following file structure:</p>
+<pre><code>YourGame.app                    (this is your root folder)
+    - Contents
+        - Resources
+            - Content           (this is where all your content and XNB's should go)
+            - YourGame.icns     (this is your app icon, in ICNS format)
+        - MacOS
+            - amd64             (this is where your game executable for amd64 belongs, place files from the osx-x64/publish directory here)
+            - arm64             (this is where your game executable for arm64 belongs, place files from the osx-arm64/publish directory here)
+            - YourGame          (the entry point script of your app, see bellow for contents)
+        - Info.plist            (the metadata of your app, see bellow for contents)
+</code></pre>
+<p>The contents of the entry point script:</p>
+<pre class="language-sh"><code class="language-sh"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token builtin class-name">cd</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token environment constant">$BASH_SOURCE</span><span class="token variable">)</span></span>/../Resources"</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> <span class="token parameter variable">-p</span><span class="token variable">)</span></span> <span class="token operator">==</span> <span class="token string">'arm'</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+  ./<span class="token punctuation">..</span>/MacOS/arm64/YourGame
+<span class="token keyword">else</span>
+  ./<span class="token punctuation">..</span>/MacOS/amd64/YourGame
+<span class="token keyword">fi</span></code></pre>
+<p>The Info.plist file is a standard macOS file containing metadata about your game. Here's an example file with required and recommended values set:</p>
+<pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">plist</span> <span class="token name">PUBLIC</span> <span class="token string">"-//Apple//DTD PLIST 1.0//EN"</span> <span class="token string">"http://www.apple.com/DTDs/PropertyList-1.0.dtd"</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plist</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleDevelopmentRegion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>en<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleExecutable<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>YourGame<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleIconFile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>YourGame<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleIdentifier<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>com.your-domain.YourGame<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleInfoDictionaryVersion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>6.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleName<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>YourGame<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundlePackageType<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>APPL<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleShortVersionString<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>1.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleSignature<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>FONV<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleVersion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>LSApplicationCategoryType<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>public.app-category.games<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>LSMinimumSystemVersion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>10.15<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>NSHumanReadableCopyright<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>Copyright © 2022<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>NSPrincipalClass<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>NSApplication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>LSRequiresNativeExecution<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>true</span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>LSArchitecturePriority<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>arm64<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plist</span><span class="token punctuation">></span></span></code></pre>
+<p>For more information about Info.plist files, see the <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html" target="_blank" rel="noopener noreferrer">documentation</a>.</p>
+<p>After completing these steps, your .app folder should appear as an executable application on macOS.</p>
+<p>For archiving, we recommend using the .tar.gz format to preserve the execution permissions (you will likely run into permission issues if you use .zip at any point).</p>
+<h2 id="special-notes-about-net-parameters" tabindex="-1"><a class="header-anchor" href="#special-notes-about-net-parameters">Special notes about .NET parameters</a></h2>
+<p>.NET proposes several parameters when publishing apps that may sound helpful, but have many issues when it comes to games (because they were never meant for games in the first place, but for small lightweight applications).</p>
+<h3 id="readytorun-rr" tabindex="-1"><a class="header-anchor" href="#readytorun-rr">ReadyToRun (R2R)</a></h3>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#readytorun-images" target="_blank" rel="noopener noreferrer">ReadyToRun</a> is advertised as improving application startup time, but slightly increasing binary size. We recommend not using it for games, because it produces micro stutters when your game is running.</p>
+<p>Ready2Run code is of low quality and makes the Just-In-Time compiler (JIT) to trigger regularly to promote the code to a higher quality. Whenever the JIT runs, it produces potentially very visible stutters.</p>
+<p>Disabling ReadyToRun solves this issue (at the cost of a slightly longer startup time, but typically very negligible).</p>
+<p>ReadyToRun is disabled by default. You can configure it by setting the <code>PublishReadyToRun</code> property in your csproj file.</p>
+<p>MonoGame templates for .NET projects explicitly set this to <code>false</code>.</p>
+<h3 id="tiered-compilation" tabindex="-1"><a class="header-anchor" href="#tiered-compilation">Tiered compilation</a></h3>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#tiered-compilation" target="_blank" rel="noopener noreferrer">Tiered compilation</a> is a companion system to ReadyToRun and works on the same principle to enhance startup time. We suggest disabling it to avoid any stutter while your game is running.</p>
+<p>Tiered compilation is <strong>enabled by default</strong>. To disable it set the <code>TieredCompilation</code> property to <code>false</code> in your csproj.
+MonoGame templates for .NET projects explicitly set this to <code>false</code>.</p>
+<h3 id="singlefilepublish" tabindex="-1"><a class="header-anchor" href="#singlefilepublish">SingleFilePublish</a></h3>
+<p>SingleFilePublish packages your game into a single executable file with all dependencies and content integrated.</p>
+<p>While it sounds very convenient, be aware that it's not magical and is in fact a hidden self-extracting zip archive. As such, it may make app startup take <strong>a lot</strong> longer if your game is large, and may fail to launch on systems where user permissions don't allow extracting files (or if there is not enough storage space available).</p>
+<p>We highly recommend not using it for better compatibility across systems.</p>
+<h2 id="windows-store-games" tabindex="-1"><a class="header-anchor" href="#windows-store-games">Windows Store games</a></h2>
+<p>Please refer to the <a href="https://docs.microsoft.com/en-us/windows/uwp/publish/" target="_blank" rel="noopener noreferrer">Windows Store documentation</a>.</p>
+<h2 id="mobile-games" tabindex="-1"><a class="header-anchor" href="#mobile-games">Mobile games</a></h2>
+<p>Please refer to the Xamarin documentation:</p>
+<ul>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/xamarin/android/deploy-test/publishing/" target="_blank" rel="noopener noreferrer">Android</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store?tabs=windows" target="_blank" rel="noopener noreferrer">iOS</a></p>
+</li>
+</ul>
+
+    </article>
+
+                    <aside class="col-3 d-none d-lg-block">
+                        <div class="affix">
+    <h5>In This Article</h5>
+<nav class="nav flex-column">
+                <ol>
+                    
+                    <li><a href="#desktop-games">Desktop games</a>
+            
+                <ol>
+                    
+                    <li><a href="#building-and-packaging-for-windows">Building and packaging for Windows</a>
+            		</li>
+
+                    <li><a href="#building-and-packaging-for-linux">Building and packaging for Linux</a>
+            		</li>
+
+                    <li><a href="#build-and-packaging-for-macos">Build and packaging for macOS</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#special-notes-about-net-parameters">Special notes about .NET parameters</a>
+            
+                <ol>
+                    
+                    <li><a href="#readytorun-rr">ReadyToRun (R2R)</a>
+            		</li>
+
+                    <li><a href="#tiered-compilation">Tiered compilation</a>
+            		</li>
+
+                    <li><a href="#singlefilepublish">SingleFilePublish</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#windows-store-games">Windows Store games</a>
+            		</li>
+
+                    <li><a href="#mobile-games">Mobile games</a>
+            		</li>
+                </ol>
+            </nav>
+</div>
+
+                    </aside>
+                </div>
+            </article>
+        </div>
+    </div>
+
+        <section class="container-xxl">
+    <footer class="border-top my-5 pt-5">
+        <div class="row justify-content-between">
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>MonoGame</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/articles/" class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/api/" class="p-0">API Reference</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/showcase/" class="p-0">Showcase</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/about/" class="p-0">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Get Involved</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a
+                            href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md"
+                            class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                            Issues</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Public Relations</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/blog/" class="p-0">Blog</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://community.monogame.net" class="p-0">Community</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/presskit/" class="p-0">Press Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h3 class="fw-bold"><a href="/about/#contact-us">Contact Us</a></h1>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+            <div>
+                Copyright © 2009-2024 MonoGame Foundation, Inc. <br/> Designed with
+                <span class="text-danger">❤</span>
+                by
+                <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+            </div>
+            <div class="d-flex justify-content-between gap-3">
+                
+                    <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                        <i class="bi bi-p-circle-fill"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                        <i class="bi bi-reddit"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="Blog RSS Feed">
+                        <i class="bi bi-rss-fill"></i>
+                    </a>
+                
+            </div>
+        </div>
+    </footer>
+</section>
+
+        <script type="text/javascript" src="/js/bundle.js"></script>
+        
+        <script type="text/javascript" src="/js/tocFilter.js"></script>
+    
+    </body>
+</html>

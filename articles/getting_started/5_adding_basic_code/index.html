@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="title" content="Adding Basic Code | MonoGame"/>
+<meta name="description" content="Learn how to add basic logic to your game."/>
+
+
+<title>Adding Basic Code | MonoGame</title>
+
+
+<meta name="og:url" content="https://monogame.net/articles/getting_started/5_adding_basic_code/"/>
+<meta name="og:type" content="website"/>
+<meta name="og:title" content="Adding Basic Code | MonoGame"/>
+<meta name="og:description" content="Learn how to add basic logic to your game."/>
+<meta name="og:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="https://monogame.net"/>
+<meta property="twitter:url" content="https://monogame.net/articles/getting_started/5_adding_basic_code/"/>
+<meta name="twitter:title" content="Adding Basic Code | MonoGame"/>
+<meta name="twitter:description" content="Learn how to add basic logic to your game."/>
+<meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<link rel="icon" href="https://monogame.net/favicon.png"/>
+
+
+<link rel="alternate" type="application/atom+xml" title="MonoGame Blog"  href="/blog/feed.xml" />
+
+
+<link rel="stylesheet" href="/bundle.css"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38431038-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-38431038-1');
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>
+
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body shadow sticky-md-top" aria-label="Navigation Bar">
+    <div class="container-xl">
+        <a class="navbar-brand" href="/" title="Return to Home">
+            <img class="mg-logo svg" style="height: 36px; display: inline-block;" alt="MonoGame Logo">
+        </a>
+        <button
+            class="btn btn-lg d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#topNavBar"
+            aria-controls="topNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/documentation/">
+                            Documentation
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/community/">
+                            Community
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/showcase/">
+                            Showcase
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/blog/">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/bounties/">
+                            Bounties
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about/">
+                            About
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/donate/">
+                            Donate
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="dropdown bd-mode-toggle">
+    <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)">
+        <i id="active-theme-icon" class="bi bi-circle-half"></i>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <i class="bi bi-sun-fill"></i>&nbsp;Light
+            </button>
+        </li>
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <i class="bi bi-moon-stars-fill"></i>&nbsp;Dark
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true">
+                <i class="bi bi-circle-half"></i>&nbsp;Auto
+            </button>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+        
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+                
+                
+                    <aside class="col-lg-3 col-xxl-2 p-3" style="z-index: 999;">
+                            
+    <nav class="navbar navbar-vertical navbar-expand-lg toc" aria-label="Offcanvas Table of Contents">
+                <button class="btn btn-lg border-0 d-lg-none" 
+                        type="button" 
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#tableOfContents"
+                        aria-controls="tableOfContents"
+                        aria-expanded="false"
+                        aria-label="Toggle Table of Contents">
+                        <i class="bi bi-list"></i>
+                </button>
+                <div id="tableOfContents" class="offcanvas offcanvas-start" aria-labelledby="tableOfContentsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="tableOfContentsLabel">Table of Contents</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-block">
+                        <form class="filter">
+                            <i class="bi bi-filter"></i>
+                            <input id="toc-filter" class="form-control" type="search" autocomplete="off" value="" placeholder="Filter by title" aria-label="Filter by title">
+                        </form>
+                        <ul class="nav flex-column nav-verticle w-100">
+                            <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/whats_new">What's New</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break active"
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-getting-started"
+                   aria-expanded="true"
+                   aria-controls="toc-getting-started"
+                   href="/articles/">
+                   Getting Started
+                </a>
+                <div id="toc-getting-started"
+                     class="active collapse show"
+                     data-bs-parent="#toc-getting-started">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started">Introduction</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-setting-up-your-development-environment"
+                   aria-expanded="false"
+                   aria-controls="toc-setting-up-your-development-environment"
+                   href="/articles/">
+                   1<wbr />. Setting up your development environment
+                </a>
+                <div id="toc-setting-up-your-development-environment"
+                     class=" collapse "
+                     data-bs-parent="#toc-setting-up-your-development-environment">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_windows">Windows</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_unix">macOS / Linux</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-creating-a-new-project"
+                   aria-expanded="false"
+                   aria-controls="toc-creating-a-new-project"
+                   href="/articles/">
+                   2<wbr />. Creating a new project
+                </a>
+                <div id="toc-creating-a-new-project"
+                     class=" collapse "
+                     data-bs-parent="#toc-creating-a-new-project">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_vs">Visual Studio 2022</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_netcore"><wbr/>.NET CLI (Rider or Visual Studio Code)</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/3_understanding_the_code">3<wbr/>. Understanding the Code</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/4_adding_content">4<wbr/>. Adding Content</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break active"
+        href="/articles/getting_started/5_adding_basic_code">5<wbr/>. Adding Basic Code</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-tools"
+                   aria-expanded="false"
+                   aria-controls="toc-tools"
+                   href="/articles/">
+                   Tools
+                </a>
+                <div id="toc-tools"
+                     class=" collapse "
+                     data-bs-parent="#toc-tools">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgcb">MGCB</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgcb_editor">MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgfxc">MGFXC</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-content-pipeline"
+                   aria-expanded="false"
+                   aria-controls="toc-content-pipeline"
+                   href="/articles/">
+                   Content Pipeline
+                </a>
+                <div id="toc-content-pipeline"
+                     class=" collapse "
+                     data-bs-parent="#toc-content-pipeline">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/why_content_pipeline">Why use the Content Pipeline</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/using_mgcb_editor">Using MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/custom_effects">Custom Effects</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/adding_ttf_fonts">TrueType fonts</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/localization">Localization</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/platforms">Supported platforms</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_37">Migrating from 3<wbr/>.7</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_38">Migrating from 3<wbr/>.8<wbr/>.0</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_xna">Migrating from XNA</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/packaging_games">Packaging</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/samples">Samples and Demos</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tutorials">Community Tutorials</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/help_and_support">Help and Support</a>
+    </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+                    </aside>
+                
+
+            
+            <article class="col-lg-9 col-xxl-10 ps-0 content">
+                <div class="row justify-content-between content-body">
+                    
+    <article class="col-md-9 col-xxl-8 article-content-body">
+        <h1 id="adding-basic-code" tabindex="-1"><a class="header-anchor" href="#adding-basic-code">Adding Basic Code</a></h1>
+<p>This tutorial will go over adding basic logic to your game, continuing from where <a href="/articles/getting_started/4_adding_content/">Adding Content</a> left off.</p>
+<hr>
+<h2 id="positioning-the-content" tabindex="-1"><a class="header-anchor" href="#positioning-the-content">Positioning the content</a></h2>
+<p>First, you need to add few new variables in the Game1.cs class file: one for position and one for speed.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Game1</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Game</span></span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">Texture2D</span> ballTexture<span class="token punctuation">;</span>
+    <span class="token class-name">Vector2</span> ballPosition<span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">float</span></span> ballSpeed<span class="token punctuation">;</span></code></pre>
+<p>Next, you need to initialize them. Find the <strong>Initialize</strong> method and add the following lines.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token comment">// TODO: Add your initialization logic here</span>
+ballPosition <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Vector2</span><span class="token punctuation">(</span>_graphics<span class="token punctuation">.</span>PreferredBackBufferWidth <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span>
+_graphics<span class="token punctuation">.</span>PreferredBackBufferHeight <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ballSpeed <span class="token operator">=</span> <span class="token number">100f</span><span class="token punctuation">;</span>
+
+<span class="token keyword">base</span><span class="token punctuation">.</span><span class="token function">Initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>With this, you are setting the ball's starting position to the center of the screen based on the dimensions of the screen determined by the current <strong>BackBufferWidth</strong> and <strong>BackBufferHeight</strong> that was obtained from the Graphics Device (the current resolution the game is running at).</p>
+<p>Lastly, change the Draw method to draw the ball at the correct position.  Find the <strong>Draw</strong> method and update the <strong>spriteBatch.Draw</strong> call to:</p>
+<pre class="language-csharp"><code class="language-csharp">_spriteBatch<span class="token punctuation">.</span><span class="token function">Draw</span><span class="token punctuation">(</span>ballTexture<span class="token punctuation">,</span> ballPosition<span class="token punctuation">,</span> Color<span class="token punctuation">.</span>White<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Now run the game.</p>
+<p><img src="/articles/getting_started/images/4_ball_not_center.png" alt="Draw Ball 1"></p>
+<p>As you can see, the ball is not quite centered yet. That is because the default origin of a texture is its top-left corner, or (0, 0) relative to the texture, so the ball texture is drawn with its top-left corner exactly centered, rather than its actual center. You can specify a different origin when drawing, as shown in the following code snippet. The new origin takes into account the height and width of the image when drawing:</p>
+<pre class="language-csharp"><code class="language-csharp">_spriteBatch<span class="token punctuation">.</span><span class="token function">Draw</span><span class="token punctuation">(</span>
+    ballTexture<span class="token punctuation">,</span>
+    ballPosition<span class="token punctuation">,</span>
+    <span class="token keyword">null</span><span class="token punctuation">,</span>
+    Color<span class="token punctuation">.</span>White<span class="token punctuation">,</span>
+    <span class="token number">0f</span><span class="token punctuation">,</span>
+    <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Vector2</span><span class="token punctuation">(</span>ballTexture<span class="token punctuation">.</span>Width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> ballTexture<span class="token punctuation">.</span>Height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    Vector2<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+    SpriteEffects<span class="token punctuation">.</span>None<span class="token punctuation">,</span>
+    <span class="token number">0f</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This change adds a few extra parameters to the spriteBatch.Draw call, but do not worry about that for now. This new code sets the actual center (width / 2 and height / 2) of the image as its origin (drawing point).</p>
+<p>Now the image will get drawn to the center of the screen.</p>
+<p><img src="/articles/getting_started/images/4_ball_center.png" alt="Draw Ball 2"></p>
+<hr>
+<h2 id="getting-user-input" tabindex="-1"><a class="header-anchor" href="#getting-user-input">Getting user input</a></h2>
+<p>Time to set up some movement. Find the <strong>Update</strong> method in the Game1.cs class file and add:</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token comment">// TODO: Add your update logic here</span>
+<span class="token class-name"><span class="token keyword">var</span></span> kstate <span class="token operator">=</span> Keyboard<span class="token punctuation">.</span><span class="token function">GetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>kstate<span class="token punctuation">.</span><span class="token function">IsKeyDown</span><span class="token punctuation">(</span>Keys<span class="token punctuation">.</span>Up<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>Y <span class="token operator">-=</span> ballSpeed <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>gameTime<span class="token punctuation">.</span>ElapsedGameTime<span class="token punctuation">.</span>TotalSeconds<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>kstate<span class="token punctuation">.</span><span class="token function">IsKeyDown</span><span class="token punctuation">(</span>Keys<span class="token punctuation">.</span>Down<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>Y <span class="token operator">+=</span> ballSpeed <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>gameTime<span class="token punctuation">.</span>ElapsedGameTime<span class="token punctuation">.</span>TotalSeconds<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>kstate<span class="token punctuation">.</span><span class="token function">IsKeyDown</span><span class="token punctuation">(</span>Keys<span class="token punctuation">.</span>Left<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>X <span class="token operator">-=</span> ballSpeed <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>gameTime<span class="token punctuation">.</span>ElapsedGameTime<span class="token punctuation">.</span>TotalSeconds<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>kstate<span class="token punctuation">.</span><span class="token function">IsKeyDown</span><span class="token punctuation">(</span>Keys<span class="token punctuation">.</span>Right<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>X <span class="token operator">+=</span> ballSpeed <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>gameTime<span class="token punctuation">.</span>ElapsedGameTime<span class="token punctuation">.</span>TotalSeconds<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">base</span><span class="token punctuation">.</span><span class="token function">Update</span><span class="token punctuation">(</span>gameTime<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>The following is a line-by-line analysis of the above code.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> kstate <span class="token operator">=</span> Keyboard<span class="token punctuation">.</span><span class="token function">GetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This code fetches the current keyboard state ('Keyboard.GetState()') and stores it into a variable called <strong>kstate</strong>.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span>kstate<span class="token punctuation">.</span><span class="token function">IsKeyDown</span><span class="token punctuation">(</span>Keys<span class="token punctuation">.</span>Up<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>This line checks to see if the Up Arrow key is pressed.</p>
+<pre class="language-csharp"><code class="language-csharp">    ballPosition<span class="token punctuation">.</span>Y <span class="token operator">-=</span> ballSpeed <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>gameTime<span class="token punctuation">.</span>ElapsedGameTime<span class="token punctuation">.</span>TotalSeconds<span class="token punctuation">;</span></code></pre>
+<p>If the <strong>Up Arrow</strong> key is pressed, the ball moves using the value you assigned to <strong>ballSpeed</strong>. The reason why <strong>ballSpeed</strong> is multiplied by <strong>gameTime.ElapsedGameTime.TotalSeconds</strong> is because, when not using fixed time step, the time between Update calls varies. To account for this, the ballSpeed is multiplied by the amount of time that has passed since the last Update call. The result is that the ball appears to move at the same speed regardless of what framerate the game happens to be running at.</p>
+<blockquote>
+<p>Try experimenting with what happens if you do not multiply the <strong>ballSpeed</strong> by <strong>gameTime.ElapsedGameTime.TotalSeconds</strong>, to see the difference it makes.</p>
+</blockquote>
+<p>The rest of the lines of code do the same thing but for the Down, Left and Right Arrow keys, and down, left, and right movement, respectively.</p>
+<p>If you run the game, you should be able to move the ball with the arrow keys.</p>
+<p>You will probably notice that the ball is not confined to the window. You can fix that by setting bounds onto the ballPosition after it has already been moved to ensure it cannot go further than the width or height of the screen.</p>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span>kstate<span class="token punctuation">.</span><span class="token function">IsKeyDown</span><span class="token punctuation">(</span>Keys<span class="token punctuation">.</span>Right<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>X <span class="token operator">+=</span> ballSpeed <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>gameTime<span class="token punctuation">.</span>ElapsedGameTime<span class="token punctuation">.</span>TotalSeconds<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>ballPosition<span class="token punctuation">.</span>X <span class="token operator">></span> _graphics<span class="token punctuation">.</span>PreferredBackBufferWidth <span class="token operator">-</span> ballTexture<span class="token punctuation">.</span>Width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>X <span class="token operator">=</span> _graphics<span class="token punctuation">.</span>PreferredBackBufferWidth <span class="token operator">-</span> ballTexture<span class="token punctuation">.</span>Width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ballPosition<span class="token punctuation">.</span>X <span class="token operator">&lt;</span> ballTexture<span class="token punctuation">.</span>Width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>X <span class="token operator">=</span> ballTexture<span class="token punctuation">.</span>Width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>ballPosition<span class="token punctuation">.</span>Y <span class="token operator">></span> _graphics<span class="token punctuation">.</span>PreferredBackBufferHeight <span class="token operator">-</span> ballTexture<span class="token punctuation">.</span>Height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>Y <span class="token operator">=</span> _graphics<span class="token punctuation">.</span>PreferredBackBufferHeight <span class="token operator">-</span> ballTexture<span class="token punctuation">.</span>Height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ballPosition<span class="token punctuation">.</span>Y <span class="token operator">&lt;</span> ballTexture<span class="token punctuation">.</span>Height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ballPosition<span class="token punctuation">.</span>Y <span class="token operator">=</span> ballTexture<span class="token punctuation">.</span>Height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">base</span><span class="token punctuation">.</span><span class="token function">Update</span><span class="token punctuation">(</span>gameTime<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Now run the game to test for yourself that the ball cannot go beyond the window bounds any more.</p>
+<p>Happy Coding ^^</p>
+<h2 id="further-reading" tabindex="-1"><a class="header-anchor" href="#further-reading">Further Reading</a></h2>
+<p>Check out the <a href="/articles/tutorials/">Tutorials section</a> for many more helpful guides and tutorials on building games with MonoGame.  We have an expansive library of helpful content, all provided by other MonoGame developers in the community.</p>
+<p>Additionally, be sure to check out the official <a href="/articles/samples/">MonoGame Samples</a> page for fully built sample projects built with MonoGame and targeting our most common platforms.</p>
+
+    </article>
+
+                    <aside class="col-3 d-none d-lg-block">
+                        <div class="affix">
+    <h5>In This Article</h5>
+<nav class="nav flex-column">
+                <ol>
+                    
+                    <li><a href="#positioning-the-content">Positioning the content</a>
+            		</li>
+
+                    <li><a href="#getting-user-input">Getting user input</a>
+            		</li>
+
+                    <li><a href="#further-reading">Further Reading</a>
+            		</li>
+                </ol>
+            </nav>
+</div>
+
+                    </aside>
+                </div>
+            </article>
+        </div>
+    </div>
+
+        <section class="container-xxl">
+    <footer class="border-top my-5 pt-5">
+        <div class="row justify-content-between">
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>MonoGame</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/articles/" class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/api/" class="p-0">API Reference</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/showcase/" class="p-0">Showcase</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/about/" class="p-0">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Get Involved</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a
+                            href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md"
+                            class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                            Issues</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Public Relations</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/blog/" class="p-0">Blog</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://community.monogame.net" class="p-0">Community</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/presskit/" class="p-0">Press Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h3 class="fw-bold"><a href="/about/#contact-us">Contact Us</a></h1>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+            <div>
+                Copyright © 2009-2024 MonoGame Foundation, Inc. <br/> Designed with
+                <span class="text-danger">❤</span>
+                by
+                <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+            </div>
+            <div class="d-flex justify-content-between gap-3">
+                
+                    <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                        <i class="bi bi-p-circle-fill"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                        <i class="bi bi-reddit"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="Blog RSS Feed">
+                        <i class="bi bi-rss-fill"></i>
+                    </a>
+                
+            </div>
+        </div>
+    </footer>
+</section>
+
+        <script type="text/javascript" src="/js/bundle.js"></script>
+        
+        <script type="text/javascript" src="/js/tocFilter.js"></script>
+    
+    </body>
+</html>

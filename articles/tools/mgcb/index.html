@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="title" content="MonoGame Content Builder (MGCB) | MonoGame"/>
+<meta name="description" content="Learn about the MonoGame Content Builder (MGCB), the command line tool for building XNB content on Windows, Mac, and Linux desktop."/>
+
+
+<title>MonoGame Content Builder (MGCB) | MonoGame</title>
+
+
+<meta name="og:url" content="https://monogame.net/articles/tools/mgcb/"/>
+<meta name="og:type" content="website"/>
+<meta name="og:title" content="MonoGame Content Builder (MGCB) | MonoGame"/>
+<meta name="og:description" content="Learn about the MonoGame Content Builder (MGCB), the command line tool for building XNB content on Windows, Mac, and Linux desktop."/>
+<meta name="og:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="https://monogame.net"/>
+<meta property="twitter:url" content="https://monogame.net/articles/tools/mgcb/"/>
+<meta name="twitter:title" content="MonoGame Content Builder (MGCB) | MonoGame"/>
+<meta name="twitter:description" content="Learn about the MonoGame Content Builder (MGCB), the command line tool for building XNB content on Windows, Mac, and Linux desktop."/>
+<meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png"/>
+
+
+<link rel="icon" href="https://monogame.net/favicon.png"/>
+
+
+<link rel="alternate" type="application/atom+xml" title="MonoGame Blog"  href="/blog/feed.xml" />
+
+
+<link rel="stylesheet" href="/bundle.css"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38431038-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-38431038-1');
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>
+
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body shadow sticky-md-top" aria-label="Navigation Bar">
+    <div class="container-xl">
+        <a class="navbar-brand" href="/" title="Return to Home">
+            <img class="mg-logo svg" style="height: 36px; display: inline-block;" alt="MonoGame Logo">
+        </a>
+        <button
+            class="btn btn-lg d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#topNavBar"
+            aria-controls="topNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/documentation/">
+                            Documentation
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/community/">
+                            Community
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/showcase/">
+                            Showcase
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/blog/">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/bounties/">
+                            Bounties
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about/">
+                            About
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="/donate/">
+                            Donate
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="dropdown bd-mode-toggle">
+    <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)">
+        <i id="active-theme-icon" class="bi bi-circle-half"></i>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <i class="bi bi-sun-fill"></i>&nbsp;Light
+            </button>
+        </li>
+        <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <i class="bi bi-moon-stars-fill"></i>&nbsp;Dark
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true">
+                <i class="bi bi-circle-half"></i>&nbsp;Auto
+            </button>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+        
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+                
+                
+                    <aside class="col-lg-3 col-xxl-2 p-3" style="z-index: 999;">
+                            
+    <nav class="navbar navbar-vertical navbar-expand-lg toc" aria-label="Offcanvas Table of Contents">
+                <button class="btn btn-lg border-0 d-lg-none" 
+                        type="button" 
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#tableOfContents"
+                        aria-controls="tableOfContents"
+                        aria-expanded="false"
+                        aria-label="Toggle Table of Contents">
+                        <i class="bi bi-list"></i>
+                </button>
+                <div id="tableOfContents" class="offcanvas offcanvas-start" aria-labelledby="tableOfContentsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="tableOfContentsLabel">Table of Contents</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-block">
+                        <form class="filter">
+                            <i class="bi bi-filter"></i>
+                            <input id="toc-filter" class="form-control" type="search" autocomplete="off" value="" placeholder="Filter by title" aria-label="Filter by title">
+                        </form>
+                        <ul class="nav flex-column nav-verticle w-100">
+                            <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/whats_new">What's New</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-getting-started"
+                   aria-expanded="false"
+                   aria-controls="toc-getting-started"
+                   href="/articles/">
+                   Getting Started
+                </a>
+                <div id="toc-getting-started"
+                     class=" collapse "
+                     data-bs-parent="#toc-getting-started">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started">Introduction</a>
+    </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-setting-up-your-development-environment"
+                   aria-expanded="false"
+                   aria-controls="toc-setting-up-your-development-environment"
+                   href="/articles/">
+                   1<wbr />. Setting up your development environment
+                </a>
+                <div id="toc-setting-up-your-development-environment"
+                     class=" collapse "
+                     data-bs-parent="#toc-setting-up-your-development-environment">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_windows">Windows</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/1_setting_up_your_development_environment_unix">macOS / Linux</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-creating-a-new-project"
+                   aria-expanded="false"
+                   aria-controls="toc-creating-a-new-project"
+                   href="/articles/">
+                   2<wbr />. Creating a new project
+                </a>
+                <div id="toc-creating-a-new-project"
+                     class=" collapse "
+                     data-bs-parent="#toc-creating-a-new-project">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_vs">Visual Studio 2022</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/2_creating_a_new_project_netcore"><wbr/>.NET CLI (Rider or Visual Studio Code)</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/3_understanding_the_code">3<wbr/>. Understanding the Code</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/4_adding_content">4<wbr/>. Adding Content</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/getting_started/5_adding_basic_code">5<wbr/>. Adding Basic Code</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break active"
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-tools"
+                   aria-expanded="true"
+                   aria-controls="toc-tools"
+                   href="/articles/">
+                   Tools
+                </a>
+                <div id="toc-tools"
+                     class="active collapse show"
+                     data-bs-parent="#toc-tools">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break active"
+        href="/articles/tools/mgcb">MGCB</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgcb_editor">MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tools/mgfxc">MGFXC</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+                <a class="nav-link text-break "
+                   data-bs-toggle="collapse"
+                   data-bs-target="#toc-content-pipeline"
+                   aria-expanded="false"
+                   aria-controls="toc-content-pipeline"
+                   href="/articles/">
+                   Content Pipeline
+                </a>
+                <div id="toc-content-pipeline"
+                     class=" collapse "
+                     data-bs-parent="#toc-content-pipeline">
+                    <ul class="nav flex-column ps-3">
+                        <li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline">Introduction</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/why_content_pipeline">Why use the Content Pipeline</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/using_mgcb_editor">Using MGCB Editor</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/custom_effects">Custom Effects</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/adding_ttf_fonts">TrueType fonts</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/content_pipeline/localization">Localization</a>
+    </li>
+                    </ul>
+                </div>
+            </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/platforms">Supported platforms</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_37">Migrating from 3<wbr/>.7</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_38">Migrating from 3<wbr/>.8<wbr/>.0</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/migrate_xna">Migrating from XNA</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/packaging_games">Packaging</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/samples">Samples and Demos</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/tutorials">Community Tutorials</a>
+    </li><li class="nav-item w-100">
+        <a class="nav-link text-break "
+        href="/articles/help_and_support">Help and Support</a>
+    </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+                    </aside>
+                
+
+            
+            <article class="col-lg-9 col-xxl-10 ps-0 content">
+                <div class="row justify-content-between content-body">
+                    
+    <article class="col-md-9 col-xxl-8 article-content-body">
+        <h1 id="monogame-content-builder-mgcb" tabindex="-1"><a class="header-anchor" href="#monogame-content-builder-mgcb">MonoGame Content Builder (MGCB)</a></h1>
+<p>The MonoGame Content Builder is a command line tool for building XNB content on Windows, Mac, and Linux desktop systems.</p>
+<p>Typically, it is executed by the <a href="/articles/tools/mgcb_editor/">MGCB Editor</a> when editing content or by <code>MonoGame.Content.Builder.Task</code> during the build process
+of a MonoGame project. Alternatively you can use it yourself from the command line for specialized build pipelines or for debugging content processing.</p>
+<h2 id="installation" tabindex="-1"><a class="header-anchor" href="#installation">Installation</a></h2>
+<p>MGCB can be installed as a <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools" target="_blank" rel="noopener noreferrer">.NET tool</a>.
+Make sure you have the .NET SDK installed. You can download it <a href="https://dotnet.microsoft.com/download" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>In a terminal run <code>dotnet tool install -g dotnet-mgcb</code> to install MGCB. Then you can execute MGCB by simply running <code>mgcb</code>.</p>
+<h2 id="command-line-options" tabindex="-1"><a class="header-anchor" href="#command-line-options">Command Line Options</a></h2>
+<p>The options are processed “left to right”. When an option is repeated, it is overwritten.</p>
+<h3 id="output-directory" tabindex="-1"><a class="header-anchor" href="#output-directory">Output Directory</a></h3>
+<pre><code>/outputDir:&lt;directory_path&gt;
+</code></pre>
+<p>Specifies the directory where all content is written. Defaults to the current working directory.</p>
+<h3 id="intermediate-directory" tabindex="-1"><a class="header-anchor" href="#intermediate-directory">Intermediate Directory</a></h3>
+<pre><code>/intermediateDir:&lt;directory_path&gt;
+</code></pre>
+<p>Specifies the directory where all intermediate files are written. Defaults to the current working directory.</p>
+<h3 id="rebuild-content" tabindex="-1"><a class="header-anchor" href="#rebuild-content">Rebuild Content</a></h3>
+<pre><code>/rebuild
+</code></pre>
+<p>Force a full rebuild of all content.</p>
+<h3 id="clean-content" tabindex="-1"><a class="header-anchor" href="#clean-content">Clean Content</a></h3>
+<pre><code>/clean
+</code></pre>
+<p>Delete all previously built content and intermediate files. Only the <code>/intermediateDir</code> and <code>/outputDir</code> need to be defined for clean to do its job.</p>
+<h3 id="incremental-build" tabindex="-1"><a class="header-anchor" href="#incremental-build">Incremental Build</a></h3>
+<pre><code>/incremental
+</code></pre>
+<p>Only build content that changed since the last build.</p>
+<h3 id="assembly-reference" tabindex="-1"><a class="header-anchor" href="#assembly-reference">Assembly Reference</a></h3>
+<pre><code>/reference:&lt;assembly_path&gt;
+</code></pre>
+<p>An optional parameter which adds an assembly reference which contains importers, processors, or writers needed during content building.</p>
+<h3 id="target-platform" tabindex="-1"><a class="header-anchor" href="#target-platform">Target Platform</a></h3>
+<pre><code>/platform:&lt;target_Platform&gt;
+</code></pre>
+<p>Set the target platform for this build. It must be a member of the <a href="/api/Microsoft.Xna.Framework.Content.Pipeline.TargetPlatform">TargetPlatform</a> enum:</p>
+<ul>
+<li>Windows</li>
+<li>iOS</li>
+<li>Android</li>
+<li>DesktopGL</li>
+<li>WindowsStoreApp</li>
+<li>PlayStation4</li>
+<li>PlayStation5</li>
+<li>XboxOne</li>
+<li>Switch</li>
+<li>Stadia</li>
+</ul>
+<p>If not set, it will default to Windows.</p>
+<p>NOTE: PlayStation 4, PlayStation 5, Xbox One, Stadia, and Switch support is only available to licensed console developers.</p>
+<h3 id="target-graphics-profile" tabindex="-1"><a class="header-anchor" href="#target-graphics-profile">Target Graphics Profile</a></h3>
+<pre><code>/profile:&lt;graphics_Profile&gt;
+</code></pre>
+<p>Set the target graphics profile for this build. It must be a member of the <a href="/api/Microsoft.Xna.Framework.Graphics.GraphicsProfile">GraphicsProfile</a> enum:</p>
+<ul>
+<li>HiDef</li>
+<li>Reach</li>
+</ul>
+<p>If not set, it will default to HiDef.</p>
+<h3 id="target-build-configuration" tabindex="-1"><a class="header-anchor" href="#target-build-configuration">Target Build Configuration</a></h3>
+<pre><code>/config:&lt;build_config&gt;
+</code></pre>
+<p>The optional build configuration name from the build system. This is sometimes used as a hint in content processors.</p>
+<h3 id="content-compression" tabindex="-1"><a class="header-anchor" href="#content-compression">Content Compression</a></h3>
+<pre><code>/compress
+</code></pre>
+<p>Uses LZ4 compression to compress the contents of the XNB files. Content build times will increase with this option enabled. Compression is not recommended for Android as the app package is already compressed. This is not compatible with LZX compression used in XNA content.</p>
+<h3 id="content-importer-name" tabindex="-1"><a class="header-anchor" href="#content-importer-name">Content Importer Name</a></h3>
+<pre><code>/importer:&lt;class_name&gt;
+</code></pre>
+<p>An optional parameter which defines the class name of the content importer for reading source content. If the option is omitted or used without a class name the default content importer for the source type is used.</p>
+<h3 id="content-processor-name" tabindex="-1"><a class="header-anchor" href="#content-processor-name">Content Processor Name</a></h3>
+<pre><code>/processor:&lt;class_name&gt;
+</code></pre>
+<p>An optional parameter which defines the class name of the content processor for processing imported content. If the option is omitted used without a class name the default content processor for the imported content is used.</p>
+<p>Note that when you change the processor all previously defined <code>/processorParam</code> are cleared.</p>
+<h3 id="content-processor-parameter" tabindex="-1"><a class="header-anchor" href="#content-processor-parameter">Content Processor Parameter</a></h3>
+<pre><code>/processorParam:&lt;name&gt;=&lt;value&gt;
+</code></pre>
+<p>An optional parameter which defines a parameter name and value to set on a content processor.</p>
+<p>Note all defined processor parameters are cleared when the <code>/processor</code> is set.</p>
+<h3 id="build-content-file" tabindex="-1"><a class="header-anchor" href="#build-content-file">Build Content File</a></h3>
+<pre><code>/build:&lt;content_filepath&gt;
+/build:&lt;content_filepath&gt;;&lt;destination_filepath&gt;
+</code></pre>
+<p>Instructs the content builder to build the specified content file using the previously set switches and options. Optional destination path may be specified if you want to change the output file path.</p>
+<h3 id="launch-debugger" tabindex="-1"><a class="header-anchor" href="#launch-debugger">Launch Debugger</a></h3>
+<pre><code>/launchdebugger
+</code></pre>
+<p>Allows a debugger to attach to the MGCB executable before content is built.</p>
+<h3 id="response-file" tabindex="-1"><a class="header-anchor" href="#response-file">Response File</a></h3>
+<pre><code>/@:&lt;response_filepath&gt;
+</code></pre>
+<p>This defines a text response file (sometimes called a command file) that contains the same options and switches you would normally find on the command line.</p>
+<p>Each switch is specified on a new line. Comment lines are prefixed with #. These lines are ignored. You can specify multiple response files or mix normal command line switches with response files.</p>
+<p>An example response file could look like this:</p>
+<pre><code># Directories
+/outputDir:bin/foo
+/intermediateDir:obj/foo
+
+/rebuild
+
+# Build a texture
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyEnabled=false
+/build:Textures\wood.png
+/build:Textures\metal.png
+/build:Textures\plastic.png
+</code></pre>
+<h4 id="preprocessor-macros" tabindex="-1"><a class="header-anchor" href="#preprocessor-macros">Preprocessor Macros</a></h4>
+<p>Response files support preprocessor macros to allow conditionals within a response file.</p>
+<pre><code>$if &lt;name&gt;=&lt;value&gt;
+$endif
+</code></pre>
+<p>Preprocessor symbols can be defined from the command line with the <code>define</code> option or in a response file with the <code>$set</code> directive.</p>
+<pre><code>&lt;example command line&gt;
+MGCB.exe /define:BuildEffects=No /@:example.mgcb
+
+&lt;example.mgcb file&gt;
+$if BuildEffects=Yes
+   /importer:EffectImporter
+   /processor:EffectProcessor
+   /build:Effects\custom.fx
+   # all other effects here....
+$endif
+</code></pre>
+<pre><code>$set BuildEffects=Yes
+
+$if BuildEffects=Yes
+    # ...
+    # This is executed
+$endif
+</code></pre>
+<p>For booleans you can omit a value to set a symbol and to check if it is set:</p>
+<pre><code>$set BuildEffects
+
+$if BuildEffects
+    # ...
+    # This is executed
+$endif
+</code></pre>
+<h3 id="customizing-your-build-process" tabindex="-1"><a class="header-anchor" href="#customizing-your-build-process">Customizing your Build Process</a></h3>
+<p>When building content from your project with <code>MonoGame.Content.Builder.Task</code>, there are a few ways to hook into the build process. <code>MonoGame.Content.Builder.Task</code> runs a target called
+<code>RunContentBuilder</code> just before your project builds. If you want to do any processing before or after this process you can use the <code>BeforeTargets</code> and <code>AfterTargets</code> mechanism provided
+by <code>msbuild</code> to run your own targets.</p>
+<pre><code>&lt;Target Name=&quot;MyBeforeTarget&quot; BeforeTargets=&quot;RunContentBuilder&quot;&gt;
+   &lt;Message Text=&quot;MyBeforeTarget Ran&quot;/&gt;
+&lt;/Target&gt;
+&lt;Target Name=&quot;MyAfterTarget&quot; AfterTargets=&quot;RunContentBuilder&quot;&gt;
+   &lt;Message Text=&quot;MyAfterTarget Ran&quot;/&gt;
+&lt;/Target&gt;
+</code></pre>
+<p>If you want to customize the arguments sent to the <code>MGCB.exe</code> as part of the build process you can use the <code>&lt;MonoGameMGCBAdditionalArguments&gt;</code> property to define those.
+For example to pass in the current project configuration you could include the following code in a PropertyGroup in your .csproj file.</p>
+<pre><code>&lt;MonoGameMGCBAdditionalArguments&gt;-config:$(Configuration)&lt;/MonoGameMGCBAdditionalArguments&gt;
+</code></pre>
+
+    </article>
+
+                    <aside class="col-3 d-none d-lg-block">
+                        <div class="affix">
+    <h5>In This Article</h5>
+<nav class="nav flex-column">
+                <ol>
+                    
+                    <li><a href="#installation">Installation</a>
+            		</li>
+
+                    <li><a href="#command-line-options">Command Line Options</a>
+            
+                <ol>
+                    
+                    <li><a href="#output-directory">Output Directory</a>
+            		</li>
+
+                    <li><a href="#intermediate-directory">Intermediate Directory</a>
+            		</li>
+
+                    <li><a href="#rebuild-content">Rebuild Content</a>
+            		</li>
+
+                    <li><a href="#clean-content">Clean Content</a>
+            		</li>
+
+                    <li><a href="#incremental-build">Incremental Build</a>
+            		</li>
+
+                    <li><a href="#assembly-reference">Assembly Reference</a>
+            		</li>
+
+                    <li><a href="#target-platform">Target Platform</a>
+            		</li>
+
+                    <li><a href="#target-graphics-profile">Target Graphics Profile</a>
+            		</li>
+
+                    <li><a href="#target-build-configuration">Target Build Configuration</a>
+            		</li>
+
+                    <li><a href="#content-compression">Content Compression</a>
+            		</li>
+
+                    <li><a href="#content-importer-name">Content Importer Name</a>
+            		</li>
+
+                    <li><a href="#content-processor-name">Content Processor Name</a>
+            		</li>
+
+                    <li><a href="#content-processor-parameter">Content Processor Parameter</a>
+            		</li>
+
+                    <li><a href="#build-content-file">Build Content File</a>
+            		</li>
+
+                    <li><a href="#launch-debugger">Launch Debugger</a>
+            		</li>
+
+                    <li><a href="#response-file">Response File</a>
+            		</li>
+
+                    <li><a href="#customizing-your-build-process">Customizing your Build Process</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+</div>
+
+                    </aside>
+                </div>
+            </article>
+        </div>
+    </div>
+
+        <section class="container-xxl">
+    <footer class="border-top my-5 pt-5">
+        <div class="row justify-content-between">
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>MonoGame</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/articles/" class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/api/" class="p-0">API Reference</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/showcase/" class="p-0">Showcase</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/about/" class="p-0">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Get Involved</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a
+                            href="https://github.com/MonoGame/monogame.github.io/blob/main/CONTRIBUTING.md"
+                            class="p-0">Documentation</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                            Issues</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h5>Public Relations</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/blog/" class="p-0">Blog</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://community.monogame.net" class="p-0">Community</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/presskit/" class="p-0">Press Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <h3 class="fw-bold"><a href="/about/#contact-us">Contact Us</a></h1>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+            <div>
+                Copyright © 2009-2024 MonoGame Foundation, Inc. <br/> Designed with
+                <span class="text-danger">❤</span>
+                by
+                <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+            </div>
+            <div class="d-flex justify-content-between gap-3">
+                
+                    <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                        <i class="bi bi-p-circle-fill"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                        <i class="bi bi-reddit"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                
+                    <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="Blog RSS Feed">
+                        <i class="bi bi-rss-fill"></i>
+                    </a>
+                
+            </div>
+        </div>
+    </footer>
+</section>
+
+        <script type="text/javascript" src="/js/bundle.js"></script>
+        
+        <script type="text/javascript" src="/js/tocFilter.js"></script>
+    
+    </body>
+</html>

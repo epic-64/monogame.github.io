@@ -128,12 +128,12 @@
     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
         <li>
             <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                <i class="bi bi-sun"></i>&nbsp;Light
+                <i class="bi bi-sun-fill"></i>&nbsp;Light
             </button>
         </li>
         <li>
             <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                <i class="bi bi-moon"></i>&nbsp;Dark
+                <i class="bi bi-moon-stars-fill"></i>&nbsp;Dark
             </button>
         </li>
         <li>
@@ -173,51 +173,56 @@
                 </div>
             </div>
             <div class="blog-body">
-                <h2>Website Refresh</h2>
-<p>Several new changes have been made to the website in this proof of concept by changing to 11ty to allow for a more proper website design than the restrictions in place when using DocFX.  In this post, I'd like to go over these changes with you and, hopefully, get some feedback from community members on <a href="https://discord.gg/monogame">Discord</a>.</p>
-<h2>Maintenance</h2>
+                <h2 id="website-refresh" tabindex="-1"><a class="header-anchor" href="#website-refresh">Website Refresh</a></h2>
+<p>Several new changes have been made to the website in this proof of concept by changing to 11ty to allow for a more proper website design than the restrictions in place when using DocFX.  In this post, I'd like to go over these changes with you and, hopefully, get some feedback from community members on <a href="https://discord.gg/monogame" target="_blank" rel="noopener noreferrer">Discord</a>.</p>
+<h2 id="maintenance" tabindex="-1"><a class="header-anchor" href="#maintenance">Maintenance</a></h2>
 <p>This is the elephant in the room, so let's get it out of the way first.  In terms of maintenance for both the MonoGame Foundation and community members that would like to contribute to the website, moving it to 11ty does not add any additional maintenance.  Everything has been pre-setup and is ready to go, no different than what you would have if you used only DocFX.  The difference now is that <em>if</em> you needed to adjust how something internally is done <strong>you can</strong>.</p>
 <p>Care was put into making this proof of concept so that visually the documentation pages are similar to that created by DocFX in terms of styling.  DocFX is still used as the backend mechanism for generating the API documentation pages.</p>
 <p>For other pages, foundation and community members only need to worry with writing Markdown files as usual, same with DocFX.  Articles are just markdown files, blog posts are just markdown files.  There's no additional maintenance overhead that needs to be managed or learned.</p>
-<h2>Showcase</h2>
-<p>The showcase page has been updated to allow for better filtering of items through the pagination system within 11ty. By making use of the <a href="https://github.com/AristurtleDev/monogame-11ty/blob/main/_data/games.json">games.json</a> data and the pagination system in the <a href="https://github.com/AristurtleDev/monogame-11ty/blob/main/content/showcase.njk">showcase.njk</a> template, individual pages are able to be generated for each filter.  This allows for &quot;pretty&quot; urls such as <code>https://monogame.net/showcase/2d</code> vs queried url's such as <code>https://monogame.net/showcase?2d</code>.</p>
-<p>The showcase gallery is still randomized using the original randomization function written by <a href="https://github.com/JakeLegendXIII">Jake Kirkbride</a>.</p>
+<h2 id="showcase" tabindex="-1"><a class="header-anchor" href="#showcase">Showcase</a></h2>
+<p>The showcase page has been updated to allow for better filtering of items through the pagination system within 11ty. By making use of the <a href="https://github.com/AristurtleDev/monogame-11ty/blob/main/_data/games.json" target="_blank" rel="noopener noreferrer">games.json</a> data and the pagination system in the <a href="https://github.com/AristurtleDev/monogame-11ty/blob/main/content/showcase.njk" target="_blank" rel="noopener noreferrer">showcase.njk</a> template, individual pages are able to be generated for each filter.  This allows for &quot;pretty&quot; urls such as <code>https://monogame.net/showcase/2d</code> vs queried url's such as <code>https://monogame.net/showcase?2d</code>.</p>
+<p>The showcase gallery is still randomized using the original randomization function written by <a href="https://github.com/JakeLegendXIII" target="_blank" rel="noopener noreferrer">Jake Kirkbride</a>.</p>
 <p>The gallery items have also been updated to use the new <code>mg-card</code> class to give a consistent styling that's used throughout on various other pages as we'll see.  This allows for brightness transitions when moving the mouse over a gallery item to highlight it as the selection.</p>
-<p><img src="images/showcase-preview.png" alt="Showcase Page Preview"></p>
-<h2>Blog</h2>
-<p>As mentioned in the <a href="https://github.com/AristurtleDev/monogame-11ty/blob/main/README.md">README.md</a>, we can now take advantage of 11ty's pagination feature to create a blog section for the MonoGame Foundation.  This can be used to post news on the foundation such as board meeting minutes or news on the MonoGame project such as new releases.  It gives single place of source to get all official news from the foundation concerning MonoGame.</p>
+<p><img src="/blog/images/showcase-preview.png" alt="Showcase Page Preview"></p>
+<h2 id="blog" tabindex="-1"><a class="header-anchor" href="#blog">Blog</a></h2>
+<p>As mentioned in the <a href="https://github.com/AristurtleDev/monogame-11ty/blob/main/README.md" target="_blank" rel="noopener noreferrer">README.md</a>, we can now take advantage of 11ty's pagination feature to create a blog section for the MonoGame Foundation.  This can be used to post news on the foundation such as board meeting minutes or news on the MonoGame project such as new releases.  It gives single place of source to get all official news from the foundation concerning MonoGame.</p>
 <p>Blog posts can be categorized using tags and filtered on the main site using the tags.</p>
-<p><img src="images/blog-preview.png" alt="Blog page preview"></p>
-<h2>About Page</h2>
+<p><img src="/blog/images/blog-preview.png" alt="Blog page preview"></p>
+<h2 id="about-page" tabindex="-1"><a class="header-anchor" href="#about-page">About Page</a></h2>
 <p>The about page has been updated to feature a more card style approach to listing the foundation members.  The History timeline was also updated to have a dashed bar between events to give it more of a timeline fill than just a list of data.</p>
-<p><img src="images/about-preview.png" alt="About page preview"></p>
-<h2>Donate Page</h2>
-<p>A new <a href="https://mgdocs.aristurtle.net/donate">Donate</a> page has been added which contains information on how they can donate to the MonoGame Foundation via Patreon. The page also uses the Patreon API to pull in the current total patrons and monthly amount.</p>
+<p><img src="/blog/images/about-preview.png" alt="About page preview"></p>
+<h2 id="donate-page" tabindex="-1"><a class="header-anchor" href="#donate-page">Donate Page</a></h2>
+<p>A new <a href="https://mgdocs.aristurtle.net/donate" target="_blank" rel="noopener noreferrer">Donate</a> page has been added which contains information on how they can donate to the MonoGame Foundation via Patreon. The page also uses the Patreon API to pull in the current total patrons and monthly amount.</p>
 <p>Further, it shows the sponsorship accreditation from Re-Logic as well as brings back the old donation table of past donors.</p>
-<p><img src="images/donate-preview-1.png" alt="Donate page preview 1">
-<img src="images/donate-preview-2.png" alt="Donate page preview 2"></p>
-<h2>Press Kit</h2>
-<p>Finally, a new <a href="https://mgdocs.aristurtle.net/presskit">Press Kit</a> page has been added.  Press kit pages are vital one stop pages for media and journalist to quickly gather pre-approved descriptions and facts concerning MonoGame and the MonoGame foundation as well as find images and logos that can be used in articles.</p>
-<p>The press kit page design is based on the <a href="https://dopresskit.com/">presskit()</a> design by <a href="https://twitter.com/tha_rami">Rami Ismail</a></p>
-<p><img src="images/presskit-preview.png" alt="Presskit Preview"></p>
-<h2>Other Things of Note</h2>
+<p><img src="/blog/images/donate-preview-1.png" alt="Donate page preview 1">
+<img src="/blog/images/donate-preview-2.png" alt="Donate page preview 2"></p>
+<h2 id="press-kit" tabindex="-1"><a class="header-anchor" href="#press-kit">Press Kit</a></h2>
+<p>Finally, a new <a href="https://mgdocs.aristurtle.net/presskit" target="_blank" rel="noopener noreferrer">Press Kit</a> page has been added.  Press kit pages are vital one stop pages for media and journalist to quickly gather pre-approved descriptions and facts concerning MonoGame and the MonoGame foundation as well as find images and logos that can be used in articles.</p>
+<p>The press kit page design is based on the <a href="https://dopresskit.com/" target="_blank" rel="noopener noreferrer">presskit()</a> design by <a href="https://twitter.com/tha_rami" target="_blank" rel="noopener noreferrer">Rami Ismail</a></p>
+<p><img src="/blog/images/presskit-preview.png" alt="Presskit Preview"></p>
+<h2 id="other-things-of-note" tabindex="-1"><a class="header-anchor" href="#other-things-of-note">Other Things of Note</a></h2>
 <p>Some of the changes are more behind the scenes things like being able to have consistency across the css styling for various things since we're not also fighting the built in DocFX styling.</p>
 <p>Custom admonitions have also been added that can be used in any markdown file. The following is a list of each one added:</p>
-<p>::: note Note Title
-This is a simple note
-:::</p>
-<p>::: tip Useful Tip
-A useful tip that the reader may need to know about.
-:::</p>
-<p>::: info Additional Information
-Additional information that can be supplied to the reader.
-:::</p>
-<p>::: warning Warning
-A warning that can be given concerning the current topic the reader is reading about.
-:::</p>
-<p>::: danger Danger
-Danger that needs to be conveyed concerning a topic.
-:::</p>
+<div class="alert alert-light admonition">
+<h4 class="alert-heading admonition-title">Note Title</h4>
+<p>This is a simple note</p>
+</div>
+<div class="alert alert-success admonition">
+<h4 class="alert-heading admonition-title">Useful Tip</h4>
+<p>A useful tip that the reader may need to know about.</p>
+</div>
+<div class="alert alert-info admonition">
+<h4 class="alert-heading admonition-title">Additional Information</h4>
+<p>Additional information that can be supplied to the reader.</p>
+</div>
+<div class="alert alert-warning admonition">
+<h4 class="alert-heading admonition-title">Warning</h4>
+<p>A warning that can be given concerning the current topic the reader is reading about.</p>
+</div>
+<div class="alert alert-danger admonition">
+<h4 class="alert-heading admonition-title">Danger</h4>
+<p>Danger that needs to be conveyed concerning a topic.</p>
+</div>
 <p>The code for using the admonitions is like this</p>
 <pre><code>::: note Note Title
 This is a simple note
@@ -239,7 +244,7 @@ A warning that can be given concerning the current topic the reader is reading a
 Danger that needs to be conveyed concerning a topic.
 :::
 </code></pre>
-<p>That's all I can think of for now. Also I'm really hungry and I'd like to stop typing to go get some food now.  Let me know what you think, shoot me some feedback on <a href="https://discord.gg/monogame">Discord</a>.</p>
+<p>That's all I can think of for now. Also I'm really hungry and I'd like to stop typing to go get some food now.  Let me know what you think, shoot me some feedback on <a href="https://discord.gg/monogame" target="_blank" rel="noopener noreferrer">Discord</a>.</p>
 <ul>
 <li>Chris Whitley (Aristurtle)</li>
 </ul>

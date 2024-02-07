@@ -15,7 +15,7 @@
             <link href="https://monogame.net/blog/2024-01-10-meeting/"/>
             <updated>2024-01-10T00:00:00Z</updated>
             <id>https://monogame.net/blog/2024-01-10-meeting/</id>
-            <content xml:lang="en-US" type="html">&lt;h2&gt;Attendee&#39;s&lt;/h2&gt;
+            <content xml:lang="en-US" type="html">&lt;h2 id=&quot;attendee-s&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2024-01-10-meeting/#attendee-s&quot;&gt;Attendee&#39;s&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Dean Ellis - President&lt;/li&gt;
 &lt;li&gt;Dominique Louis - Treasurer&lt;/li&gt;
@@ -24,7 +24,7 @@
 &lt;li&gt;Marko Jeremic - Board Chairman&lt;/li&gt;
 &lt;li&gt;Thomas Altenburger - Board Member&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Agenda&lt;/h2&gt;
+&lt;h2 id=&quot;agenda&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2024-01-10-meeting/#agenda&quot;&gt;Agenda&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Continuing discussions and the plans to offer funding support to community investments and work, as well as yearly forecasts.&lt;/li&gt;
 &lt;li&gt;Further discussion and clarification on paid bounties for the Foundation.&lt;/li&gt;
@@ -33,7 +33,7 @@
 &lt;li&gt;Review of Documentation migration and formalization of the MonoGame Roadmap.&lt;/li&gt;
 &lt;li&gt;WebSite migration and update.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Outcomes&lt;/h2&gt;
+&lt;h2 id=&quot;outcomes&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2024-01-10-meeting/#outcomes&quot;&gt;Outcomes&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The kick-off for 2024 has spurred new energy into the team, with a renewed focus on making the most use of the funds we have been donated by all parties involved, ensuring that spends are both sustainable and responsible.  Acknowledging all the hard work thus far, the team are reassured by the community feedback on the progress so far and the demand to deliver more.&lt;/p&gt;
 &lt;p&gt;Here is a summary of the outcomes from new year consultations:&lt;/p&gt;
 &lt;ul&gt;
@@ -41,24 +41,24 @@
 &lt;li&gt;There was a review of existing services and opening up the opportunity to hire some staff for web site and repository maintenance.  Further details to be irons out with community feedback.&lt;/li&gt;
 &lt;li&gt;The first bounty has been drafted and will be published soon, with the aim for the MonoGame board to deliver an initial specification implementation and then open up for community feedback and contributions.  Of note, the team feels it is best to deliver the framework that the community can build upon.&lt;/li&gt;
 &lt;li&gt;The Treasurer will draft the budget for the Foundation and submit it for publication, focusing on our immediate and long terms goals and spending.&lt;/li&gt;
-&lt;li&gt;The nominated repository maintainer is now &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8118&quot;&gt;documented in GitHub&lt;/a&gt;. adding further transparency for how the MonoGame Framework is being managed.&lt;/li&gt;
-&lt;li&gt;Work on Vulkan has started, this will initially create a new sustainable framework for extensions/implementations for MonoGame going forward. The foundation is making use of an existing implementation offered by the team to deliver this capability.  There has been extensive &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/4593&quot;&gt;consultation with the community&lt;/a&gt; on this matter and the team feels this is the best route forward as it will also inform the architecture for refreshing/adapting new platforms.&lt;/li&gt;
-&lt;li&gt;Alongside the existing MS XNA -&amp;gt; MonoGame content migration, a new full sized tutorial (with accompanying video content) is being produced.  This will set the standard for Community tutorials submitted to the MonoGame Foundation, as well as &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8120&quot;&gt;bounties&lt;/a&gt; for specific Tutorial content.&lt;/li&gt;
-&lt;li&gt;The new and updated WebSite has been published, many thanks to &lt;a href=&quot;https://github.com/AristurtleDev&quot;&gt;ArisTurtle&lt;/a&gt; for all their hard work and efforts.&lt;/li&gt;
-&lt;li&gt;The new &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8120&quot;&gt;bounties board&lt;/a&gt; has been published, this will be the place to find requested work activities with MonoGame with funding where applicable.  Although there are no bounties posted at this time, we want to ensure all work is fairly compensated and has clear requirements and deliverables set.  Please bear with us while we structure this formally.&lt;/li&gt;
+&lt;li&gt;The nominated repository maintainer is now &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8118&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;documented in GitHub&lt;/a&gt;. adding further transparency for how the MonoGame Framework is being managed.&lt;/li&gt;
+&lt;li&gt;Work on Vulkan has started, this will initially create a new sustainable framework for extensions/implementations for MonoGame going forward. The foundation is making use of an existing implementation offered by the team to deliver this capability.  There has been extensive &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/4593&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;consultation with the community&lt;/a&gt; on this matter and the team feels this is the best route forward as it will also inform the architecture for refreshing/adapting new platforms.&lt;/li&gt;
+&lt;li&gt;Alongside the existing MS XNA -&amp;gt; MonoGame content migration, a new full sized tutorial (with accompanying video content) is being produced.  This will set the standard for Community tutorials submitted to the MonoGame Foundation, as well as &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8120&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;bounties&lt;/a&gt; for specific Tutorial content.&lt;/li&gt;
+&lt;li&gt;The new and updated WebSite has been published, many thanks to &lt;a href=&quot;https://github.com/AristurtleDev&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;ArisTurtle&lt;/a&gt; for all their hard work and efforts.&lt;/li&gt;
+&lt;li&gt;The new &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8120&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;bounties board&lt;/a&gt; has been published, this will be the place to find requested work activities with MonoGame with funding where applicable.  Although there are no bounties posted at this time, we want to ensure all work is fairly compensated and has clear requirements and deliverables set.  Please bear with us while we structure this formally.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;New year, new rules&lt;/h2&gt;
+&lt;h2 id=&quot;new-year-new-rules&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2024-01-10-meeting/#new-year-new-rules&quot;&gt;New year, new rules&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The MonoGame community is truly awesome, so many people willing to offer support through time offered and code, as well as a huge shout out to our donors, although a quick reminder that if you can support MonoGame, please take the time to do so in these challenging times.  While MonoGame is free, we do incur costs, so if you are making money through using MonoGame, please consider giving back (if you can) as it goes to maintain and enhance the framework for all.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://monogame.net/donate/&quot;&gt;Contributions are welcome through:&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://monogame.net/donate/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Contributions are welcome through:&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Code.&lt;/li&gt;
 &lt;li&gt;Help in the Community discord and beyond (we also love blog posts).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.patreon.com/bePatron?u=3142012&quot;&gt;Patreon&lt;/a&gt;, several tiers are available.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.patreon.com/bePatron?u=3142012&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Patreon&lt;/a&gt;, several tiers are available.&lt;/li&gt;
 &lt;li&gt;Paypal.&lt;/li&gt;
 &lt;li&gt;The MonoGame store (coming soon) with MonoGame branded gear and merch.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;P.S.
-&lt;a href=&quot;https://github.com/tomspilman&quot;&gt;Tom Spilman&lt;/a&gt; has been going out of his way to find the best merch for the MonoGame Foundation and looking to secure sustainable and beneficial gear for the MonoGame community.  Stay tuned and we will share more when we can.&lt;/p&gt;
+&lt;a href=&quot;https://github.com/tomspilman&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Tom Spilman&lt;/a&gt; has been going out of his way to find the best merch for the MonoGame Foundation and looking to secure sustainable and beneficial gear for the MonoGame community.  Stay tuned and we will share more when we can.&lt;/p&gt;
 </content>
         </entry>
         <entry>
@@ -66,51 +66,56 @@
             <link href="https://monogame.net/blog/2023-12-29-website-refresh/"/>
             <updated>2023-12-29T00:00:00Z</updated>
             <id>https://monogame.net/blog/2023-12-29-website-refresh/</id>
-            <content xml:lang="en-US" type="html">&lt;h2&gt;Website Refresh&lt;/h2&gt;
-&lt;p&gt;Several new changes have been made to the website in this proof of concept by changing to 11ty to allow for a more proper website design than the restrictions in place when using DocFX.  In this post, I&#39;d like to go over these changes with you and, hopefully, get some feedback from community members on &lt;a href=&quot;https://discord.gg/monogame&quot;&gt;Discord&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Maintenance&lt;/h2&gt;
+            <content xml:lang="en-US" type="html">&lt;h2 id=&quot;website-refresh&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#website-refresh&quot;&gt;Website Refresh&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Several new changes have been made to the website in this proof of concept by changing to 11ty to allow for a more proper website design than the restrictions in place when using DocFX.  In this post, I&#39;d like to go over these changes with you and, hopefully, get some feedback from community members on &lt;a href=&quot;https://discord.gg/monogame&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Discord&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;maintenance&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#maintenance&quot;&gt;Maintenance&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This is the elephant in the room, so let&#39;s get it out of the way first.  In terms of maintenance for both the MonoGame Foundation and community members that would like to contribute to the website, moving it to 11ty does not add any additional maintenance.  Everything has been pre-setup and is ready to go, no different than what you would have if you used only DocFX.  The difference now is that &lt;em&gt;if&lt;/em&gt; you needed to adjust how something internally is done &lt;strong&gt;you can&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Care was put into making this proof of concept so that visually the documentation pages are similar to that created by DocFX in terms of styling.  DocFX is still used as the backend mechanism for generating the API documentation pages.&lt;/p&gt;
 &lt;p&gt;For other pages, foundation and community members only need to worry with writing Markdown files as usual, same with DocFX.  Articles are just markdown files, blog posts are just markdown files.  There&#39;s no additional maintenance overhead that needs to be managed or learned.&lt;/p&gt;
-&lt;h2&gt;Showcase&lt;/h2&gt;
-&lt;p&gt;The showcase page has been updated to allow for better filtering of items through the pagination system within 11ty. By making use of the &lt;a href=&quot;https://github.com/AristurtleDev/monogame-11ty/blob/main/_data/games.json&quot;&gt;games.json&lt;/a&gt; data and the pagination system in the &lt;a href=&quot;https://github.com/AristurtleDev/monogame-11ty/blob/main/content/showcase.njk&quot;&gt;showcase.njk&lt;/a&gt; template, individual pages are able to be generated for each filter.  This allows for &amp;quot;pretty&amp;quot; urls such as &lt;code&gt;https://monogame.net/showcase/2d&lt;/code&gt; vs queried url&#39;s such as &lt;code&gt;https://monogame.net/showcase?2d&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The showcase gallery is still randomized using the original randomization function written by &lt;a href=&quot;https://github.com/JakeLegendXIII&quot;&gt;Jake Kirkbride&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;showcase&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#showcase&quot;&gt;Showcase&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The showcase page has been updated to allow for better filtering of items through the pagination system within 11ty. By making use of the &lt;a href=&quot;https://github.com/AristurtleDev/monogame-11ty/blob/main/_data/games.json&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;games.json&lt;/a&gt; data and the pagination system in the &lt;a href=&quot;https://github.com/AristurtleDev/monogame-11ty/blob/main/content/showcase.njk&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;showcase.njk&lt;/a&gt; template, individual pages are able to be generated for each filter.  This allows for &amp;quot;pretty&amp;quot; urls such as &lt;code&gt;https://monogame.net/showcase/2d&lt;/code&gt; vs queried url&#39;s such as &lt;code&gt;https://monogame.net/showcase?2d&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The showcase gallery is still randomized using the original randomization function written by &lt;a href=&quot;https://github.com/JakeLegendXIII&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jake Kirkbride&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The gallery items have also been updated to use the new &lt;code&gt;mg-card&lt;/code&gt; class to give a consistent styling that&#39;s used throughout on various other pages as we&#39;ll see.  This allows for brightness transitions when moving the mouse over a gallery item to highlight it as the selection.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/2023-12-29-website-refresh/images/showcase-preview.png&quot; alt=&quot;Showcase Page Preview&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;Blog&lt;/h2&gt;
-&lt;p&gt;As mentioned in the &lt;a href=&quot;https://github.com/AristurtleDev/monogame-11ty/blob/main/README.md&quot;&gt;README.md&lt;/a&gt;, we can now take advantage of 11ty&#39;s pagination feature to create a blog section for the MonoGame Foundation.  This can be used to post news on the foundation such as board meeting minutes or news on the MonoGame project such as new releases.  It gives single place of source to get all official news from the foundation concerning MonoGame.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/images/showcase-preview.png&quot; alt=&quot;Showcase Page Preview&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;blog&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#blog&quot;&gt;Blog&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;As mentioned in the &lt;a href=&quot;https://github.com/AristurtleDev/monogame-11ty/blob/main/README.md&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;README.md&lt;/a&gt;, we can now take advantage of 11ty&#39;s pagination feature to create a blog section for the MonoGame Foundation.  This can be used to post news on the foundation such as board meeting minutes or news on the MonoGame project such as new releases.  It gives single place of source to get all official news from the foundation concerning MonoGame.&lt;/p&gt;
 &lt;p&gt;Blog posts can be categorized using tags and filtered on the main site using the tags.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/2023-12-29-website-refresh/images/blog-preview.png&quot; alt=&quot;Blog page preview&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;About Page&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/images/blog-preview.png&quot; alt=&quot;Blog page preview&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;about-page&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#about-page&quot;&gt;About Page&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The about page has been updated to feature a more card style approach to listing the foundation members.  The History timeline was also updated to have a dashed bar between events to give it more of a timeline fill than just a list of data.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/2023-12-29-website-refresh/images/about-preview.png&quot; alt=&quot;About page preview&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;Donate Page&lt;/h2&gt;
-&lt;p&gt;A new &lt;a href=&quot;https://mgdocs.aristurtle.net/donate&quot;&gt;Donate&lt;/a&gt; page has been added which contains information on how they can donate to the MonoGame Foundation via Patreon. The page also uses the Patreon API to pull in the current total patrons and monthly amount.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/images/about-preview.png&quot; alt=&quot;About page preview&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;donate-page&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#donate-page&quot;&gt;Donate Page&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A new &lt;a href=&quot;https://mgdocs.aristurtle.net/donate&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Donate&lt;/a&gt; page has been added which contains information on how they can donate to the MonoGame Foundation via Patreon. The page also uses the Patreon API to pull in the current total patrons and monthly amount.&lt;/p&gt;
 &lt;p&gt;Further, it shows the sponsorship accreditation from Re-Logic as well as brings back the old donation table of past donors.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/2023-12-29-website-refresh/images/donate-preview-1.png&quot; alt=&quot;Donate page preview 1&quot; /&gt;
-&lt;img src=&quot;https://monogame.net/blog/2023-12-29-website-refresh/images/donate-preview-2.png&quot; alt=&quot;Donate page preview 2&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;Press Kit&lt;/h2&gt;
-&lt;p&gt;Finally, a new &lt;a href=&quot;https://mgdocs.aristurtle.net/presskit&quot;&gt;Press Kit&lt;/a&gt; page has been added.  Press kit pages are vital one stop pages for media and journalist to quickly gather pre-approved descriptions and facts concerning MonoGame and the MonoGame foundation as well as find images and logos that can be used in articles.&lt;/p&gt;
-&lt;p&gt;The press kit page design is based on the &lt;a href=&quot;https://dopresskit.com/&quot;&gt;presskit()&lt;/a&gt; design by &lt;a href=&quot;https://twitter.com/tha_rami&quot;&gt;Rami Ismail&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/2023-12-29-website-refresh/images/presskit-preview.png&quot; alt=&quot;Presskit Preview&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;Other Things of Note&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/images/donate-preview-1.png&quot; alt=&quot;Donate page preview 1&quot; /&gt;
+&lt;img src=&quot;https://monogame.net/blog/images/donate-preview-2.png&quot; alt=&quot;Donate page preview 2&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;press-kit&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#press-kit&quot;&gt;Press Kit&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Finally, a new &lt;a href=&quot;https://mgdocs.aristurtle.net/presskit&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Press Kit&lt;/a&gt; page has been added.  Press kit pages are vital one stop pages for media and journalist to quickly gather pre-approved descriptions and facts concerning MonoGame and the MonoGame foundation as well as find images and logos that can be used in articles.&lt;/p&gt;
+&lt;p&gt;The press kit page design is based on the &lt;a href=&quot;https://dopresskit.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;presskit()&lt;/a&gt; design by &lt;a href=&quot;https://twitter.com/tha_rami&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Rami Ismail&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://monogame.net/blog/images/presskit-preview.png&quot; alt=&quot;Presskit Preview&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;other-things-of-note&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-12-29-website-refresh/#other-things-of-note&quot;&gt;Other Things of Note&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Some of the changes are more behind the scenes things like being able to have consistency across the css styling for various things since we&#39;re not also fighting the built in DocFX styling.&lt;/p&gt;
 &lt;p&gt;Custom admonitions have also been added that can be used in any markdown file. The following is a list of each one added:&lt;/p&gt;
-&lt;p&gt;::: note Note Title
-This is a simple note
-:::&lt;/p&gt;
-&lt;p&gt;::: tip Useful Tip
-A useful tip that the reader may need to know about.
-:::&lt;/p&gt;
-&lt;p&gt;::: info Additional Information
-Additional information that can be supplied to the reader.
-:::&lt;/p&gt;
-&lt;p&gt;::: warning Warning
-A warning that can be given concerning the current topic the reader is reading about.
-:::&lt;/p&gt;
-&lt;p&gt;::: danger Danger
-Danger that needs to be conveyed concerning a topic.
-:::&lt;/p&gt;
+&lt;div class=&quot;alert alert-light admonition&quot;&gt;
+&lt;h4 class=&quot;alert-heading admonition-title&quot;&gt;Note Title&lt;/h4&gt;
+&lt;p&gt;This is a simple note&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-success admonition&quot;&gt;
+&lt;h4 class=&quot;alert-heading admonition-title&quot;&gt;Useful Tip&lt;/h4&gt;
+&lt;p&gt;A useful tip that the reader may need to know about.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info admonition&quot;&gt;
+&lt;h4 class=&quot;alert-heading admonition-title&quot;&gt;Additional Information&lt;/h4&gt;
+&lt;p&gt;Additional information that can be supplied to the reader.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning admonition&quot;&gt;
+&lt;h4 class=&quot;alert-heading admonition-title&quot;&gt;Warning&lt;/h4&gt;
+&lt;p&gt;A warning that can be given concerning the current topic the reader is reading about.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger admonition&quot;&gt;
+&lt;h4 class=&quot;alert-heading admonition-title&quot;&gt;Danger&lt;/h4&gt;
+&lt;p&gt;Danger that needs to be conveyed concerning a topic.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;The code for using the admonitions is like this&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;::: note Note Title
 This is a simple note
@@ -132,7 +137,7 @@ A warning that can be given concerning the current topic the reader is reading a
 Danger that needs to be conveyed concerning a topic.
 :::
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That&#39;s all I can think of for now. Also I&#39;m really hungry and I&#39;d like to stop typing to go get some food now.  Let me know what you think, shoot me some feedback on &lt;a href=&quot;https://discord.gg/monogame&quot;&gt;Discord&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That&#39;s all I can think of for now. Also I&#39;m really hungry and I&#39;d like to stop typing to go get some food now.  Let me know what you think, shoot me some feedback on &lt;a href=&quot;https://discord.gg/monogame&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Discord&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Chris Whitley (Aristurtle)&lt;/li&gt;
 &lt;/ul&gt;
@@ -143,7 +148,7 @@ Danger that needs to be conveyed concerning a topic.
             <link href="https://monogame.net/blog/2023-11-22-meeting/"/>
             <updated>2023-11-29T00:00:00Z</updated>
             <id>https://monogame.net/blog/2023-11-22-meeting/</id>
-            <content xml:lang="en-US" type="html">&lt;h2&gt;Attendee&#39;s&lt;/h2&gt;
+            <content xml:lang="en-US" type="html">&lt;h2 id=&quot;attendee-s&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-11-22-meeting/#attendee-s&quot;&gt;Attendee&#39;s&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Dean Ellis - President&lt;/li&gt;
 &lt;li&gt;Dominique Louis - Treasurer&lt;/li&gt;
@@ -152,7 +157,7 @@ Danger that needs to be conveyed concerning a topic.
 &lt;li&gt;Marko Jeremic - Board Chairman&lt;/li&gt;
 &lt;li&gt;Thomas Altenburger - Board Member&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Agenda&lt;/h2&gt;
+&lt;h2 id=&quot;agenda&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-11-22-meeting/#agenda&quot;&gt;Agenda&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Funding discussions and the plans to offer funding support to community investments and work.&lt;/li&gt;
 &lt;li&gt;Initial discussion on which issues the MonoGame Foundation would like to fund first.&lt;/li&gt;
@@ -170,7 +175,7 @@ Danger that needs to be conveyed concerning a topic.
 &lt;li&gt;New Content design and build Support.&lt;/li&gt;
 &lt;li&gt;Upgrading to DotNet 8 and the move away from DotNet 6.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Outcomes&lt;/h2&gt;
+&lt;h2 id=&quot;outcomes&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-11-22-meeting/#outcomes&quot;&gt;Outcomes&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This has been a heavy week for discussions, debates and some real outcomes that will directly benefit all MonoGame Developers.  The foundation has really listened to the community and driven the key priorities needed to move MonoGame forward in the immediate future, with definitive roadmap for ongoing development.&lt;/p&gt;
 &lt;p&gt;Here is a summary of the outcomes from our week long debate:&lt;/p&gt;
 &lt;ul&gt;
@@ -180,7 +185,7 @@ Danger that needs to be conveyed concerning a topic.
 &lt;li&gt;The RoadMap, work has begun in earnest and a formal roadmap will be published soon, but here are the highlights for the 3.X cycle:
 &lt;ul&gt;
 &lt;li&gt;Native AOT support for cross platform builds.&lt;/li&gt;
-&lt;li&gt;The addition of Vulkan support (which will also provide Metal support) for desktop and mobile platforms. (see &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/4593&quot;&gt;This issue&lt;/a&gt; for details.)&lt;/li&gt;
+&lt;li&gt;The addition of Vulkan support (which will also provide Metal support) for desktop and mobile platforms. (see &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/4593&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;This issue&lt;/a&gt; for details.)&lt;/li&gt;
 &lt;li&gt;Update Xbox platform for DX 12 and GDKX support (with plans to bring DX12 to Windows once complete).&lt;/li&gt;
 &lt;li&gt;Unite the Native API for MonoGame for all platforms, to make maintenance and new platforms easier.&lt;/li&gt;
 &lt;/ul&gt;
@@ -191,7 +196,7 @@ Danger that needs to be conveyed concerning a topic.
 &lt;li&gt;DotNet 8 upgrade plans - the next release of MonoGame (provisionally 3.9) will be upgraded to DotNet 8 to accelerate and enable other improvements to the MonoGame Framework.  This should cause &lt;strong&gt;NO&lt;/strong&gt; breaking changes to existing projects, and if anything, offer a speed boots due to DotNet 8 compilation and runtime.  For those wanting to remain on DotNet 6, then you will have to remain on MG 3.8.&lt;/li&gt;
 &lt;li&gt;The first bug bounty has been released, but is only available to Xbox users as it relies on existing Xbox NDA&#39;s and access to DirectX12/GDKX access from Microsoft.  Please check the MonoGame Native access discord/GitHub repo if you have access for the details.  Funding is offered if required.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Exciting times&lt;/h2&gt;
+&lt;h2 id=&quot;exciting-times&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-11-22-meeting/#exciting-times&quot;&gt;Exciting times&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Encouraged by public support and the funding from our partners and community, the MonoGame Foundation is racing ahead with new vigor to deliver on MonoGame&#39;s promise of a Build Once and SHip everywhere framework.&lt;/p&gt;
 &lt;p&gt;P.S.
 Super top-secret, Swag and other merchandise is being discussed with the hopes of hosting our first community engagement!&lt;/p&gt;
@@ -202,7 +207,7 @@ Super top-secret, Swag and other merchandise is being discussed with the hopes o
             <link href="https://monogame.net/blog/2023-11-15-meeting/"/>
             <updated>2023-11-16T00:00:00Z</updated>
             <id>https://monogame.net/blog/2023-11-15-meeting/</id>
-            <content xml:lang="en-US" type="html">&lt;h2&gt;Attendee&#39;s&lt;/h2&gt;
+            <content xml:lang="en-US" type="html">&lt;h2 id=&quot;attendee-s&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-11-15-meeting/#attendee-s&quot;&gt;Attendee&#39;s&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Dean Ellis - President&lt;/li&gt;
 &lt;li&gt;Dominique Louis - Treasurer&lt;/li&gt;
@@ -211,7 +216,7 @@ Super top-secret, Swag and other merchandise is being discussed with the hopes o
 &lt;li&gt;Marko Jeremic - Board Chairman&lt;/li&gt;
 &lt;li&gt;Thomas Altenburger - Board Member&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Agenda&lt;/h2&gt;
+&lt;h2 id=&quot;agenda&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-11-15-meeting/#agenda&quot;&gt;Agenda&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Status on setting up Microsoft email server and Microsoft Teams&lt;/li&gt;
 &lt;li&gt;Transfer/Application for Console Developer accounts (will required email setup first I guess)&lt;/li&gt;
@@ -235,7 +240,7 @@ Super top-secret, Swag and other merchandise is being discussed with the hopes o
 &lt;/li&gt;
 &lt;li&gt;Next steps? (let us keep the momentum going)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Outcomes&lt;/h2&gt;
+&lt;h2 id=&quot;outcomes&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-11-15-meeting/#outcomes&quot;&gt;Outcomes&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The second MonoGame Foundation meeting was a great success, getting accounts, funding and the general organization structure defined, as well as outlining the immediate plans for MonoGame improvement.&lt;/p&gt;
 &lt;p&gt;Of note, the current decisions were made by the conclusion of the meeting:&lt;/p&gt;
 &lt;ul&gt;
@@ -259,7 +264,7 @@ Super top-secret, Swag and other merchandise is being discussed with the hopes o
             <link href="https://monogame.net/blog/2023-10-24-meeting/"/>
             <updated>2023-10-24T00:00:00Z</updated>
             <id>https://monogame.net/blog/2023-10-24-meeting/</id>
-            <content xml:lang="en-US" type="html">&lt;h2&gt;Attendee&#39;s&lt;/h2&gt;
+            <content xml:lang="en-US" type="html">&lt;h2 id=&quot;attendee-s&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-10-24-meeting/#attendee-s&quot;&gt;Attendee&#39;s&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Dean Ellis - President&lt;/li&gt;
 &lt;li&gt;Dominique Louis - Treasurer&lt;/li&gt;
@@ -268,7 +273,7 @@ Super top-secret, Swag and other merchandise is being discussed with the hopes o
 &lt;li&gt;Marko Jeremic - Board Chairman&lt;/li&gt;
 &lt;li&gt;Thomas Altenburger - Board Member&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Agenda&lt;/h2&gt;
+&lt;h2 id=&quot;agenda&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-10-24-meeting/#agenda&quot;&gt;Agenda&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Initial kick off meeting&lt;/li&gt;
 &lt;li&gt;Foundation setup progress&lt;/li&gt;
@@ -276,7 +281,7 @@ Super top-secret, Swag and other merchandise is being discussed with the hopes o
 &lt;li&gt;MonoGame GitHub Issue and PR clean-up / process&lt;/li&gt;
 &lt;li&gt;Aob&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Outcomes&lt;/h2&gt;
+&lt;h2 id=&quot;outcomes&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://monogame.net/blog/2023-10-24-meeting/#outcomes&quot;&gt;Outcomes&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The first official MonoGame Foundation meeting was a great success, setting out the core principles under which the foundation will be run.&lt;/p&gt;
 &lt;p&gt;Of note, the current decisions were made by the conclusion of the meeting:&lt;/p&gt;
 &lt;ul&gt;
