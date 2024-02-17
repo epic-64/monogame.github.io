@@ -4,12 +4,69 @@
     <subtitle>One framework for creating powerful cross-platform games</subtitle>
     <link href="https://monogame.net/blog/feed.xml" rel="self"/>
     <link href="https://monogame.net"/>
-    <updated>2024-01-10T00:00:00Z</updated>
+    <updated>2024-02-11T00:00:00Z</updated>
     <id>https://monogame.net/</id>
     <author>
         <name>MonoGame Foundation</name>
         <email>admin@monogame.net</email>
     </author>
+        <entry>
+            <title>Board Meeting Minutes</title>
+            <link href="https://monogame.net/blog/2024-02-14-meeting/"/>
+            <updated>2024-02-11T00:00:00Z</updated>
+            <id>https://monogame.net/blog/2024-02-14-meeting/</id>
+            <content xml:lang="en-US" type="html">&lt;h2&gt;Attendee&#39;s&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dean Ellis - President&lt;/li&gt;
+&lt;li&gt;Dominique Louis - Treasurer&lt;/li&gt;
+&lt;li&gt;Simon Jackson - Corporate Secretary&lt;/li&gt;
+&lt;li&gt;Tom Spilman - Banking Matters&lt;/li&gt;
+&lt;li&gt;Marko Jeremic - Board Chairman&lt;/li&gt;
+&lt;li&gt;Thomas Altenburger - Board Member&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Agenda&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bounty rewards&lt;/li&gt;
+&lt;li&gt;Documentation&lt;/li&gt;
+&lt;li&gt;NativeAoT / DX12 progress&lt;/li&gt;
+&lt;li&gt;Possible GDC tie ins?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Outcomes&lt;/h2&gt;
+&lt;p&gt;The team are picking up steam on delivering on our new years purpose to both expand MonoGame&#39;s base platform support as well as heavily investing in updating and renewing documentation and samples.  Suffice to say, We hear you (and agree).  We are pushing as hard as we can to get more to you as soon as we are able, as well as enabling community members to contribute and get their own names in the MonoGame hall of fame (tbc).&lt;/p&gt;
+&lt;p&gt;Here is a summary of the outcomes from new year consultations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MonoGame should have a presence on itchio, with the aim of also publishing the MonoGame samples in web form (where possible).  The MonoGame brand is currently held by another user so the team will coordinate with itchio support to regain ownership of the brand.&lt;/li&gt;
+&lt;li&gt;The documentation migration and update is progressing steadily and has completed the initial migration.  The current outstanding tasks are:
+&lt;ul&gt;
+&lt;li&gt;Review and update the Microsoft Content to MOnoGame standards and ensure there is no repetition, as well as identify any gaps.&lt;/li&gt;
+&lt;li&gt;A new &amp;quot;university style&amp;quot; approach is being built based on the migrated documentation, with the aim to give more guided learning.&lt;/li&gt;
+&lt;li&gt;The API code docs are being reinvigorated with help from the community.&lt;/li&gt;
+&lt;li&gt;We are introducing more official samples and also reaching out to the community to build and publish more, some even sponsored through bounties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&quot;https://github.com/MonoGame/MonoGame.Samples/tree/feature/ship-game/ShipGame&quot;&gt;ShipGame sample&lt;/a&gt; is reborn for the MonoGame samples repository, a fan favorite descent style clone (albeit a lot simpler).  When its review is finished and merged, a new bounty will be launched to update/refresh it for 2023.&lt;/li&gt;
+&lt;li&gt;Work continues on DX12 and NativeAoT ports, we are seeking help regarding these but the team members also need them, so we are beginning anyway.&lt;/li&gt;
+&lt;li&gt;A new bounty is being raised to help support the work to update the API documentation, including migrating some missing XNA docs.  Keep an eye on the &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8120&quot;&gt;bounties board&lt;/a&gt; where these will be announced.&lt;/li&gt;
+&lt;li&gt;Following discussions, the team do not feel there will be sufficient material or announcements leading up to GDC for us to make a presence (although we will still try), our aim is to go large at next years GDC.  That being said, we are aiming to make announcements as we reach milestones and keep the party going.&lt;/li&gt;
+&lt;li&gt;The nominated repository maintainer has updated for February, as  &lt;a href=&quot;https://github.com/MonoGame/MonoGame/issues/8118&quot;&gt;documented in GitHub&lt;/a&gt;. Keeping up the transparency for how the MonoGame Framework is being managed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sneak peek
+&lt;img src=&quot;https://github.com/MonoGame/MonoGame.Samples/blob/feature/ship-game/Images/ShipGame.gif?raw=true&quot; alt=&quot;Ship Game 3D Sample&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;New year, new rules&lt;/h2&gt;
+&lt;p&gt;We acknowledge the discrepancy in the MonoGame documentation, but hopefully you can see the team are working hard (unpaid) to fill in critical gaps, as well as discussing new ways the community can contribute directly to the MonoGame documentation.  While we are investing in new platforms, we recognize that investment for newcomers (and existing developers) is desperately needed.&lt;/p&gt;
+&lt;p&gt;We encourage everyone to get involved and share their learnings, or even submit suggestions to a &lt;a href=&quot;https://github.com/users/SimonDarksideJ/projects/1&quot;&gt;Project board that one of our members setup to track requests&lt;/a&gt;, everyone&#39;s voice should be heard and we welcome everyone to join in.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://monogame.net/donate/&quot;&gt;Contributions are welcome through:&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Code.&lt;/li&gt;
+&lt;li&gt;Help in the Community discord and beyond (we also love blog posts).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.patreon.com/bePatron?u=3142012&quot;&gt;Patreon&lt;/a&gt;, several tiers are available.&lt;/li&gt;
+&lt;li&gt;Paypal.&lt;/li&gt;
+&lt;li&gt;The MonoGame store (coming soon) with MonoGame branded gear and merch.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        </entry>
         <entry>
             <title>Board Meeting Minutes</title>
             <link href="https://monogame.net/blog/2024-01-10-meeting/"/>
