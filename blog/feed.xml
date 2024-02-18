@@ -38,7 +38,7 @@
 &lt;li&gt;MonoGame should have a presence on itchio, with the aim of also publishing the MonoGame samples in web form (where possible).  The MonoGame brand is currently held by another user so the team will coordinate with itchio support to regain ownership of the brand.&lt;/li&gt;
 &lt;li&gt;The documentation migration and update is progressing steadily and has completed the initial migration.  The current outstanding tasks are:
 &lt;ul&gt;
-&lt;li&gt;Review and update the Microsoft Content to MOnoGame standards and ensure there is no repetition, as well as identify any gaps.&lt;/li&gt;
+&lt;li&gt;Review and update the Microsoft Content to MonoGame standards and ensure there is no repetition, as well as identify any gaps.&lt;/li&gt;
 &lt;li&gt;A new &amp;quot;university style&amp;quot; approach is being built based on the migrated documentation, with the aim to give more guided learning.&lt;/li&gt;
 &lt;li&gt;The API code docs are being reinvigorated with help from the community.&lt;/li&gt;
 &lt;li&gt;We are introducing more official samples and also reaching out to the community to build and publish more, some even sponsored through bounties.&lt;/li&gt;
